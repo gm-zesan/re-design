@@ -109,7 +109,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
       />
 
       {/* Original Housing Sub-Portal Header Strip (hd2.jpg identity preserved with live readable text + click-to-call) */}
-      <div className="border-b border-[#E4E3DF] bg-[#141518] text-white dark:border-white/10">
+      <div className="border-b border-[#E2E8F0] bg-[#10182C] text-white dark:border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3.5">
@@ -122,7 +122,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                 <p className="font-display text-lg font-semibold text-white">
                   {KINGDOM_CITY_DATA.companyHeading}
                 </p>
-                <p className="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#C9A46B]">
+                <p className="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#93C5FD]">
                   {KINGDOM_CITY_DATA.landownershipBadge}
                 </p>
               </div>
@@ -136,7 +136,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                 <a
                   key={num}
                   href={`tel:${num}`}
-                  className="inline-flex items-center gap-1 rounded-lg border border-[#8C6730]/50 bg-[#8C6730]/15 px-2.5 py-1 font-mono-tech text-xs font-medium text-[#DFC69B] tabular-nums transition hover:bg-[#C9A46B] hover:text-[#0C0D0F]"
+                  className="inline-flex items-center gap-1 rounded-lg border border-[#60A5FA]/40 bg-[#3B5BDB]/20 px-2.5 py-1 font-mono-tech text-xs font-medium text-[#BFDBFE] tabular-nums transition hover:bg-[#3B5BDB] hover:text-white"
                 >
                   <Phone className="h-3 w-3" />
                   <span>{num}</span>
@@ -153,9 +153,9 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
           {/* Left Sticky Sidebar */}
           <aside className="lg:col-span-3">
             <div className="sticky top-28 space-y-5">
-              <div className="overflow-hidden rounded-2xl border border-[#E4E3DF] bg-white shadow-xs dark:border-white/10 dark:bg-[#1A1C21]">
-                <div className="border-b border-[#E4E3DF] bg-[#F2F1EE] px-4 py-3 dark:border-white/10 dark:bg-[#141518]">
-                  <p className="font-mono-tech text-[11px] font-semibold uppercase tracking-wider text-[#18191D] dark:text-[#C9A46B]">
+              <div className="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-xs dark:border-white/10 dark:bg-[#141D35]">
+                <div className="border-b border-[#E2E8F0] bg-[#F1F5F9] px-4 py-3 dark:border-white/10 dark:bg-[#10182C]">
+                  <p className="font-mono-tech text-[11px] font-semibold uppercase tracking-wider text-[#2D3192] dark:text-[#93C5FD]">
                     KINGDOM City Navigation
                   </p>
                 </div>
@@ -169,15 +169,15 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                         to={item.to}
                         className={`flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm font-medium transition ${
                           active
-                            ? 'bg-[#18191D] text-white shadow-xs dark:bg-[#8C6730] dark:text-[#111215]'
-                            : 'text-[#141518] hover:bg-[#F9F9F8] hover:text-[#18191D] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#DFC69B]'
+                            ? 'bg-[#2D3192] text-white shadow-xs dark:bg-[#3B5BDB] dark:text-white'
+                            : 'text-[#0F172A] hover:bg-[#F8FAFC] hover:text-[#2D3192] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#BFDBFE]'
                         }`}
                       >
                         <Icon
                           className={`h-4 w-4 ${
                             active
-                              ? 'text-[#C9A46B] dark:text-[#111215]'
-                              : 'text-[#8C6730] dark:text-[#C9A46B]'
+                              ? 'text-[#93C5FD] dark:text-white'
+                              : 'text-[#2D3192] dark:text-[#93C5FD]'
                           }`}
                         />
                         <span>{item.label}</span>
@@ -188,22 +188,22 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
               </div>
 
               {/* Credentials Card */}
-              <div className="rounded-2xl border border-[#E4E3DF] bg-white p-5 dark:border-white/10 dark:bg-[#1A1C21]">
-                <p className="font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+              <div className="rounded-2xl border border-[#E2E8F0] bg-white p-5 dark:border-white/10 dark:bg-[#141D35]">
+                <p className="font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                   Verified Credentials
                 </p>
                 <div className="mt-3 space-y-2">
                   {KINGDOM_CITY_DATA.associations.map((badge) => (
                     <div
                       key={badge}
-                      className="flex items-center gap-2 rounded-lg bg-[#F9F9F8] px-3 py-2 text-xs font-semibold text-[#18191D] ring-1 ring-[#E4E3DF] dark:bg-[#141518] dark:text-white dark:ring-white/10"
+                      className="flex items-center gap-2 rounded-lg bg-[#F8FAFC] px-3 py-2 text-xs font-semibold text-[#2D3192] ring-1 ring-[#E2E8F0] dark:bg-[#10182C] dark:text-white dark:ring-white/10"
                     >
-                      <ShieldCheck className="h-4 w-4 text-[#8C6730] dark:text-[#C9A46B]" />
+                      <ShieldCheck className="h-4 w-4 text-[#2D3192] dark:text-[#93C5FD]" />
                       <span>{badge}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 overflow-hidden rounded-xl border border-[#E4E3DF] dark:border-white/10">
+                <div className="mt-4 overflow-hidden rounded-xl border border-[#E2E8F0] dark:border-white/10">
                   <img
                     src={KINGDOM_CITY_DATA.bannerImage}
                     alt="KINGDOM Housing Ltd. Banner Graphic"
@@ -219,13 +219,13 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
             {activeTab === 'about' && (
               <div className="space-y-8">
                 {/* Bilingual Copy + Landownership */}
-                <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
-                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#E4E3DF] pb-4 dark:border-white/10">
+                <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
+                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#E2E8F0] pb-4 dark:border-white/10">
                     <div>
-                      <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+                      <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                         About KINGDOM City
                       </span>
-                      <h2 className="font-bengali mt-1 text-2xl font-bold text-[#18191D] dark:text-white sm:text-3xl">
+                      <h2 className="font-bengali mt-1 text-2xl font-bold text-[#2D3192] dark:text-white sm:text-3xl">
                         {KINGDOM_CITY_DATA.banglaTagline}
                       </h2>
                     </div>
@@ -234,12 +234,12 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                     </span>
                   </div>
 
-                  <p className="mt-4 font-display text-base italic text-[#52555E] dark:text-zinc-300">
+                  <p className="mt-4 font-display text-base italic text-[#475569] dark:text-slate-300">
                     {KINGDOM_CITY_DATA.bilingualMotto}
                   </p>
 
                   {/* Verbatim Bangla Copy */}
-                  <div className="mt-5 space-y-3 rounded-2xl border border-[#E4E3DF] bg-[#F9F9F8] p-5 font-bengali text-base leading-relaxed text-[#141518] dark:border-white/10 dark:bg-[#141518] dark:text-[#F4F3F0]">
+                  <div className="mt-5 space-y-3 rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 font-bengali text-base leading-relaxed text-[#0F172A] dark:border-white/10 dark:bg-[#10182C] dark:text-[#F8FAFC]">
                     {KINGDOM_CITY_DATA.banglaParagraphs.map((line, i) => (
                       <p key={i}>{line}</p>
                     ))}
@@ -247,7 +247,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
 
                   {/* Interactive Plot Size Filter & Installment Rates */}
                   <div className="mt-8">
-                    <h3 className="font-display text-xl font-semibold text-[#18191D] dark:text-white">
+                    <h3 className="font-display text-xl font-semibold text-[#2D3192] dark:text-white">
                       Available Plot Sizes &amp; Easy 5-Year Installment Rates
                     </h3>
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -258,8 +258,8 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                           onClick={() => setSelectedPlot(size)}
                           className={`rounded-lg px-3.5 py-2 text-xs font-semibold transition tabular-nums ${
                             selectedPlot === size
-                              ? 'bg-[#18191D] text-white dark:bg-[#8C6730] dark:text-[#111215]'
-                              : 'border border-[#E4E3DF] bg-[#F9F9F8] text-[#141518] hover:border-[#18191D] dark:border-white/15 dark:bg-[#141518] dark:text-zinc-200 dark:hover:border-[#C9A46B]'
+                              ? 'bg-[#2D3192] text-white dark:bg-[#3B5BDB] dark:text-white'
+                              : 'border border-[#E2E8F0] bg-[#F8FAFC] text-[#0F172A] hover:border-[#2D3192] dark:border-white/15 dark:bg-[#10182C] dark:text-slate-200 dark:hover:border-[#93C5FD]'
                           }`}
                         >
                           {size} Katha
@@ -267,11 +267,11 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                       ))}
                     </div>
 
-                    <div className="mt-4 rounded-xl border border-[#E4E3DF] bg-[#F2F1EE]/60 p-4 text-sm text-[#141518] dark:border-[#8C6730]/30 dark:bg-[#1E2026] dark:text-white">
-                      <p className="font-semibold text-[#18191D] dark:text-[#C9A46B]">
+                    <div className="mt-4 rounded-xl border border-[#E2E8F0] bg-[#F1F5F9]/60 p-4 text-sm text-[#0F172A] dark:border-[#60A5FA]/25 dark:bg-[#192440] dark:text-white">
+                      <p className="font-semibold text-[#2D3192] dark:text-[#93C5FD]">
                         Selected Size: {selectedPlot} Katha Plot
                       </p>
-                      <p className="mt-1 text-xs text-[#52555E] dark:text-zinc-300">
+                      <p className="mt-1 text-xs text-[#475569] dark:text-slate-300">
                         {selectedPlot === '3'
                           ? 'Published promotional installment from brochure (ab.jpg): 30,000 BDT / month over easy 5-year installment plan (or lump-sum).'
                           : selectedPlot === '5'
@@ -284,9 +284,9 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                       {KINGDOM_CITY_DATA.installmentPricing.map((plan) => (
                         <div
                           key={plan.plotSizeEnglish}
-                          className="rounded-2xl border border-[#18191D]/20 bg-[#18191D] p-5 text-white shadow-sm dark:border-[#8C6730]/30 dark:bg-[#141518]"
+                          className="rounded-2xl border border-[#2D3192]/30 bg-[#101A36] p-5 text-white shadow-sm dark:border-[#60A5FA]/25 dark:bg-[#10182C]"
                         >
-                          <p className="font-mono-tech text-[11px] uppercase tracking-wider text-[#C9A46B]">
+                          <p className="font-mono-tech text-[11px] uppercase tracking-wider text-[#93C5FD]">
                             {plan.plotSizeEnglish} ({plan.plotSizeBangla})
                           </p>
                           <p className="mt-1 font-display text-2xl font-bold tabular-nums">
@@ -303,13 +303,13 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                 </div>
 
                 {/* Zoomable ab.jpg Brochure Graphic */}
-                <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
+                <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div>
-                      <h3 className="font-display text-xl font-semibold text-[#18191D] dark:text-white">
+                      <h3 className="font-display text-xl font-semibold text-[#2D3192] dark:text-white">
                         Original Promotional Brochure &amp; Offer Sheet
                       </h3>
-                      <p className="text-xs text-[#52555E] dark:text-zinc-300">
+                      <p className="text-xs text-[#475569] dark:text-slate-300">
                         Preserved graphic from `/Home/content_details` (`ab.jpg`) — click to inspect at full resolution
                       </p>
                     </div>
@@ -323,14 +323,14 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                           caption: 'ধলেশ্বরী নদীর তীরে একখণ্ড জমি — 3 Katha 30,000 BDT & 5 Katha 40,000 BDT',
                         })
                       }
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#18191D] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#2D3192] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
                     >
                       <Maximize2 className="h-3.5 w-3.5" />
                       <span>Zoom Brochure</span>
                     </button>
                   </div>
 
-                  <div className="mt-4 overflow-hidden rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] dark:border-white/10 dark:bg-[#141518]">
+                  <div className="mt-4 overflow-hidden rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] dark:border-white/10 dark:bg-[#10182C]">
                     <img
                       src={KINGDOM_CITY_DATA.promoBrochureImage}
                       alt="KINGDOM City Promotional Brochure"
@@ -348,20 +348,20 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                 </div>
 
                 {/* Block-Wise Planned Civic Amenities */}
-                <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
-                  <h3 className="font-display text-xl font-semibold text-[#18191D] dark:text-white">
+                <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
+                  <h3 className="font-display text-xl font-semibold text-[#2D3192] dark:text-white">
                     Planned Civic Amenities in Every Block
                   </h3>
                   <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                     {KINGDOM_CITY_DATA.blockAmenities.map((item) => (
                       <div
                         key={item.en}
-                        className="flex items-start gap-2.5 rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-3.5 dark:border-white/10 dark:bg-[#141518]"
+                        className="flex items-start gap-2.5 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-3.5 dark:border-white/10 dark:bg-[#10182C]"
                       >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                         <div>
-                          <p className="text-sm font-semibold text-[#141518] dark:text-white">{item.en}</p>
-                          <p className="font-bengali text-xs text-[#52555E] dark:text-zinc-300">{item.bn}</p>
+                          <p className="text-sm font-semibold text-[#0F172A] dark:text-white">{item.en}</p>
+                          <p className="font-bengali text-xs text-[#475569] dark:text-slate-300">{item.bn}</p>
                         </div>
                       </div>
                     ))}
@@ -371,13 +371,13 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
             )}
 
             {activeTab === 'location-map' && (
-              <div className="space-y-6 rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E4E3DF] pb-4 dark:border-white/10">
+              <div className="space-y-6 rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E2E8F0] pb-4 dark:border-white/10">
                   <div>
-                    <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+                    <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                       Connectivity &amp; Site Map
                     </span>
-                    <h2 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white sm:text-3xl">
+                    <h2 className="mt-1 font-display text-2xl font-semibold text-[#2D3192] dark:text-white sm:text-3xl">
                       Location Map
                     </h2>
                   </div>
@@ -391,14 +391,14 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                         caption: 'Dhaka–Mawa By-Pass Road & Dhaleshwari River Corridor',
                       })
                     }
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#18191D] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#2D3192] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
                   >
-                    <Maximize2 className="h-4 w-4 text-[#C9A46B] dark:text-[#111215]" />
+                    <Maximize2 className="h-4 w-4 text-[#93C5FD] dark:text-white" />
                     <span>Open Interactive Zoom Viewer</span>
                   </button>
                 </div>
 
-                <div className="overflow-hidden rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-2 dark:border-white/10 dark:bg-[#141518]">
+                <div className="overflow-hidden rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-2 dark:border-white/10 dark:bg-[#10182C]">
                   <img
                     src={KINGDOM_CITY_DATA.locationMapImage}
                     alt="KINGDOM City Location Map"
@@ -415,17 +415,17 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                 </div>
 
                 <div>
-                  <h3 className="flex items-center gap-2 font-display text-lg font-semibold text-[#18191D] dark:text-white">
-                    <Compass className="h-5 w-5 text-[#8C6730] dark:text-[#C9A46B]" />
+                  <h3 className="flex items-center gap-2 font-display text-lg font-semibold text-[#2D3192] dark:text-white">
+                    <Compass className="h-5 w-5 text-[#2D3192] dark:text-[#93C5FD]" />
                     <span>Key Roadways &amp; Corridor Landmarks Shown on Map</span>
                   </h3>
                   <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
                     {KINGDOM_CITY_DATA.locationCorridors.map((corridor) => (
                       <div
                         key={corridor}
-                        className="flex items-center gap-2.5 rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-3 text-sm text-[#141518] dark:border-white/10 dark:bg-[#141518] dark:text-zinc-200"
+                        className="flex items-center gap-2.5 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-3 text-sm text-[#0F172A] dark:border-white/10 dark:bg-[#10182C] dark:text-slate-200"
                       >
-                        <MapPin className="h-4 w-4 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                        <MapPin className="h-4 w-4 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                         <span>{corridor}</span>
                       </div>
                     ))}
@@ -435,13 +435,13 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
             )}
 
             {activeTab === 'layout-plan' && (
-              <div className="space-y-6 rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E4E3DF] pb-4 dark:border-white/10">
+              <div className="space-y-6 rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E2E8F0] pb-4 dark:border-white/10">
                   <div>
-                    <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+                    <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                       Master Plan • Sectors 1–7
                     </span>
-                    <h2 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white sm:text-3xl">
+                    <h2 className="mt-1 font-display text-2xl font-semibold text-[#2D3192] dark:text-white sm:text-3xl">
                       City Layout PLAN
                     </h2>
                   </div>
@@ -455,14 +455,14 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                         caption: 'RAJUK RD - 0090 • Sectors 1–7 along 300 ft Dhaka–Mawa Bypass Road',
                       })
                     }
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#18191D] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#2D3192] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
                   >
-                    <Maximize2 className="h-4 w-4 text-[#C9A46B] dark:text-[#111215]" />
+                    <Maximize2 className="h-4 w-4 text-[#93C5FD] dark:text-white" />
                     <span>Inspect Masterplan at 300%</span>
                   </button>
                 </div>
 
-                <div className="overflow-hidden rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-2 dark:border-white/10 dark:bg-[#141518]">
+                <div className="overflow-hidden rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-2 dark:border-white/10 dark:bg-[#10182C]">
                   <img
                     src={KINGDOM_CITY_DATA.layoutPlanImage}
                     alt="KINGDOM City Layout Plan"
@@ -480,19 +480,19 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
 
                 {/* Extracted Sector Directory */}
                 <div>
-                  <h3 className="font-display text-xl font-semibold text-[#18191D] dark:text-white">
+                  <h3 className="font-display text-xl font-semibold text-[#2D3192] dark:text-white">
                     Township Sector Breakdown (Extracted from Layout Plan)
                   </h3>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {KINGDOM_CITY_DATA.sectors.map((sec) => (
                       <div
                         key={sec.sector}
-                        className="rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-4 dark:border-white/10 dark:bg-[#141518]"
+                        className="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 dark:border-white/10 dark:bg-[#10182C]"
                       >
-                        <p className="font-mono-tech text-xs font-bold uppercase text-[#18191D] dark:text-[#C9A46B]">
+                        <p className="font-mono-tech text-xs font-bold uppercase text-[#2D3192] dark:text-[#93C5FD]">
                           {sec.sector}
                         </p>
-                        <p className="mt-1 text-sm text-[#52555E] dark:text-zinc-300">{sec.highlights}</p>
+                        <p className="mt-1 text-sm text-[#475569] dark:text-slate-300">{sec.highlights}</p>
                       </div>
                     ))}
                   </div>
@@ -501,20 +501,20 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
             )}
 
             {activeTab === 'booking' && (
-              <div className="space-y-6 rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
-                <div className="border-b border-[#E4E3DF] pb-4 dark:border-white/10">
-                  <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+              <div className="space-y-6 rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
+                <div className="border-b border-[#E2E8F0] pb-4 dark:border-white/10">
+                  <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                     Plot Inquiry &amp; Client Desk
                   </span>
-                  <h2 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white sm:text-3xl">
+                  <h2 className="mt-1 font-display text-2xl font-semibold text-[#2D3192] dark:text-white sm:text-3xl">
                     Booking Contact
                   </h2>
-                  <p className="mt-1 text-sm text-[#52555E] dark:text-zinc-300">{HOUSING_BOOKING_DETAILS.intro}</p>
+                  <p className="mt-1 text-sm text-[#475569] dark:text-slate-300">{HOUSING_BOOKING_DETAILS.intro}</p>
                 </div>
 
                 {/* Hotlines */}
-                <div className="rounded-2xl border border-[#18191D] bg-[#18191D] p-6 text-white dark:border-white/10 dark:bg-[#141518]">
-                  <p className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#C9A46B]">
+                <div className="rounded-2xl border border-[#2D3192]/35 bg-[#101A36] p-6 text-white dark:border-white/10 dark:bg-[#10182C]">
+                  <p className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#93C5FD]">
                     Direct Booking Hotlines
                   </p>
                   <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -522,9 +522,9 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                       <a
                         key={hotline}
                         href={`tel:${hotline}`}
-                        className="flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-3 font-mono-tech text-sm font-semibold text-white tabular-nums transition hover:border-[#C9A46B] hover:bg-[#C9A46B] hover:text-[#0C0D0F]"
+                        className="flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-3 font-mono-tech text-sm font-semibold text-white tabular-nums transition hover:border-[#60A5FA] hover:bg-[#3B5BDB] hover:text-white"
                       >
-                        <Phone className="h-4 w-4 text-[#C9A46B]" />
+                        <Phone className="h-4 w-4 text-[#93C5FD]" />
                         <span>{hotline}</span>
                       </a>
                     ))}
@@ -534,14 +534,14 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                 {/* 3 Offices */}
                 <div className="grid gap-5 md:grid-cols-3">
                   {/* Corporate Office */}
-                  <div className="rounded-2xl border border-[#E4E3DF] bg-[#F9F9F8] p-5 dark:border-white/10 dark:bg-[#141518]">
-                    <h3 className="font-display text-lg font-semibold text-[#18191D] dark:text-[#C9A46B]">
+                  <div className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 dark:border-white/10 dark:bg-[#10182C]">
+                    <h3 className="font-display text-lg font-semibold text-[#2D3192] dark:text-[#93C5FD]">
                       {HOUSING_BOOKING_DETAILS.registeredCorporate.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[#141518] dark:text-zinc-200">
+                    <p className="mt-2 text-sm text-[#0F172A] dark:text-slate-200">
                       {HOUSING_BOOKING_DETAILS.registeredCorporate.address}
                     </p>
-                    <div className="mt-4 space-y-1.5 text-xs text-[#52555E] dark:text-zinc-300">
+                    <div className="mt-4 space-y-1.5 text-xs text-[#475569] dark:text-slate-300">
                       <p>
                         <strong className="dark:text-white">Phone:</strong> {HOUSING_BOOKING_DETAILS.registeredCorporate.phone}
                       </p>
@@ -552,7 +552,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                         <strong className="dark:text-white">Mobile:</strong> {HOUSING_BOOKING_DETAILS.registeredCorporate.mobile}
                       </p>
                       <p className="flex flex-wrap items-center gap-1">
-                        <Mail className="h-3.5 w-3.5 text-[#8C6730] dark:text-[#C9A46B]" />
+                        <Mail className="h-3.5 w-3.5 text-[#2D3192] dark:text-[#93C5FD]" />
                         <span>{HOUSING_BOOKING_DETAILS.registeredCorporate.emails.join(', ')}</span>
                       </p>
                       <p>
@@ -562,14 +562,14 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                   </div>
 
                   {/* Sales Office */}
-                  <div className="rounded-2xl border border-[#E4E3DF] bg-[#F9F9F8] p-5 dark:border-white/10 dark:bg-[#141518]">
-                    <h3 className="font-display text-lg font-semibold text-[#18191D] dark:text-[#C9A46B]">
+                  <div className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 dark:border-white/10 dark:bg-[#10182C]">
+                    <h3 className="font-display text-lg font-semibold text-[#2D3192] dark:text-[#93C5FD]">
                       {HOUSING_BOOKING_DETAILS.salesOffice.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[#141518] dark:text-zinc-200">
+                    <p className="mt-2 text-sm text-[#0F172A] dark:text-slate-200">
                       {HOUSING_BOOKING_DETAILS.salesOffice.address}
                     </p>
-                    <div className="mt-4 space-y-1.5 text-xs text-[#52555E] dark:text-zinc-300">
+                    <div className="mt-4 space-y-1.5 text-xs text-[#475569] dark:text-slate-300">
                       <p>
                         <strong className="dark:text-white">Mobile:</strong> {HOUSING_BOOKING_DETAILS.salesOffice.mobile}
                       </p>
@@ -584,16 +584,16 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                   </div>
 
                   {/* Site Office */}
-                  <div className="rounded-2xl border border-[#E4E3DF] bg-[#F9F9F8] p-5 dark:border-white/10 dark:bg-[#141518]">
-                    <h3 className="font-display text-lg font-semibold text-[#18191D] dark:text-[#C9A46B]">
+                  <div className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 dark:border-white/10 dark:bg-[#10182C]">
+                    <h3 className="font-display text-lg font-semibold text-[#2D3192] dark:text-[#93C5FD]">
                       {HOUSING_BOOKING_DETAILS.siteOffice.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[#141518] dark:text-zinc-200">
+                    <p className="mt-2 text-sm text-[#0F172A] dark:text-slate-200">
                       {HOUSING_BOOKING_DETAILS.siteOffice.address}
                     </p>
-                    <p className="mt-3 text-xs text-[#52555E] dark:text-zinc-300">
+                    <p className="mt-3 text-xs text-[#475569] dark:text-slate-300">
                       Layout Plan Reference:{' '}
-                      <span className="font-medium text-[#141518] dark:text-white">
+                      <span className="font-medium text-[#0F172A] dark:text-white">
                         {HOUSING_BOOKING_DETAILS.siteOffice.layoutPlanVariant}
                       </span>
                     </p>
@@ -603,23 +603,23 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
             )}
 
             {activeTab === 'gallery' && (
-              <div className="space-y-6 rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
-                <div className="border-b border-[#E4E3DF] pb-4 dark:border-white/10">
-                  <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+              <div className="space-y-6 rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
+                <div className="border-b border-[#E2E8F0] pb-4 dark:border-white/10">
+                  <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                     KINGDOM City Visuals
                   </span>
-                  <h2 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white sm:text-3xl">
+                  <h2 className="mt-1 font-display text-2xl font-semibold text-[#2D3192] dark:text-white sm:text-3xl">
                     Photo Gallery
                   </h2>
                 </div>
 
                 {/* Honest Audit Note regarding empty /Home/galleryH */}
-                <div className="rounded-xl border border-[#8C6730]/40 bg-[#F2F1EE]/60 p-4 dark:border-[#8C6730]/30 dark:bg-[#1E2026]">
+                <div className="rounded-xl border border-[#2D3192]/40 bg-[#F1F5F9]/60 p-4 dark:border-[#60A5FA]/25 dark:bg-[#192440]">
                   <div className="flex items-start gap-2.5">
-                    <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
-                    <p className="text-xs leading-relaxed text-[#52555E] dark:text-zinc-300">
-                      <strong className="text-[#141518] dark:text-white">Origin Page Status:</strong> The dedicated{' '}
-                      <code className="rounded bg-white px-1 py-0.5 font-mono-tech dark:bg-white/10 dark:text-[#DFC69B]">
+                    <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
+                    <p className="text-xs leading-relaxed text-[#475569] dark:text-slate-300">
+                      <strong className="text-[#0F172A] dark:text-white">Origin Page Status:</strong> The dedicated{' '}
+                      <code className="rounded bg-white px-1 py-0.5 font-mono-tech dark:bg-white/10 dark:text-[#BFDBFE]">
                         /Home/galleryH
                       </code>{' '}
                       gallery container on the original website currently contains zero published
@@ -649,7 +649,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                   ].map((photo) => (
                     <div
                       key={photo.src}
-                      className="group overflow-hidden rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] dark:border-white/10 dark:bg-[#141518]"
+                      className="group overflow-hidden rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] dark:border-white/10 dark:bg-[#10182C]"
                     >
                       <div className="relative overflow-hidden">
                         <img
@@ -667,17 +667,17 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                               caption: photo.caption,
                             })
                           }
-                          className="absolute bottom-2.5 right-2.5 rounded-lg bg-[#111215]/85 p-2 text-white transition hover:bg-[#18191D]"
+                          className="absolute bottom-2.5 right-2.5 rounded-lg bg-[#0F1629]/85 p-2 text-white transition hover:bg-[#2D3192]"
                           aria-label={`Zoom ${photo.title}`}
                         >
                           <Maximize2 className="h-3.5 w-3.5" />
                         </button>
                       </div>
                       <div className="p-3.5">
-                        <p className="font-bengali text-sm font-semibold text-[#141518] dark:text-white">
+                        <p className="font-bengali text-sm font-semibold text-[#0F172A] dark:text-white">
                           {photo.title}
                         </p>
-                        <p className="mt-0.5 text-xs text-[#52555E] dark:text-zinc-300">{photo.caption}</p>
+                        <p className="mt-0.5 text-xs text-[#475569] dark:text-slate-300">{photo.caption}</p>
                       </div>
                     </div>
                   ))}
@@ -686,15 +686,15 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
             )}
 
             {activeTab === 'feedback' && (
-              <div className="space-y-6 rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
-                <div className="border-b border-[#E4E3DF] pb-4 dark:border-white/10">
-                  <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+              <div className="space-y-6 rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8">
+                <div className="border-b border-[#E2E8F0] pb-4 dark:border-white/10">
+                  <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                     KINGDOM City Client Response
                   </span>
-                  <h2 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white sm:text-3xl">
+                  <h2 className="mt-1 font-display text-2xl font-semibold text-[#2D3192] dark:text-white sm:text-3xl">
                     Feedback
                   </h2>
-                  <p className="mt-1 text-sm text-[#52555E] dark:text-zinc-300">
+                  <p className="mt-1 text-sm text-[#475569] dark:text-slate-300">
                     Share feedback, site visit requests, or plot inquiries for KINGDOM Housing Ltd.
                   </p>
                 </div>
@@ -707,7 +707,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                 />
 
                 {feedbackError && (
-                  <div className="rounded-xl border border-[#B93832]/30 bg-red-50 px-4 py-3 text-sm text-[#B93832] dark:border-red-500/40 dark:bg-red-950/50 dark:text-red-200">
+                  <div className="rounded-xl border border-[#C8232C]/30 bg-red-50 px-4 py-3 text-sm text-[#C8232C] dark:border-red-500/40 dark:bg-red-950/50 dark:text-red-200">
                     {feedbackError}
                   </div>
                 )}
@@ -717,7 +717,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                     <div>
                       <label
                         htmlFor="contact_name"
-                        className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                        className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                       >
                         Your Name *
                       </label>
@@ -729,14 +729,14 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                         onChange={(e) => setContactName(e.target.value)}
                         placeholder="Your name"
                         required
-                        className="mt-2 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                        className="mt-2 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                       />
                     </div>
 
                     <div>
                       <label
                         htmlFor="contact_email"
-                        className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                        className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                       >
                         Your Email *
                       </label>
@@ -748,7 +748,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                         onChange={(e) => setContactEmail(e.target.value)}
                         placeholder="Your email"
                         required
-                        className="mt-2 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                        className="mt-2 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                       />
                     </div>
                   </div>
@@ -756,7 +756,7 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                   <div>
                     <label
                       htmlFor="contact_words"
-                      className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                      className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                     >
                       Your Message *
                     </label>
@@ -768,18 +768,18 @@ export function HousingPage({ defaultSection }: HousingPageProps) {
                       onChange={(e) => setContactWords(e.target.value)}
                       placeholder="Your Message"
                       required
-                      className="mt-2 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                      className="mt-2 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                     />
                   </div>
 
                   <div className="flex flex-wrap items-center justify-between gap-3">
-                    <span className="inline-flex items-center gap-1.5 text-xs text-[#52555E] dark:text-zinc-300">
-                      <FileText className="h-3.5 w-3.5 text-[#8C6730] dark:text-[#C9A46B]" />
+                    <span className="inline-flex items-center gap-1.5 text-xs text-[#475569] dark:text-slate-300">
+                      <FileText className="h-3.5 w-3.5 text-[#2D3192] dark:text-[#93C5FD]" />
                       Matches original <code className="font-mono-tech">/Home/feedback</code> fields
                     </span>
                     <button
                       type="submit"
-                      className="rounded-xl bg-[#18191D] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                      className="rounded-xl bg-[#2D3192] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
                     >
                       Submit Feedback
                     </button>

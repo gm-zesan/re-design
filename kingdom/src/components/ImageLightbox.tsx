@@ -45,7 +45,7 @@ export function ImageLightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col bg-[#111215]/95 text-white backdrop-blur-md"
+      className="fixed inset-0 z-50 flex flex-col bg-[#0F1629]/95 text-white backdrop-blur-md"
       role="dialog"
       aria-modal="true"
       aria-label={title || alt}
@@ -110,7 +110,7 @@ export function ImageLightbox({
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg border border-white/20 bg-white/10 p-2 text-white transition hover:bg-[#B93832]"
+            className="rounded-lg border border-white/20 bg-white/10 p-2 text-white transition hover:bg-[#C8232C]"
             aria-label="Close lightbox"
           >
             <X className="h-5 w-5" />

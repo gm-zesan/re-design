@@ -51,10 +51,10 @@ export function ContactPage() {
         <div className="mb-12">
           <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+              <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                 Office Locations
               </span>
-              <h2 className="mt-1 font-display text-3xl font-semibold text-[#18191D] dark:text-white">
+              <h2 className="mt-1 font-display text-3xl font-semibold text-[#2D3192] dark:text-white">
                 Nationwide &amp; Dhaka Office Directory
               </h2>
             </div>
@@ -62,9 +62,9 @@ export function ContactPage() {
               href={SITE_META.mapsPlaceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#18191D]/30 bg-white px-4 py-2 text-xs font-semibold text-[#18191D] transition hover:bg-[#18191D] hover:text-white dark:border-white/15 dark:bg-[#1A1C21] dark:text-[#C9A46B] dark:hover:bg-[#C9A46B] dark:hover:text-[#0C0D0F]"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#2D3192]/30 bg-white px-4 py-2 text-xs font-semibold text-[#2D3192] transition hover:bg-[#2D3192] hover:text-white dark:border-white/15 dark:bg-[#141D35] dark:text-[#93C5FD] dark:hover:bg-[#3B5BDB] dark:hover:text-white"
             >
-              <MapPin className="h-3.5 w-3.5 text-[#8C6730] dark:text-[#C9A46B]" />
+              <MapPin className="h-3.5 w-3.5 text-[#2D3192] dark:text-[#93C5FD]" />
               <span>Open KINGDOM GROUP on Google Maps</span>
               <ExternalLink className="h-3 w-3" />
             </a>
@@ -78,8 +78,8 @@ export function ContactPage() {
                   key={office.id}
                   className={`flex flex-col justify-between rounded-2xl border p-6 shadow-2xs ${
                     isControlUnit
-                      ? 'border-[#18191D] bg-[#18191D] text-white dark:border-[#8C6730]/40 dark:bg-[#141518] md:col-span-2 lg:col-span-3'
-                      : 'border-[#E4E3DF] bg-white text-[#141518] dark:border-white/10 dark:bg-[#1A1C21] dark:text-white'
+                      ? 'border-[#2D3192] bg-[#2D3192] text-white dark:border-[#60A5FA]/35 dark:bg-[#10182C] md:col-span-2 lg:col-span-3'
+                      : 'border-[#E2E8F0] bg-white text-[#0F172A] dark:border-white/10 dark:bg-[#141D35] dark:text-white'
                   }`}
                 >
                   <div>
@@ -87,7 +87,7 @@ export function ContactPage() {
                       <div className="flex items-center gap-2">
                         <Building2
                           className={`h-5 w-5 ${
-                            isControlUnit ? 'text-[#C9A46B]' : 'text-[#8C6730] dark:text-[#C9A46B]'
+                            isControlUnit ? 'text-[#93C5FD]' : 'text-[#2D3192] dark:text-[#93C5FD]'
                           }`}
                         />
                         <h3 className="font-display text-xl font-semibold">{office.title}</h3>
@@ -96,8 +96,8 @@ export function ContactPage() {
                         <span
                           className={`rounded-full px-2.5 py-0.5 font-mono-tech text-[10px] font-semibold uppercase tracking-wider ${
                             isControlUnit
-                              ? 'bg-[#8C6730] text-[#111215]'
-                              : 'bg-[#F2F1EE] text-[#18191D] dark:bg-[#C9A46B]/18 dark:text-[#DFC69B]'
+                              ? 'bg-[#2D3192] text-white'
+                              : 'bg-[#F1F5F9] text-[#2D3192] dark:bg-[#3B5BDB]/20 dark:text-[#BFDBFE]'
                           }`}
                         >
                           {office.badge}
@@ -107,7 +107,7 @@ export function ContactPage() {
 
                     <div
                       className={`mt-3 space-y-0.5 text-sm leading-relaxed ${
-                        isControlUnit ? 'text-white/85' : 'text-[#52555E] dark:text-zinc-300'
+                        isControlUnit ? 'text-white/85' : 'text-[#475569] dark:text-slate-300'
                       }`}
                     >
                       {office.addressLines.map((line) => (
@@ -119,12 +119,12 @@ export function ContactPage() {
                       className={`mt-4 space-y-2 text-xs ${
                         isControlUnit
                           ? 'flex flex-wrap items-center gap-4 space-y-0'
-                          : 'text-[#52555E] dark:text-zinc-300'
+                          : 'text-[#475569] dark:text-slate-300'
                       }`}
                     >
                       {office.phones && (
                         <p className="flex items-center gap-2">
-                          <Phone className="h-3.5 w-3.5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                          <Phone className="h-3.5 w-3.5 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                           <span className="tabular-nums">
                             <strong className="dark:text-white">Phone:</strong> {office.phones.join(', ')}
                           </span>
@@ -132,7 +132,7 @@ export function ContactPage() {
                       )}
                       {office.fax && (
                         <p className="flex items-center gap-2">
-                          <Printer className="h-3.5 w-3.5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                          <Printer className="h-3.5 w-3.5 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                           <span className="tabular-nums">
                             <strong className="dark:text-white">Fax:</strong> {office.fax.join(', ')}
                           </span>
@@ -143,15 +143,15 @@ export function ContactPage() {
                           <p key={mob} className="flex items-center gap-2">
                             <Phone
                               className={`h-3.5 w-3.5 shrink-0 ${
-                                isControlUnit ? 'text-[#C9A46B]' : 'text-[#8C6730] dark:text-[#C9A46B]'
+                                isControlUnit ? 'text-[#93C5FD]' : 'text-[#2D3192] dark:text-[#93C5FD]'
                               }`}
                             />
                             <a
                               href={`tel:${mob.replace(/\s+/g, '')}`}
                               className={`font-semibold tabular-nums hover:underline ${
                                 isControlUnit
-                                  ? 'rounded-lg bg-white/10 px-3 py-1.5 text-sm text-[#DFC69B]'
-                                  : 'text-[#18191D] dark:text-[#C9A46B]'
+                                  ? 'rounded-lg bg-white/10 px-3 py-1.5 text-sm text-[#BFDBFE]'
+                                  : 'text-[#2D3192] dark:text-[#93C5FD]'
                               }`}
                             >
                               {isControlUnit ? mob : `Mobile: ${mob}`}
@@ -160,7 +160,7 @@ export function ContactPage() {
                         ))}
                       {office.customerCare && (
                         <p className="flex items-center gap-2">
-                          <Phone className="h-3.5 w-3.5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                          <Phone className="h-3.5 w-3.5 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                           <span className="tabular-nums">
                             <strong className="dark:text-white">Customer Care:</strong> {office.customerCare}
                           </span>
@@ -168,7 +168,7 @@ export function ContactPage() {
                       )}
                       {office.collection && (
                         <p className="flex items-center gap-2">
-                          <Phone className="h-3.5 w-3.5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                          <Phone className="h-3.5 w-3.5 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                           <span className="tabular-nums">
                             <strong className="dark:text-white">Collection:</strong> {office.collection}
                           </span>
@@ -176,12 +176,12 @@ export function ContactPage() {
                       )}
                       {office.emails && (
                         <p className="flex items-start gap-2">
-                          <Mail className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                          <Mail className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                           <span>
                             <strong className="dark:text-white">E-mail:</strong>{' '}
                             {office.emails.map((em, i) => (
                               <span key={em}>
-                                <a href={`mailto:${em}`} className="text-[#18191D] hover:underline dark:text-[#C9A46B]">
+                                <a href={`mailto:${em}`} className="text-[#2D3192] hover:underline dark:text-[#93C5FD]">
                                   {em}
                                 </a>
                                 {i < office.emails!.length - 1 ? ', ' : ''}
@@ -192,7 +192,7 @@ export function ContactPage() {
                       )}
                       {office.web && (
                         <p className="flex items-center gap-2">
-                          <Globe className="h-3.5 w-3.5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                          <Globe className="h-3.5 w-3.5 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                           <span>
                             <strong className="dark:text-white">Web:</strong> {office.web}
                           </span>
@@ -206,10 +206,10 @@ export function ContactPage() {
                       className={`mt-4 flex items-start gap-1.5 border-t pt-3 text-[11px] ${
                         isControlUnit
                           ? 'border-white/15 text-white/75'
-                          : 'border-[#E4E3DF] text-[#52555E] dark:border-white/10 dark:text-zinc-400'
+                          : 'border-[#E2E8F0] text-[#475569] dark:border-white/10 dark:text-slate-400'
                       }`}
                     >
-                      <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
+                      <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#2D3192] dark:text-[#93C5FD]" />
                       <span>{office.note}</span>
                     </div>
                   )}
@@ -222,19 +222,19 @@ export function ContactPage() {
         {/* Map & Direct Inquiry Form Split */}
         <div className="grid gap-8 lg:grid-cols-12">
           {/* Embedded Map */}
-          <div className="overflow-hidden rounded-2xl border border-[#E4E3DF] bg-white p-3 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] lg:col-span-6">
+          <div className="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-3 shadow-xs dark:border-white/10 dark:bg-[#141D35] lg:col-span-6">
             <div className="mb-3 flex items-center justify-between px-2 pt-1">
               <div>
-                <h2 className="font-display text-xl font-semibold text-[#18191D] dark:text-white">
+                <h2 className="font-display text-xl font-semibold text-[#2D3192] dark:text-white">
                   Headquarters Map Location
                 </h2>
-                <p className="text-xs text-[#52555E] dark:text-zinc-300">Mohakhali DOHS, Dhaka-1206</p>
+                <p className="text-xs text-[#475569] dark:text-slate-300">Mohakhali DOHS, Dhaka-1206</p>
               </div>
               <a
                 href={SITE_META.mapsPlaceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-semibold text-[#18191D] hover:underline dark:text-[#C9A46B]"
+                className="text-xs font-semibold text-[#2D3192] hover:underline dark:text-[#93C5FD]"
               >
                 Larger Map →
               </a>
@@ -244,20 +244,20 @@ export function ContactPage() {
               src={SITE_META.mapsEmbedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-[360px] w-full rounded-xl border border-[#E4E3DF] dark:border-white/10"
+              className="h-[360px] w-full rounded-xl border border-[#E2E8F0] dark:border-white/10"
               allowFullScreen
             />
           </div>
 
           {/* Contact Inquiry Form */}
-          <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8 lg:col-span-6">
-            <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+          <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#141D35] sm:p-8 lg:col-span-6">
+            <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
               Direct Inquiry
             </span>
-            <h2 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white">
+            <h2 className="mt-1 font-display text-2xl font-semibold text-[#2D3192] dark:text-white">
               Send a Message
             </h2>
-            <p className="mt-1 text-sm text-[#52555E] dark:text-zinc-300">
+            <p className="mt-1 text-sm text-[#475569] dark:text-slate-300">
               Reach Corporate Headquarters or request plot and project consultation.
             </p>
 
@@ -271,7 +271,7 @@ export function ContactPage() {
             </div>
 
             {errorMsg && (
-              <div className="mt-4 rounded-xl border border-[#B93832]/30 bg-red-50 px-4 py-3 text-xs font-medium text-[#B93832] dark:border-red-500/40 dark:bg-red-950/50 dark:text-red-200">
+              <div className="mt-4 rounded-xl border border-[#C8232C]/30 bg-red-50 px-4 py-3 text-xs font-medium text-[#C8232C] dark:border-red-500/40 dark:bg-red-950/50 dark:text-red-200">
                 {errorMsg}
               </div>
             )}
@@ -280,7 +280,7 @@ export function ContactPage() {
               <div>
                 <label
                   htmlFor="contact-page-name"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Your Name *
                 </label>
@@ -291,14 +291,14 @@ export function ContactPage() {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="contact-page-email"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Your Email *
                 </label>
@@ -309,14 +309,14 @@ export function ContactPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="contact-page-msg"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Your Message *
                 </label>
@@ -327,16 +327,16 @@ export function ContactPage() {
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Your Message"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#18191D] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#2D3192] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
               >
                 <span>Get in touch &raquo;</span>
-                <Send className="h-4 w-4 text-[#C9A46B] dark:text-[#111215]" />
+                <Send className="h-4 w-4 text-[#93C5FD] dark:text-white" />
               </button>
             </form>
           </div>

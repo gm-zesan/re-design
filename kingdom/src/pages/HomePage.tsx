@@ -59,7 +59,7 @@ export function HomePage() {
   return (
     <div>
       {/* 1. Full-Screen Edge-to-Edge Architectural Gallery Hero (Emaar / Foster + Partners Aesthetic) */}
-      <section className="relative flex min-h-[calc(100svh-167px)] w-full flex-col justify-between overflow-hidden bg-[#0C0D0F] lg:min-h-[calc(100svh-147px)]">
+      <section className="relative flex min-h-[calc(100svh-167px)] w-full flex-col justify-between overflow-hidden bg-[#0B1120] lg:min-h-[calc(100svh-147px)]">
         {/* Unobstructed Flagship Architectural Photography + Subtle Ken Burns Motion */}
         <img
           src="/images/hero/kingdom-flagship-hero.jpg"
@@ -74,7 +74,7 @@ export function HomePage() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0A0B0D] via-[#0A0B0D]/80 via-[65%] to-transparent sm:via-[#0A0B0D]/68 sm:via-[38%]"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070B16] via-[#070B16]/80 via-[65%] to-transparent sm:via-[#070B16]/68 sm:via-[38%]"
         />
 
         {/* Top Discreet Architectural HUD Bar */}
@@ -82,7 +82,7 @@ export function HomePage() {
           <span className="font-mono-tech text-[10px] uppercase tracking-[0.2em] text-white/90 drop-shadow-xs sm:text-[11px] sm:tracking-[0.22em]">
             23.7789° N, 90.3942° E · Dhaka
           </span>
-          <span className="font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#DFC69B] drop-shadow-xs sm:text-[11px] sm:tracking-[0.22em]">
+          <span className="font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#BFDBFE] drop-shadow-xs sm:text-[11px] sm:tracking-[0.22em]">
             RAJUK RD-0090 · Est. 2006
           </span>
         </div>
@@ -92,13 +92,13 @@ export function HomePage() {
           <div className="flex flex-col justify-between gap-6 sm:gap-8 lg:flex-row lg:items-end">
             {/* Left Monumental Serif Anchor */}
             <div className="max-w-3xl">
-              <p className="font-mono-tech text-[11px] uppercase tracking-[0.24em] text-[#C9A46B] drop-shadow-[0_1px_10px_rgba(0,0,0,0.8)]">
+              <p className="font-mono-tech text-[11px] uppercase tracking-[0.24em] text-[#93C5FD] drop-shadow-[0_1px_10px_rgba(0,0,0,0.8)]">
                 Trusted Partner to Realize Your Dream
               </p>
 
               <h1 className="mt-2 font-display text-[2.15rem] font-semibold leading-[0.98] tracking-[-0.025em] text-white sm:mt-3 sm:text-6xl lg:text-[4.5rem]">
                 Shaping Skylines.
-                <span className="mt-1 block font-normal italic text-[#C9A46B]">
+                <span className="mt-1 block font-normal italic text-[#93C5FD]">
                   Enduring Foundations.
                 </span>
               </h1>
@@ -114,7 +114,7 @@ export function HomePage() {
             <div className="flex shrink-0 flex-wrap items-center gap-3 sm:gap-3.5 lg:justify-end">
               <Link
                 to="/concerns/housing"
-                className="inline-flex items-center gap-2 rounded-full bg-[#C9A46B] px-5 py-3 text-sm font-semibold text-[#0C0D0F] shadow-lg transition hover:bg-white sm:px-6 sm:py-3.5"
+                className="inline-flex items-center gap-2 rounded-full bg-[#3B5BDB] px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/25 shadow-lg transition hover:bg-white hover:text-[#2D3192] sm:px-6 sm:py-3.5"
               >
                 <span>Explore KINGDOM City</span>
                 <ArrowUpRight className="h-4 w-4" />
@@ -132,10 +132,10 @@ export function HomePage() {
           {/* Integrated Bottom Structural Pillars Bar */}
           <div className="mt-6 grid grid-cols-2 gap-3.5 border-t border-white/20 pt-4 sm:mt-8 sm:gap-6 sm:pt-5 lg:grid-cols-4 lg:gap-8">
             <Link to="/concerns/housing" className="group block">
-              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#C9A46B]">
+              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#93C5FD]">
                 01 · Township
               </span>
-              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#C9A46B]">
+              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#93C5FD]">
                 <span>KINGDOM City</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-60 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
               </p>
@@ -143,10 +143,10 @@ export function HomePage() {
             </Link>
 
             <Link to="/concerns/builders" className="group block">
-              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#C9A46B]">
+              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#93C5FD]">
                 02 · Real Estate
               </span>
-              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#C9A46B]">
+              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#93C5FD]">
                 <span>KINGDOM Builders</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-60 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
               </p>
@@ -154,10 +154,10 @@ export function HomePage() {
             </Link>
 
             <Link to="/concerns/construction" className="group block">
-              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#C9A46B]">
+              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#93C5FD]">
                 03 · Infrastructure
               </span>
-              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#C9A46B]">
+              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#93C5FD]">
                 <span>Civil &amp; Crusher Fleet</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-60 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
               </p>
@@ -165,10 +165,10 @@ export function HomePage() {
             </Link>
 
             <Link to="/about" className="group block">
-              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#C9A46B]">
+              <span className="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#93C5FD]">
                 04 · Heritage
               </span>
-              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#C9A46B]">
+              <p className="mt-1 flex items-center gap-1.5 font-display text-base font-medium text-white transition group-hover:text-[#93C5FD]">
                 <span>Incorporated 2006</span>
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-60 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
               </p>
@@ -182,15 +182,15 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#8C6730]">
+            <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#2D3192] dark:text-[#93C5FD]">
               Home • Corporate Heritage
             </span>
-            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-[#18191D] dark:text-white sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-[#2D3192] dark:text-white sm:text-4xl">
               {HOME_OVERVIEW.heading}
             </h2>
 
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-[#52555E] dark:text-zinc-300">
-              <p className="rounded-xl border-l-4 border-[#8C6730] bg-[#F2F1EE]/70 p-4 text-[#141518] dark:bg-[#1A1C21] dark:text-[#F4F3F0]">
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-[#475569] dark:text-slate-300">
+              <p className="rounded-xl border-l-4 border-[#2D3192] bg-[#F1F5F9]/70 p-4 text-[#0F172A] dark:bg-[#141D35] dark:text-[#F8FAFC]">
                 {HOME_OVERVIEW.paragraph1}
               </p>
               <p>{HOME_OVERVIEW.paragraph2}</p>
@@ -206,10 +206,10 @@ export function HomePage() {
               ].map(({ label, icon: Icon }) => (
                 <div
                   key={label}
-                  className="rounded-xl border border-[#E4E3DF] bg-white p-3.5 shadow-2xs dark:border-white/10 dark:bg-[#141518]"
+                  className="rounded-xl border border-[#E2E8F0] bg-white p-3.5 shadow-2xs dark:border-white/10 dark:bg-[#10182C]"
                 >
-                  <Icon className="h-5 w-5 text-[#18191D] dark:text-[#C9A46B]" />
-                  <p className="mt-2 text-xs font-semibold text-[#141518] dark:text-white">{label}</p>
+                  <Icon className="h-5 w-5 text-[#2D3192] dark:text-[#93C5FD]" />
+                  <p className="mt-2 text-xs font-semibold text-[#0F172A] dark:text-white">{label}</p>
                 </div>
               ))}
             </div>
@@ -217,14 +217,14 @@ export function HomePage() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#18191D] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#2D3192] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
               >
                 <span>Read Full Corporate Story</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/concerns/construction"
-                className="inline-flex items-center gap-2 rounded-xl border border-[#E4E3DF] bg-white px-5 py-2.5 text-sm font-semibold text-[#141518] transition hover:border-[#18191D] dark:border-white/15 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-white px-5 py-2.5 text-sm font-semibold text-[#0F172A] transition hover:border-[#2D3192] dark:border-white/15 dark:bg-[#10182C] dark:text-white dark:hover:border-[#93C5FD]"
               >
                 <span>Construction &amp; Fleet</span>
               </Link>
@@ -233,8 +233,8 @@ export function HomePage() {
 
           {/* Right Architectural Render Card */}
           <div className="lg:col-span-5">
-            <div className="overflow-hidden rounded-2xl border border-[#E4E3DF] bg-white p-3 shadow-md dark:border-white/10 dark:bg-[#141518]">
-              <div className="group relative overflow-hidden rounded-xl bg-[#111215]">
+            <div className="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-3 shadow-md dark:border-white/10 dark:bg-[#10182C]">
+              <div className="group relative overflow-hidden rounded-xl bg-[#0F1629]">
                 <img
                   src={HOME_OVERVIEW.sideImage}
                   alt={HOME_OVERVIEW.sideImageAlt}
@@ -250,17 +250,17 @@ export function HomePage() {
                       caption: 'Visual from origin homepage (kingdom_md_n_pm.jpg)',
                     })
                   }
-                  className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-lg bg-[#111215]/85 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-xs transition hover:bg-[#18191D]"
+                  className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-lg bg-[#0F1629]/85 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-xs transition hover:bg-[#2D3192]"
                 >
-                  <Maximize2 className="h-3.5 w-3.5 text-[#C9A46B]" />
+                  <Maximize2 className="h-3.5 w-3.5 text-[#93C5FD]" />
                   <span>Expand</span>
                 </button>
               </div>
               <div className="px-2 pb-1 pt-3">
-                <p className="text-sm font-semibold text-[#18191D] dark:text-[#C9A46B]">
+                <p className="text-sm font-semibold text-[#2D3192] dark:text-[#93C5FD]">
                   Multi-Story Residential Development Perspective
                 </p>
-                <p className="mt-1 text-xs text-[#52555E] dark:text-zinc-300">
+                <p className="mt-1 text-xs text-[#475569] dark:text-slate-300">
                   Public &amp; private client delivery across Dhaka and District Headquarters.
                 </p>
               </div>
@@ -270,14 +270,14 @@ export function HomePage() {
       </section>
 
       {/* 2B. Field Operations, Projects & Fleet Archive (All 11 Origin Showcase Slides) */}
-      <section className="border-t border-[#E4E3DF] bg-white/70 py-14 dark:border-white/10 dark:bg-[#111215] lg:py-16">
+      <section className="border-t border-[#E2E8F0] bg-white/70 py-14 dark:border-white/10 dark:bg-[#0F1629] lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#8C6730] dark:text-[#C9A46B]">
+              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#2D3192] dark:text-[#93C5FD]">
                 Project &amp; Operations Archive (11 Visuals)
               </span>
-              <h2 className="mt-1.5 font-display text-2xl font-semibold tracking-tight text-[#18191D] dark:text-white sm:text-3xl">
+              <h2 className="mt-1.5 font-display text-2xl font-semibold tracking-tight text-[#2D3192] dark:text-white sm:text-3xl">
                 Township Progress, Fleet &amp; Landmark Developments
               </h2>
             </div>
@@ -286,7 +286,7 @@ export function HomePage() {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E3DF] bg-white text-[#141518] transition hover:border-[#18191D] dark:border-white/15 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E2E8F0] bg-white text-[#0F172A] transition hover:border-[#2D3192] dark:border-white/15 dark:bg-[#10182C] dark:text-white dark:hover:border-[#93C5FD]"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -294,7 +294,7 @@ export function HomePage() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E3DF] bg-white text-[#141518] transition hover:border-[#18191D] dark:border-white/15 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E2E8F0] bg-white text-[#0F172A] transition hover:border-[#2D3192] dark:border-white/15 dark:bg-[#10182C] dark:text-white dark:hover:border-[#93C5FD]"
                 aria-label="Next slide"
               >
                 <ChevronRight className="h-4 w-4" />
@@ -302,7 +302,7 @@ export function HomePage() {
               <button
                 type="button"
                 onClick={() => setIsPlaying((p) => !p)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E3DF] bg-white text-[#141518] transition hover:border-[#18191D] dark:border-white/15 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E2E8F0] bg-white text-[#0F172A] transition hover:border-[#2D3192] dark:border-white/15 dark:bg-[#10182C] dark:text-white dark:hover:border-[#93C5FD]"
                 aria-label={isPlaying ? 'Pause showcase' : 'Play showcase'}
                 title={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
               >
@@ -318,7 +318,7 @@ export function HomePage() {
                     caption: currentSlide.subtitle,
                   })
                 }
-                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E3DF] bg-white text-[#141518] transition hover:border-[#18191D] dark:border-white/15 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E2E8F0] bg-white text-[#0F172A] transition hover:border-[#2D3192] dark:border-white/15 dark:bg-[#10182C] dark:text-white dark:hover:border-[#93C5FD]"
                 aria-label="Inspect slide full screen"
                 title="Inspect full image"
               >
@@ -330,10 +330,10 @@ export function HomePage() {
           <div className="mt-7 grid gap-6 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <div
-                className={`relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[#E4E3DF] shadow-xs dark:border-white/10 ${
+                className={`relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[#E2E8F0] shadow-xs dark:border-white/10 ${
                   currentSlide.fitMode === 'contain'
                     ? 'bg-black'
-                    : 'bg-[#ECEBE8] dark:bg-[#141518]'
+                    : 'bg-[#E2E8F0] dark:bg-[#10182C]'
                 }`}
               >
                 <img
@@ -358,20 +358,20 @@ export function HomePage() {
 
               <div className="mt-3.5 flex flex-wrap items-center justify-between gap-2">
                 <div>
-                  <span className="font-mono-tech text-[11px] uppercase tracking-[0.16em] text-[#8C6730] dark:text-[#C9A46B]">
+                  <span className="font-mono-tech text-[11px] uppercase tracking-[0.16em] text-[#2D3192] dark:text-[#93C5FD]">
                     {String(activeSlide + 1).padStart(2, '0')} / {HERO_SLIDES.length} —{' '}
                     {currentSlide.category}
                   </span>
-                  <h3 className="font-display text-lg font-semibold text-[#141518] dark:text-white">
+                  <h3 className="font-display text-lg font-semibold text-[#0F172A] dark:text-white">
                     {currentSlide.title}
                   </h3>
-                  <p className="font-bengali text-sm text-[#52555E] dark:text-zinc-300">
+                  <p className="font-bengali text-sm text-[#475569] dark:text-slate-300">
                     {currentSlide.subtitle}
                   </p>
                 </div>
                 <Link
                   to={currentSlide.linkTo}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#18191D] hover:underline dark:text-[#C9A46B]"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2D3192] hover:underline dark:text-[#93C5FD]"
                 >
                   <span>Explore Division</span>
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -391,14 +391,14 @@ export function HomePage() {
                     onClick={() => setActiveSlide(idx)}
                     className={`flex items-center justify-between rounded-lg border px-3 py-2 text-left transition ${
                       active
-                        ? 'border-[#18191D] bg-[#18191D] text-white dark:border-[#C9A46B] dark:bg-[#8C6730] dark:text-[#111215]'
-                        : 'border-[#E4E3DF] bg-[#F9F9F8] text-[#141518] hover:border-[#18191D]/40 dark:border-white/10 dark:bg-[#141518] dark:text-zinc-200 dark:hover:border-[#C9A46B]/40'
+                        ? 'border-[#2D3192] bg-[#2D3192] text-white dark:border-[#93C5FD] dark:bg-[#3B5BDB] dark:text-white'
+                        : 'border-[#E2E8F0] bg-[#F8FAFC] text-[#0F172A] hover:border-[#2D3192]/40 dark:border-white/10 dark:bg-[#10182C] dark:text-slate-200 dark:hover:border-[#93C5FD]/40'
                     }`}
                   >
                     <span className="min-w-0 truncate text-xs font-medium">
                       <span
                         className={`font-mono-tech mr-2 text-[10px] ${
-                          active ? 'text-[#C9A46B] dark:text-[#111215]' : 'text-[#8C6730] dark:text-[#C9A46B]'
+                          active ? 'text-[#93C5FD] dark:text-white' : 'text-[#2D3192] dark:text-[#93C5FD]'
                         }`}
                       >
                         {String(idx + 1).padStart(2, '0')}
@@ -407,7 +407,7 @@ export function HomePage() {
                     </span>
                     <span
                       className={`ml-2 shrink-0 font-mono-tech text-[10px] ${
-                        active ? 'text-white/80 dark:text-[#111215]/80' : 'text-[#52555E] dark:text-zinc-400'
+                        active ? 'text-white/80 dark:text-white/85' : 'text-[#475569] dark:text-slate-400'
                       }`}
                     >
                       {slide.badgeText || slide.category}
@@ -421,20 +421,20 @@ export function HomePage() {
       </section>
 
       {/* 3. Conglomerate Portfolio Bento Grid (All 7 Sister Concerns) */}
-      <section className="border-y border-[#E4E3DF] bg-[#F2F1EE]/60 py-16 dark:border-white/10 dark:bg-[#141518] lg:py-20">
+      <section className="border-y border-[#E2E8F0] bg-[#F1F5F9]/60 py-16 dark:border-white/10 dark:bg-[#10182C] lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#8C6730] dark:text-[#C9A46B]">
+              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#2D3192] dark:text-[#93C5FD]">
                 Our Concern Portfolio
               </span>
-              <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-[#18191D] dark:text-white sm:text-4xl">
+              <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-[#2D3192] dark:text-white sm:text-4xl">
                 Seven Diversified Companies Under One Group
               </h2>
             </div>
             <Link
               to="/concerns"
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[#18191D]/25 bg-white px-4 py-2 text-sm font-semibold text-[#18191D] transition hover:bg-[#18191D] hover:text-white dark:border-white/15 dark:bg-[#141518] dark:text-[#C9A46B] dark:hover:bg-[#C9A46B] dark:hover:text-[#0C0D0F]"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-[#2D3192]/25 bg-white px-4 py-2 text-sm font-semibold text-[#2D3192] transition hover:bg-[#2D3192] hover:text-white dark:border-white/15 dark:bg-[#10182C] dark:text-[#93C5FD] dark:hover:bg-[#3B5BDB] dark:hover:text-white"
             >
               <span>View Full Directory</span>
               <ArrowRight className="h-4 w-4" />
@@ -446,7 +446,7 @@ export function HomePage() {
               <Link
                 key={company.slug}
                 to={company.route}
-                className="group flex flex-col justify-between rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-2xs transition hover:-translate-y-0.5 hover:border-[#18191D]/40 hover:shadow-lg dark:border-white/10 dark:bg-[#1A1C21] dark:hover:border-[#C9A46B]/40"
+                className="group flex flex-col justify-between rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-2xs transition hover:-translate-y-0.5 hover:border-[#2D3192]/40 hover:shadow-lg dark:border-white/10 dark:bg-[#141D35] dark:hover:border-[#93C5FD]/40"
               >
                 <div>
                   <div className="flex items-start justify-between gap-4">
@@ -455,39 +455,39 @@ export function HomePage() {
                       alt={company.name}
                       className="h-14 w-auto max-w-[120px] object-contain dark:brightness-125 dark:drop-shadow-[0_0_0.6px_rgba(255,255,255,0.95)]"
                     />
-                    <span className="font-mono-tech rounded-full bg-[#F2F1EE] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#18191D] dark:bg-[#C9A46B]/18 dark:text-[#DFC69B]">
+                    <span className="font-mono-tech rounded-full bg-[#F1F5F9] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#2D3192] dark:bg-[#3B5BDB]/20 dark:text-[#BFDBFE]">
                       {company.hasOriginalDedicatedContent ? 'Flagship' : 'Group Entity'}
                     </span>
                   </div>
 
-                  <h3 className="mt-5 font-display text-xl font-semibold text-[#141518] transition group-hover:text-[#18191D] dark:text-white dark:group-hover:text-[#C9A46B]">
+                  <h3 className="mt-5 font-display text-xl font-semibold text-[#0F172A] transition group-hover:text-[#2D3192] dark:text-white dark:group-hover:text-[#93C5FD]">
                     {company.name}
                   </h3>
-                  <p className="mt-1 text-xs font-medium text-[#8C6730] dark:text-[#C9A46B]">{company.sector}</p>
+                  <p className="mt-1 text-xs font-medium text-[#2D3192] dark:text-[#93C5FD]">{company.sector}</p>
                   {company.tagline && (
-                    <p className="font-bengali mt-2 text-xs font-semibold text-[#18191D] dark:text-[#DFC69B]">
+                    <p className="font-bengali mt-2 text-xs font-semibold text-[#2D3192] dark:text-[#BFDBFE]">
                       {company.tagline}
                     </p>
                   )}
-                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[#52555E] dark:text-zinc-300">
+                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[#475569] dark:text-slate-300">
                     {company.summary}
                   </p>
                 </div>
 
-                <div className="mt-5 border-t border-[#E4E3DF] pt-4 dark:border-white/10">
+                <div className="mt-5 border-t border-[#E2E8F0] pt-4 dark:border-white/10">
                   {company.subUnits.length > 0 && (
                     <div className="mb-3 flex flex-wrap gap-1.5">
                       {company.subUnits.map((unit) => (
                         <span
                           key={unit.name}
-                          className="rounded-md bg-[#F9F9F8] px-2 py-0.5 text-[11px] font-medium text-[#52555E] ring-1 ring-[#E4E3DF] dark:bg-white/5 dark:text-zinc-300 dark:ring-white/15"
+                          className="rounded-md bg-[#F8FAFC] px-2 py-0.5 text-[11px] font-medium text-[#475569] ring-1 ring-[#E2E8F0] dark:bg-white/5 dark:text-slate-300 dark:ring-white/15"
                         >
                           {unit.name}
                         </span>
                       ))}
                     </div>
                   )}
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#18191D] group-hover:gap-2.5 dark:text-[#C9A46B]">
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2D3192] group-hover:gap-2.5 dark:text-[#93C5FD]">
                     <span>Explore {company.shortTitle}</span>
                     <ArrowRight className="h-4 w-4 transition-transform" />
                   </span>
@@ -502,7 +502,7 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-8 lg:grid-cols-12">
           {/* KINGDOM City Flagship Township Card */}
-          <div className="flex flex-col justify-between overflow-hidden rounded-2xl border border-[#18191D] bg-[#18191D] text-white shadow-xl dark:border-white/12 lg:col-span-7">
+          <div className="flex flex-col justify-between overflow-hidden rounded-2xl border border-[#2D3192]/40 bg-[#101A36] text-white shadow-xl dark:border-[#60A5FA]/20 dark:bg-[#121D3A] lg:col-span-7">
             <div className="p-6 sm:p-8">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
@@ -512,7 +512,7 @@ export function HomePage() {
                     className="h-12 w-12 rounded-xl object-cover"
                   />
                   <div>
-                    <span className="font-mono-tech text-[11px] uppercase tracking-[0.2em] text-[#C9A46B]">
+                    <span className="font-mono-tech text-[11px] uppercase tracking-[0.2em] text-[#93C5FD]">
                       KINGDOM Housing Ltd.
                     </span>
                     <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
@@ -520,13 +520,13 @@ export function HomePage() {
                     </h2>
                   </div>
                 </div>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-[#8C6730]/60 bg-[#C9A46B]/18 px-3 py-1 font-mono-tech text-xs text-[#DFC69B]">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[#60A5FA]/50 bg-[#3B5BDB]/25 px-3 py-1 font-mono-tech text-xs text-[#BFDBFE]">
                   <ShieldCheck className="h-3.5 w-3.5" />
                   RAJUK RD - 0090
                 </span>
               </div>
 
-              <p className="font-bengali mt-5 text-lg font-semibold text-[#DFC69B]">
+              <p className="font-bengali mt-5 text-lg font-semibold text-[#BFDBFE]">
                 {KINGDOM_CITY_DATA.banglaTagline} — {KINGDOM_CITY_DATA.banglaSubtitle}
               </p>
               <p className="font-bengali mt-2 text-sm leading-relaxed text-white/85">
@@ -541,7 +541,7 @@ export function HomePage() {
                     key={plan.plotSizeEnglish}
                     className="rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur-xs"
                   >
-                    <p className="font-mono-tech text-[11px] uppercase tracking-wider text-[#C9A46B]">
+                    <p className="font-mono-tech text-[11px] uppercase tracking-wider text-[#93C5FD]">
                       {plan.plotSizeEnglish}
                     </p>
                     <p className="mt-1 font-display text-2xl font-bold text-white tabular-nums">
@@ -556,25 +556,25 @@ export function HomePage() {
 
               <div className="mt-6 grid grid-cols-2 gap-2.5 text-xs text-white/85 sm:grid-cols-3">
                 <div className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
-                  <MapPin className="h-3.5 w-3.5 text-[#C9A46B]" />
+                  <MapPin className="h-3.5 w-3.5 text-[#93C5FD]" />
                   <span>Dhaka–Mawa Bypass Road</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
-                  <Layers className="h-3.5 w-3.5 text-[#C9A46B]" />
+                  <Layers className="h-3.5 w-3.5 text-[#93C5FD]" />
                   <span>Sectors 1 to 7 Masterplan</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
-                  <ShieldCheck className="h-3.5 w-3.5 text-[#C9A46B]" />
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#93C5FD]" />
                   <span className="font-bengali">খরিদ সূত্রে জমির মালিক</span>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/15 bg-[#141518] px-6 py-4 sm:px-8">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/15 bg-[#10182C] px-6 py-4 sm:px-8">
               <div className="flex flex-wrap gap-2">
                 <Link
                   to="/concerns/housing"
-                  className="rounded-lg bg-[#C9A46B] px-4 py-2 text-xs font-semibold text-[#0C0D0F] transition hover:bg-[#DFBE88]"
+                  className="rounded-lg bg-[#3B5BDB] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#4C6EF5]"
                 >
                   Overview &amp; Pricing
                 </Link>
@@ -593,7 +593,7 @@ export function HomePage() {
               </div>
               <Link
                 to="/concerns/housing/booking"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C9A46B] hover:underline"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#93C5FD] hover:underline"
               >
                 <Phone className="h-3.5 w-3.5" />
                 <span>01711-925098</span>
@@ -602,20 +602,20 @@ export function HomePage() {
           </div>
 
           {/* KINGDOM Builders Highlight */}
-          <div className="flex flex-col justify-between rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#1A1C21] sm:p-8 lg:col-span-5">
+          <div className="flex flex-col justify-between rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#141D35] sm:p-8 lg:col-span-5">
             <div>
               <div className="flex items-center justify-between gap-3">
-                <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
+                <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#2D3192] dark:text-[#93C5FD]">
                   KINGDOM Builders Ltd.
                 </span>
-                <span className="rounded-full bg-[#F2F1EE] px-3 py-0.5 text-[11px] font-semibold text-[#18191D] dark:bg-[#C9A46B]/18 dark:text-[#DFC69B]">
+                <span className="rounded-full bg-[#F1F5F9] px-3 py-0.5 text-[11px] font-semibold text-[#2D3192] dark:bg-[#3B5BDB]/20 dark:text-[#BFDBFE]">
                   Since 2006
                 </span>
               </div>
-              <h2 className="mt-2 font-display text-2xl font-semibold text-[#18191D] dark:text-white">
+              <h2 className="mt-2 font-display text-2xl font-semibold text-[#2D3192] dark:text-white">
                 Ongoing &amp; Landmark Projects
               </h2>
-              <p className="mt-2 text-sm leading-relaxed text-[#52555E] dark:text-zinc-300">
+              <p className="mt-2 text-sm leading-relaxed text-[#475569] dark:text-slate-300">
                 Dedicated to Quality and Commitment — delivering commercial complexes and
                 residential towers across Dhaka, Shariatpur, and Khulna.
               </p>
@@ -624,19 +624,19 @@ export function HomePage() {
                 {BUILDERS_PROJECTS.map((proj) => (
                   <div
                     key={proj.id}
-                    className="flex items-center gap-3 rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-3 dark:border-white/10 dark:bg-[#141518]"
+                    className="flex items-center gap-3 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-3 dark:border-white/10 dark:bg-[#10182C]"
                   >
                     <img
                       src={proj.image}
                       alt={proj.name}
-                      className="h-14 w-16 shrink-0 rounded-lg border border-[#E4E3DF] bg-white object-cover dark:border-white/15"
+                      className="h-14 w-16 shrink-0 rounded-lg border border-[#E2E8F0] bg-white object-cover dark:border-white/15"
                     />
                     <div className="min-w-0">
-                      <p className="text-sm font-semibold text-[#141518] dark:text-white">{proj.name}</p>
-                      <p className="line-clamp-1 text-xs text-[#52555E] dark:text-zinc-300">
+                      <p className="text-sm font-semibold text-[#0F172A] dark:text-white">{proj.name}</p>
+                      <p className="line-clamp-1 text-xs text-[#475569] dark:text-slate-300">
                         {proj.addressLines[0]}
                       </p>
-                      <span className="mt-0.5 inline-block font-mono-tech text-[10px] uppercase text-[#8C6730] dark:text-[#C9A46B]">
+                      <span className="mt-0.5 inline-block font-mono-tech text-[10px] uppercase text-[#2D3192] dark:text-[#93C5FD]">
                         {proj.category}
                       </span>
                     </div>
@@ -645,10 +645,10 @@ export function HomePage() {
               </div>
             </div>
 
-            <div className="mt-6 border-t border-[#E4E3DF] pt-4 dark:border-white/10">
+            <div className="mt-6 border-t border-[#E2E8F0] pt-4 dark:border-white/10">
               <Link
                 to="/concerns/builders"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#18191D] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#2D3192] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
               >
                 <span>View All Builders Projects</span>
                 <ArrowRight className="h-4 w-4" />
@@ -659,66 +659,66 @@ export function HomePage() {
       </section>
 
       {/* 5. Leadership Snapshot & Contact Strip */}
-      <section className="border-t border-[#E4E3DF] bg-white py-14 dark:border-white/10 dark:bg-[#141518]">
+      <section className="border-t border-[#E2E8F0] bg-white py-14 dark:border-white/10 dark:bg-[#10182C]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-8 lg:grid-cols-12">
             <div className="flex flex-col gap-5 sm:flex-row lg:col-span-8">
-              <div className="flex items-center gap-4 rounded-2xl border border-[#E4E3DF] bg-[#F9F9F8] p-4 dark:border-white/10 dark:bg-[#1A1C21] sm:flex-1">
+              <div className="flex items-center gap-4 rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 dark:border-white/10 dark:bg-[#141D35] sm:flex-1">
                 <img
                   src={ABOUT_DATA.managingDirector.image}
                   alt={ABOUT_DATA.managingDirector.name}
-                  className="h-20 w-20 shrink-0 rounded-xl border border-[#E4E3DF] object-cover object-top dark:border-white/15"
+                  className="h-20 w-20 shrink-0 rounded-xl border border-[#E2E8F0] object-cover object-top dark:border-white/15"
                 />
                 <div>
-                  <p className="font-mono-tech text-[10px] uppercase tracking-wider text-[#8C6730] dark:text-[#C9A46B]">
+                  <p className="font-mono-tech text-[10px] uppercase tracking-wider text-[#2D3192] dark:text-[#93C5FD]">
                     {ABOUT_DATA.managingDirector.title}
                   </p>
-                  <p className="font-display text-base font-semibold text-[#18191D] dark:text-white">
+                  <p className="font-display text-base font-semibold text-[#2D3192] dark:text-white">
                     {ABOUT_DATA.managingDirector.name}
                   </p>
-                  <p className="mt-1 line-clamp-2 text-xs text-[#52555E] dark:text-zinc-300">
+                  <p className="mt-1 line-clamp-2 text-xs text-[#475569] dark:text-slate-300">
                     Founder Managing Director leading KINGDOM GROUP since 2006.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 rounded-2xl border border-[#E4E3DF] bg-[#F9F9F8] p-4 dark:border-white/10 dark:bg-[#1A1C21] sm:flex-1">
+              <div className="flex items-center gap-4 rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 dark:border-white/10 dark:bg-[#141D35] sm:flex-1">
                 <img
                   src={ABOUT_DATA.founderChairmanArchive.image}
                   alt={ABOUT_DATA.founderChairmanArchive.name}
-                  className="h-20 w-20 shrink-0 rounded-xl border border-[#E4E3DF] object-cover object-top dark:border-white/15"
+                  className="h-20 w-20 shrink-0 rounded-xl border border-[#E2E8F0] object-cover object-top dark:border-white/15"
                 />
                 <div>
-                  <p className="font-mono-tech text-[10px] uppercase tracking-wider text-[#8C6730] dark:text-[#C9A46B]">
+                  <p className="font-mono-tech text-[10px] uppercase tracking-wider text-[#2D3192] dark:text-[#93C5FD]">
                     {ABOUT_DATA.founderChairmanArchive.title}
                   </p>
-                  <p className="font-display text-base font-semibold text-[#18191D] dark:text-white">
+                  <p className="font-display text-base font-semibold text-[#2D3192] dark:text-white">
                     {ABOUT_DATA.founderChairmanArchive.name}
                   </p>
-                  <p className="mt-1 text-xs text-[#52555E] dark:text-zinc-300">
+                  <p className="mt-1 text-xs text-[#475569] dark:text-slate-300">
                     {ABOUT_DATA.founderChairmanArchive.credentials} • REHAB &amp; BASIS Contributor
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col justify-center rounded-2xl border border-[#E4E3DF] bg-[#F2F1EE] p-6 dark:border-[#8C6730]/30 dark:bg-[#1E2026] lg:col-span-4">
-              <p className="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#18191D] dark:text-[#C9A46B]">
+            <div className="flex flex-col justify-center rounded-2xl border border-[#E2E8F0] bg-[#F1F5F9] p-6 dark:border-[#60A5FA]/25 dark:bg-[#192440] lg:col-span-4">
+              <p className="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2D3192] dark:text-[#93C5FD]">
                 7 Offices • 24h Control Unit
               </p>
-              <p className="mt-1 font-display text-xl font-semibold text-[#141518] dark:text-white">
+              <p className="mt-1 font-display text-xl font-semibold text-[#0F172A] dark:text-white">
                 Connect With KINGDOM GROUP
               </p>
               <div className="mt-4 flex flex-wrap gap-2.5">
                 <Link
                   to="/contact"
-                  className="rounded-lg bg-[#18191D] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                  className="rounded-lg bg-[#2D3192] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
                 >
                   Office Directory &amp; Map
                 </Link>
                 <Link
                   to="/career/apply"
-                  className="rounded-lg border border-[#18191D]/30 bg-white px-4 py-2 text-xs font-semibold text-[#18191D] transition hover:bg-[#18191D] hover:text-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+                  className="rounded-lg border border-[#2D3192]/30 bg-white px-4 py-2 text-xs font-semibold text-[#2D3192] transition hover:bg-[#2D3192] hover:text-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
                 >
                   Submit CV
                 </Link>

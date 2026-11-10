@@ -143,18 +143,18 @@ export function CvSubmissionPage() {
         )}
 
         {errorMsg && (
-          <div className="mb-6 rounded-xl border border-[#B93832]/40 bg-red-50 px-4 py-3 text-sm font-medium text-[#B93832] dark:border-red-500/40 dark:bg-red-950/50 dark:text-red-200">
+          <div className="mb-6 rounded-xl border border-[#C8232C]/40 bg-red-50 px-4 py-3 text-sm font-medium text-[#C8232C] dark:border-red-500/40 dark:bg-red-950/50 dark:text-red-200">
             {errorMsg}
           </div>
         )}
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-8 rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#1A1C21] sm:p-8"
+          className="space-y-8 rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#141D35] sm:p-8"
         >
           {/* Section 1: Personal & Role Selection */}
           <div>
-            <h2 className="border-b border-[#E4E3DF] pb-3 font-display text-xl font-semibold text-[#18191D] dark:border-white/10 dark:text-white">
+            <h2 className="border-b border-[#E2E8F0] pb-3 font-display text-xl font-semibold text-[#2D3192] dark:border-white/10 dark:text-white">
               1. Applicant &amp; Position Details
             </h2>
 
@@ -162,7 +162,7 @@ export function CvSubmissionPage() {
               <div>
                 <label
                   htmlFor="applicant_name"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Name *
                 </label>
@@ -174,14 +174,14 @@ export function CvSubmissionPage() {
                   onChange={(e) => setApplicantName(e.target.value)}
                   placeholder="Full Name"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="job_applied_post_name"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Position Applied (56 Roles) *
                 </label>
@@ -191,7 +191,7 @@ export function CvSubmissionPage() {
                   value={positionApplied}
                   onChange={(e) => setPositionApplied(e.target.value)}
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 >
                   <option value="">-- Select Position Applied --</option>
                   {POSITION_APPLIED_OPTIONS.map((opt) => (
@@ -203,29 +203,29 @@ export function CvSubmissionPage() {
               </div>
 
               <div>
-                <span className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200">
+                <span className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200">
                   Gender *
                 </span>
                 <div className="mt-2.5 flex items-center gap-6">
-                  <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-[#141518] dark:text-zinc-200">
+                  <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-[#0F172A] dark:text-slate-200">
                     <input
                       type="radio"
                       name="gender"
                       value="male"
                       checked={gender === 'male'}
                       onChange={() => setGender('male')}
-                      className="h-4 w-4 text-[#18191D] focus:ring-[#18191D] dark:accent-[#C9A46B]"
+                      className="h-4 w-4 text-[#2D3192] focus:ring-[#2D3192] dark:accent-[#93C5FD]"
                     />
                     <span>Male</span>
                   </label>
-                  <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-[#141518] dark:text-zinc-200">
+                  <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-[#0F172A] dark:text-slate-200">
                     <input
                       type="radio"
                       name="gender"
                       value="female"
                       checked={gender === 'female'}
                       onChange={() => setGender('female')}
-                      className="h-4 w-4 text-[#18191D] focus:ring-[#18191D] dark:accent-[#C9A46B]"
+                      className="h-4 w-4 text-[#2D3192] focus:ring-[#2D3192] dark:accent-[#93C5FD]"
                     />
                     <span>Female</span>
                   </label>
@@ -235,7 +235,7 @@ export function CvSubmissionPage() {
               <div>
                 <label
                   htmlFor="birth_day"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Date of Birth (dd/mm/yyyy) *
                 </label>
@@ -247,7 +247,7 @@ export function CvSubmissionPage() {
                   onChange={(e) => setBirthDay(e.target.value)}
                   placeholder="dd/mm/yyyy"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] tabular-nums focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] tabular-nums focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
             </div>
@@ -255,7 +255,7 @@ export function CvSubmissionPage() {
 
           {/* Section 2: Contact & Location */}
           <div>
-            <h2 className="border-b border-[#E4E3DF] pb-3 font-display text-xl font-semibold text-[#18191D] dark:border-white/10 dark:text-white">
+            <h2 className="border-b border-[#E2E8F0] pb-3 font-display text-xl font-semibold text-[#2D3192] dark:border-white/10 dark:text-white">
               2. Contact Information &amp; District
             </h2>
 
@@ -263,7 +263,7 @@ export function CvSubmissionPage() {
               <div>
                 <label
                   htmlFor="contact_no"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Contact No. *
                 </label>
@@ -275,14 +275,14 @@ export function CvSubmissionPage() {
                   onChange={(e) => setContactNo(e.target.value)}
                   placeholder="+880 1XXX-XXXXXX"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] tabular-nums focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] tabular-nums focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Email Address *
                 </label>
@@ -294,14 +294,14 @@ export function CvSubmissionPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@example.com"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <div className="sm:col-span-2">
                 <label
                   htmlFor="address"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Address *
                 </label>
@@ -313,14 +313,14 @@ export function CvSubmissionPage() {
                   onChange={(e) => setAddress(e.target.value)}
                   placeholder="Present / permanent mailing address"
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="district"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   District (All 64 Districts) *
                 </label>
@@ -330,7 +330,7 @@ export function CvSubmissionPage() {
                   value={district}
                   onChange={(e) => setDistrict(e.target.value)}
                   required
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 >
                   <option value="">-- Select District --</option>
                   {BANGLADESH_DISTRICTS.map((dist) => (
@@ -345,11 +345,11 @@ export function CvSubmissionPage() {
                 <div className="flex items-center justify-between">
                   <label
                     htmlFor="expert_on"
-                    className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                    className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                   >
                     Expert On
                   </label>
-                  <span className="font-mono-tech text-[11px] text-[#52555E] dark:text-zinc-400">
+                  <span className="font-mono-tech text-[11px] text-[#475569] dark:text-slate-400">
                     {expertOn.length} / 30 chars
                   </span>
                 </div>
@@ -361,7 +361,7 @@ export function CvSubmissionPage() {
                   value={expertOn}
                   onChange={(e) => setExpertOn(e.target.value)}
                   placeholder="Write your expertise (maximum 30 characters)"
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
             </div>
@@ -369,7 +369,7 @@ export function CvSubmissionPage() {
 
           {/* Section 3: Work Experiences */}
           <div>
-            <h2 className="border-b border-[#E4E3DF] pb-3 font-display text-xl font-semibold text-[#18191D] dark:border-white/10 dark:text-white">
+            <h2 className="border-b border-[#E2E8F0] pb-3 font-display text-xl font-semibold text-[#2D3192] dark:border-white/10 dark:text-white">
               3. Experiences
             </h2>
 
@@ -377,7 +377,7 @@ export function CvSubmissionPage() {
               <div>
                 <label
                   htmlFor="experience1"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Experience 1
                 </label>
@@ -388,14 +388,14 @@ export function CvSubmissionPage() {
                   value={experience1}
                   onChange={(e) => setExperience1(e.target.value)}
                   placeholder="Role, organization & duration"
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="experience2"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Experience 2
                 </label>
@@ -406,7 +406,7 @@ export function CvSubmissionPage() {
                   value={experience2}
                   onChange={(e) => setExperience2(e.target.value)}
                   placeholder="Previous role, organization & duration"
-                  className="mt-1.5 w-full rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-2.5 text-sm text-[#141518] focus:border-[#18191D] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#111215] dark:text-white dark:placeholder:text-zinc-400 dark:focus:border-[#C9A46B] dark:focus:bg-[#111215]"
+                  className="mt-1.5 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#2D3192] focus:bg-white focus:outline-none dark:border-white/15 dark:bg-[#0F1629] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#93C5FD] dark:focus:bg-[#0F1629]"
                 />
               </div>
             </div>
@@ -414,16 +414,16 @@ export function CvSubmissionPage() {
 
           {/* Section 4: Picture, CV & Repeatable Other Documents */}
           <div>
-            <h2 className="border-b border-[#E4E3DF] pb-3 font-display text-xl font-semibold text-[#18191D] dark:border-white/10 dark:text-white">
+            <h2 className="border-b border-[#E2E8F0] pb-3 font-display text-xl font-semibold text-[#2D3192] dark:border-white/10 dark:text-white">
               4. Document Attachments
             </h2>
 
             <div className="mt-5 grid gap-6 sm:grid-cols-2">
               {/* Picture Upload */}
-              <div className="rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-4 dark:border-white/10 dark:bg-[#141518]">
+              <div className="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 dark:border-white/10 dark:bg-[#10182C]">
                 <label
                   htmlFor="picture_upload"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Picture (.jpg, .png, .pdf) *
                 </label>
@@ -432,10 +432,10 @@ export function CvSubmissionPage() {
                     <img
                       src={picturePreview}
                       alt="Applicant Preview"
-                      className="h-14 w-14 rounded-lg border border-[#E4E3DF] object-cover dark:border-white/15"
+                      className="h-14 w-14 rounded-lg border border-[#E2E8F0] object-cover dark:border-white/15"
                     />
                   ) : (
-                    <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-[#8C6730] bg-white text-[#8C6730] dark:bg-[#1A1C21] dark:text-[#C9A46B]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-[#2D3192] bg-white text-[#2D3192] dark:bg-[#141D35] dark:text-[#93C5FD]">
                       <UploadCloud className="h-5 w-5" />
                     </div>
                   )}
@@ -446,7 +446,7 @@ export function CvSubmissionPage() {
                       type="file"
                       accept=".jpg,.jpeg,.png,.pdf"
                       onChange={handlePictureChange}
-                      className="block w-full text-xs text-[#52555E] file:mr-3 file:rounded-lg file:border-0 file:bg-[#18191D] file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white hover:file:bg-[#2E3036] dark:text-zinc-300 dark:file:bg-[#8C6730] dark:file:text-[#111215] dark:hover:file:bg-[#C9A46B]"
+                      className="block w-full text-xs text-[#475569] file:mr-3 file:rounded-lg file:border-0 file:bg-[#2D3192] file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white hover:file:bg-[#1E2270] dark:text-slate-300 dark:file:bg-[#3B5BDB] dark:file:text-white dark:hover:file:bg-[#4C6EF5]"
                     />
                     {pictureName && (
                       <p className="mt-1 truncate text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
@@ -458,15 +458,15 @@ export function CvSubmissionPage() {
               </div>
 
               {/* Attach CV */}
-              <div className="rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-4 dark:border-white/10 dark:bg-[#141518]">
+              <div className="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 dark:border-white/10 dark:bg-[#10182C]">
                 <label
                   htmlFor="cv_file"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-zinc-200"
+                  className="block text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-slate-200"
                 >
                   Attach CV (.doc, .docx, .pdf, .jpg, .png) *
                 </label>
                 <div className="mt-3 flex items-center gap-3">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-[#8C6730] bg-white text-[#8C6730] dark:bg-[#1A1C21] dark:text-[#C9A46B]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-[#2D3192] bg-white text-[#2D3192] dark:bg-[#141D35] dark:text-[#93C5FD]">
                     <FileCheck2 className="h-5 w-5" />
                   </div>
                   <div className="min-w-0 flex-1">
@@ -476,7 +476,7 @@ export function CvSubmissionPage() {
                       type="file"
                       accept=".doc,.docx,.pdf,.jpg,.jpeg,.png"
                       onChange={handleCvChange}
-                      className="block w-full text-xs text-[#52555E] file:mr-3 file:rounded-lg file:border-0 file:bg-[#18191D] file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white hover:file:bg-[#2E3036] dark:text-zinc-300 dark:file:bg-[#8C6730] dark:file:text-[#111215] dark:hover:file:bg-[#C9A46B]"
+                      className="block w-full text-xs text-[#475569] file:mr-3 file:rounded-lg file:border-0 file:bg-[#2D3192] file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white hover:file:bg-[#1E2270] dark:text-slate-300 dark:file:bg-[#3B5BDB] dark:file:text-white dark:hover:file:bg-[#4C6EF5]"
                     />
                     {cvFileName && (
                       <p className="mt-1 truncate text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
@@ -489,20 +489,20 @@ export function CvSubmissionPage() {
             </div>
 
             {/* Repeatable Other Documents Rows */}
-            <div className="mt-6 rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-4 dark:border-white/10 dark:bg-[#141518]">
+            <div className="mt-6 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-4 dark:border-white/10 dark:bg-[#10182C]">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#141518] dark:text-white">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#0F172A] dark:text-white">
                     Other Documents (.doc, .docx, .pdf, .jpg, .png)
                   </p>
-                  <p className="text-[11px] text-[#52555E] dark:text-zinc-300">
+                  <p className="text-[11px] text-[#475569] dark:text-slate-300">
                     Add academic certificates, NID, or portfolio files as needed.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={addOtherDocRow}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#18191D] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#2D3192] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
                 >
                   <Plus className="h-3.5 w-3.5" />
                   <span>Add Row</span>
@@ -513,23 +513,23 @@ export function CvSubmissionPage() {
                 {otherDocs.map((row, idx) => (
                   <div
                     key={row.id}
-                    className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-[#E4E3DF] bg-white px-3 py-2.5 dark:border-white/10 dark:bg-[#1A1C21]"
+                    className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-[#E2E8F0] bg-white px-3 py-2.5 dark:border-white/10 dark:bg-[#141D35]"
                   >
                     <div className="flex min-w-0 flex-1 items-center gap-3">
-                      <span className="font-mono-tech text-xs text-[#52555E] dark:text-zinc-400">#{idx + 1}</span>
+                      <span className="font-mono-tech text-xs text-[#475569] dark:text-slate-400">#{idx + 1}</span>
                       <input
                         type="file"
                         name="others_document[]"
                         accept=".doc,.docx,.pdf,.jpg,.jpeg,.png"
                         onChange={(e) => handleOtherDocChange(row.id, e)}
-                        className="block w-full text-xs text-[#52555E] file:mr-3 file:rounded-lg file:border-0 file:bg-[#F2F1EE] file:px-3 file:py-1 file:text-xs file:font-semibold file:text-[#18191D] dark:text-zinc-300 dark:file:bg-white/10 dark:file:text-[#DFC69B]"
+                        className="block w-full text-xs text-[#475569] file:mr-3 file:rounded-lg file:border-0 file:bg-[#F1F5F9] file:px-3 file:py-1 file:text-xs file:font-semibold file:text-[#2D3192] dark:text-slate-300 dark:file:bg-white/10 dark:file:text-[#BFDBFE]"
                       />
                     </div>
                     {otherDocs.length > 1 && (
                       <button
                         type="button"
                         onClick={() => removeOtherDocRow(row.id)}
-                        className="rounded-lg p-1.5 text-[#B93832] transition hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/50"
+                        className="rounded-lg p-1.5 text-[#C8232C] transition hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/50"
                         aria-label={`Remove document row ${idx + 1}`}
                       >
                         <Trash2 className="h-4 w-4" />
@@ -542,14 +542,14 @@ export function CvSubmissionPage() {
           </div>
 
           {/* Submit */}
-          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#E4E3DF] pt-6 dark:border-white/10">
-            <span className="inline-flex items-center gap-1.5 text-xs text-[#52555E] dark:text-zinc-300">
-              <Info className="h-4 w-4 text-[#8C6730] dark:text-[#C9A46B]" />
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#E2E8F0] pt-6 dark:border-white/10">
+            <span className="inline-flex items-center gap-1.5 text-xs text-[#475569] dark:text-slate-300">
+              <Info className="h-4 w-4 text-[#2D3192] dark:text-[#93C5FD]" />
               <span>Fields marked (*) are required on the original application form.</span>
             </span>
             <button
               type="submit"
-              className="rounded-xl bg-[#18191D] px-7 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
+              className="rounded-xl bg-[#2D3192] px-7 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1E2270] dark:bg-[#3B5BDB] dark:text-white dark:hover:bg-[#4C6EF5]"
             >
               Submit CV Application
             </button>

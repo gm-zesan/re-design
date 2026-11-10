@@ -26,7 +26,7 @@ export function PageBanner({
   badge,
 }: PageBannerProps) {
   return (
-    <section className="relative flex min-h-[250px] flex-col justify-end overflow-hidden border-b border-[#E4E3DF] bg-[#0C0D0F] text-white dark:border-white/10 dark:bg-[#090A0C] sm:min-h-[290px] lg:min-h-[320px]">
+    <section className="relative flex min-h-[250px] flex-col justify-end overflow-hidden border-b border-[#E2E8F0] bg-[#0B1120] text-white dark:border-white/10 dark:bg-[#060A13] sm:min-h-[290px] lg:min-h-[320px]">
       <img
         src={backgroundImage}
         alt=""
@@ -36,17 +36,17 @@ export function PageBanner({
       {/* Directional & bottom edge gradient scrim: keeps left/bottom typography legible while leaving photography clear */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0C0D0F]/85 via-[#0C0D0F]/50 to-[#0C0D0F]/15 dark:from-[#090A0C]/90 dark:via-[#090A0C]/58 dark:to-[#090A0C]/20"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0B1120]/85 via-[#0B1120]/50 to-[#0B1120]/15 dark:from-[#060A13]/90 dark:via-[#060A13]/58 dark:to-[#060A13]/20"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0C0D0F]/80 via-[#0C0D0F]/25 to-black/20"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0B1120]/80 via-[#0B1120]/25 to-black/20"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-5 flex flex-wrap items-center gap-1.5 text-xs text-white/75">
-          <Link to="/" className="inline-flex items-center gap-1 transition hover:text-[#C9A46B]">
+          <Link to="/" className="inline-flex items-center gap-1 transition hover:text-[#93C5FD]">
             <Home className="h-3.5 w-3.5" />
             <span>Home</span>
           </Link>
@@ -54,7 +54,7 @@ export function PageBanner({
             <span key={`${crumb.label}-${idx}`} className="inline-flex items-center gap-1.5">
               <ChevronRight className="h-3.5 w-3.5 text-white/40" />
               {crumb.to ? (
-                <Link to={crumb.to} className="transition hover:text-[#C9A46B]">
+                <Link to={crumb.to} className="transition hover:text-[#93C5FD]">
                   {crumb.label}
                 </Link>
               ) : (
@@ -67,11 +67,11 @@ export function PageBanner({
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-3xl">
             <div className="mb-3 flex flex-wrap items-center gap-2.5">
-              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C9A46B]">
+              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#93C5FD]">
                 {eyebrow}
               </span>
               {badge && (
-                <span className="rounded-full border border-[#8C6730]/50 bg-[#C9A46B]/18 px-2.5 py-0.5 font-mono-tech text-[11px] font-medium text-[#DFC69B]">
+                <span className="rounded-full border border-[#60A5FA]/45 bg-[#3B5BDB]/25 px-2.5 py-0.5 font-mono-tech text-[11px] font-medium text-[#BFDBFE]">
                   {badge}
                 </span>
               )}
@@ -89,7 +89,7 @@ export function PageBanner({
       </div>
 
       {/* Subtle architectural bottom accent line */}
-      <div className="relative h-1 w-full bg-gradient-to-r from-[#8C6730] via-[#C9A46B] to-[#2E3036]" />
+      <div className="relative h-1 w-full bg-gradient-to-r from-[#2D3192] via-[#3B5BDB] to-[#C8232C]" />
     </section>
   );
 }

@@ -8,15 +8,15 @@
   --font-bengali: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-canvas: #F9F9F8;
-  --color-sandstone: #F2F1EE;
-  --color-sandstone-deep: #E4E3DF;
-  --color-indigo-brand: #18191D;
-  --color-indigo-bright: #2E3036;
-  --color-ink: #141518;
-  --color-slate-muted: #52555E;
-  --color-brass: #8C6730;
-  --color-crimson: #B93832;
+  --color-canvas: #F8FAFC;
+  --color-sandstone: #F1F5F9;
+  --color-sandstone-deep: #E2E8F0;
+  --color-indigo-brand: #2D3192;
+  --color-indigo-bright: #1E2270;
+  --color-ink: #10182C;
+  --color-slate-muted: #475569;
+  --color-brass: #2D3192;
+  --color-crimson: #C8232C;
 }
 
 @layer base {
@@ -29,8 +29,8 @@
 
   html.dark {
     color-scheme: dark;
-    background-color: #0C0D0F;
-    color: #F4F3F0;
+    background-color: #0B1120;
+    color: #F8FAFC;
   }
 }
 
