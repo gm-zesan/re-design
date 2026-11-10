@@ -1,0 +1,83 @@
+# Content Preservation & Migration Checklist
+
+Every item below has been extracted verbatim from `https://sharif.com.bd/` into `project-doc/extracted-pages.json` and `project-doc/extracted-properties.json`, and must be verified as present and accessible in the redesigned React application.
+
+## A. Global Header, Navigation & Footer
+- [x] Brand Logo (`/frontend/img/logo.png`), Title (`Sharif Properties Service`), Subtitle (`Home Management Dhaka`)
+- [x] Live World Clocks (`Dhaka`, `New York`, `Brisbane`, `Tokyo`)
+- [x] Top Utility Contact Bar (`Mr. ShariF`, `+8801636333333`, `mail@sharif.com.bd`, `login / register` -> `/userLogin`)
+- [x] Complete Navigation Menu & Submenus (`Home`, `Rent Property`, `Property` dropdown with 7 links, `Our Services` dropdown with 9 top links + 5 nested `Property Maintenance` sub-links, `Contact`)
+- [x] Floating WhatsApp Quick-Chat Action (`https://api.whatsapp.com/send?phone=8801636333333&text=`)
+- [x] Footer Column 1: 9 Bangladeshi Newspaper & Business Portal Links + 6 Featured Internal Location Links + Google Maps Search Links
+- [x] Footer Column 2: Newsletter Subscription Form (`newsletter_mail_insert`)
+- [x] Footer Column 3: Facebook Feed 8-Photo Showcase Grid (`i1.jpg`–`i8.jpg`)
+- [x] Footer Column 4: 8 Social Media Channels (Facebook, Twitter, LinkedIn, Google, Pinterest, YouTube, Vimeo, Lacartes)
+
+## B. Homepage Sections (`/`) — 100% Content Extracted
+- [x] Hero Banner (`Dhaka Real Estate Agents Bangladesh`) + Hero Background (`/frontend/img/header-bg.jpg`)
+- [x] Property Search Bar (`service apartment Dhaka`, `Search by Card No.`, expandable Advanced Search Filters: Category, Subcategory, 20 Areas, Price Range BDT 0–800,000, Size filter)
+- [x] Furnished Apartment Dhaka Tabbed Showcase (`Gulshan`: 6, `Banani`: 6, `Baridhara`: 6, `Niketon`: 5, `Uttara`: 2, `Bashundhara`: 6)
+- [x] Commercial Building Dhaka Tabbed Showcase (`Gulshan`: 6, `Banani`: 6, `Mohakhali`: 2, `Tejgaon`: 6, `Progoti Sarani`: 3, `Uttara`: 6)
+- [x] Our Services Section (Intro + 11 service bullet lines + 5 detailed service cards: `Rent collection`, `Inspections`, `Tenant Screening and Selection`, `Tenant Move In`, `Tenant Move Out`)
+- [x] Our Top Rated Properties (6 curated properties)
+- [x] Area Showcase Grid (19 properties across Gulshan Dhaka, Tongi, Tejgaon, Baridhara Diplomatic Zone, Shewrapara Mirpur, Dhanmondi, Niketon, Bashundhara, Motijheel, Banani Dhaka, Mohammadpur, Nikunja, Khulshi Chattogram, Mirpur-DOHS, Mohakhali, Uttara, Progoti Sarani, Gazipur, Ashulia)
+- [x] About / Fee Structure / Legal Notice (`Why Choose Us`, `Our Properties` 20% / 5% / 10,000 BDT management charges, `Legal Notice`, plus `/frontend/img/about-img.jpg`)
+- [x] Contact Information Cards (Banani Block-L office address, 2 phone numbers, 2 email addresses), Embedded Google Map, and Interactive Inquiry Form
+
+## C. Property Listings & Categories (`365` Properties + `11` Category Pages)
+- [x] All `11` `/property-type/...` category routes extracted with exact membership counts
+- [x] All `365` property listings extracted (`360` full detail pages + `5` card-salvaged entries)
+- [x] All `79` `RENTED` property statuses preserved accurately
+- [x] All Property Card Numbers (`S10001`–`S10439`), prices, per-sqft breakdowns, bedrooms, bathrooms, garage counts, sq ft, year built, features, amenities, addresses, postcodes, descriptions, `38` YouTube video embeds, `118` Google Map embeds, and `4,131` gallery image URLs preserved
+
+## D. All 50 Informational, Service & Neighborhood Guide Pages
+- [x] `/about` — About us (42 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/apartment-for-rent-baridhara` — Furnished Apartment Rent Baridhara (22 structured blocks, 1 YouTube, 0 Maps)
+- [x] `/apartment-for-rent-gulshan` — Apartments For Rent Dhaka (51 structured blocks, 0 YouTube, 1 Maps)
+- [x] `/apartment-rent-banani` — Furnished Apartments for Rent in Banani (17 structured blocks, 2 YouTube, 1 Maps)
+- [x] `/apartment-rent-baridhara` — Apartment Rent Baridhara (122 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/apartment-rent-dhaka` — Apartment Rent in Dhaka (34 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/apartment-rent-gulshan` — Furnished Apartments for Rent in Gulshan (75 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/apartment-rent-gulshan-north` — Apartments For Rent Dhaka (35 structured blocks, 0 YouTube, 2 Maps)
+- [x] `/apartments-for-rent-in-banani-dhaka` — service apartment banani (82 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/apartments-for-rent-in-baridhara-dhaka` — furnished apartments for rent in baridhara (14 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/apartments-for-rent-in-gulshan-dhaka` — Furnished Apartments for Rent in Gulshan (43 structured blocks, 2 YouTube, 1 Maps)
+- [x] `/baridhara-property` — Apartment for Rent Baridhara (68 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/building-maintenance-dhaka` — Building Maintenance Dhaka (43 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/building-repairing-dhaka` — Building Repairing Gulshan Dhaka (8 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/dhaka-property-management` — Dhaka Property Management Bangladesh (135 structured blocks, 0 YouTube, 2 Maps)
+- [x] `/dhaka-real-estate-broker` — Dhaka Real EState Broker (95 structured blocks, 0 YouTube, 1 Maps)
+- [x] `/electric-plumber-service-in-dhaka` — Electric & Plumber Service in Dhaka (40 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/estate-agent-dhaka` — Real Estate Broker Dhaka (7 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/facility-management-dhaka` — Facility Management Dhaka Bangladesh (29 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/furnished-apartment-baridhara-dhaka` — Furnished Apartments for Rent Baridhara Dhaka (29 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/furnished-apartment-for-rent-dhaka` — furnished apartments for rent in Dhaka (34 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/furnished-apartment-rent-dhaka` — furnished apartment for rent in Dhaka (27 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/furnished-apartment-rent-gulshan` — Furnished Apartments for Rent in Gulshan (20 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/furnished-apartments-for-rent-in-banani` — furnished apartments for rent in Banani (46 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/furnished-apartments-for-rent-in-baridhara` — Furnished Apartments for Rent in Baridhara (2 structured blocks, 1 YouTube, 0 Maps)
+- [x] `/furnished-apartments-for-rent-in-gulshan` — Furnished Apartment Rent Gulshan Dhaka (19 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/furnished-apartments-rent-in-baridhara` — Furnished Apartments for Rent in Baridhara (37 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/gulshan-property` — Dhaka Real Estate Agents Bangladesh (68 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/gulshan-property-management` — Dhaka Property Management Bangladesh (88 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/office-for-rent-dhaka` — Office Space for rent in Dhaka (80 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/office-rent-gulshan` — Real Estate Broker Dhaka (51 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/plumber-service-in-dhaka` — Plumber Mistri in Dhaka (38 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/property-for-rent-baridhara` — Rental Property Baridhara Dhaka (19 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/property-maintenance-dhaka` — Property Maintenance Dhaka (28 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/property-management-dhaka-bangladesh` — Property Management Dhaka (82 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/property-rent-gulshan` — Real Estate Broker Dhaka (54 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/property-service-dhaka` — Property Service Dhaka (32 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/property_mgmt` — Property Management Dhaka (82 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/real-estate-agent-bd` — Real Estate Agent Dhaka (7 structured blocks, 1 YouTube, 0 Maps)
+- [x] `/real-estate-agent-dhaka` — Real Estate Agent Dhaka (70 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/real-estate-broker-bangladesh` — Real EState Broker Dhaka (86 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/real-estate-broker-dhaka` — Real Estate Broker Dhaka (7 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/real-estate-brokerage-dhaka` — Real Estate Broker Dhaka (12 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/real-estate-dhaka-bangladesh` — Real Estate Service Dhaka (21 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/real-estate-management-dhaka` — Real Estate Management Dhaka (61 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/real-estate-rent-dhaka` — Dhaka Real Estate Agents Bangladesh (49 structured blocks, 0 YouTube, 0 Maps)
+- [x] `/service-apartment-dhaka` — service Apartments for Rent in Gulshan (102 structured blocks, 2 YouTube, 2 Maps)
+- [x] `/service-apartment-gulshan` — service Apartments for Rent in Gulshan (118 structured blocks, 2 YouTube, 2 Maps)
+- [x] `/service-apartment-in-gulshan` — Service Apartments in Gulshan (40 structured blocks, 1 YouTube, 1 Maps)
+- [x] `/service-apartments-dhaka` — Services (49 structured blocks, 0 YouTube, 0 Maps)

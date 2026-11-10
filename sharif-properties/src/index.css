@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --color-canvas: 247 248 251;       /* #F7F8FB */
+    --color-surface: 255 255 255;      /* #FFFFFF */
+    --color-panel: 238 241 247;        /* #EEF1F7 */
+    --color-hairline: 220 226 236;     /* #DCE2EC */
+    --color-ink: 17 24 39;             /* #111827 */
+    --color-ink-muted: 75 85 101;      /* #4B5565 */
+    --color-ink-subtle: 107 114 128;   /* #6B7280 */
+    --color-blue-tint: 238 242 250;    /* #EEF2FA */
+    --color-magenta-tint: 250 241 246; /* #FAF1F6 */
+  }
+
+  html.dark {
+    color-scheme: dark;
+    --color-canvas: 8 21 42;           /* #08152a */
+    --color-surface: 15 31 60;         /* #0F1F3C */
+    --color-panel: 23 43 79;           /* #172B4F */
+    --color-hairline: 42 66 110;       /* #2A426E */
+    --color-ink: 241 245 249;          /* #F1F5F9 */
+    --color-ink-muted: 194 206 226;    /* #C2CEE2 */
+    --color-ink-subtle: 148 163 184;   /* #94A3B8 */
+    --color-blue-tint: 22 44 82;       /* #162C52 */
+    --color-magenta-tint: 64 20 50;    /* #401432 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  .tabular-nums {
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+}
+
+/* Direct Dark Mode Surface & Text Guarantees (resilient even across un-restarted Vite dev HMR) */
+html.dark,
+html.dark body {
+  background-color: #08152a;
+  color: #f1f5f9;
+}
+
+html.dark .bg-canvas {
+  background-color: #08152a;
+}
+
+html.dark .bg-canvas\/60 {
+  background-color: rgba(8, 21, 42, 0.6);
+}
+
+html.dark .bg-surface,
+html.dark .hover\:bg-surface:hover,
+html.dark .focus\:bg-surface:focus {
+  background-color: #0f1f3c;
+}
+
+html.dark article.bg-surface {
+  background-color: #132548;
+}
+
+html.dark .bg-panel,
+html.dark .hover\:bg-panel:hover {
+  background-color: #172b4f;
+}
+
+html.dark .bg-panel\/60 {
+  background-color: rgba(23, 43, 79, 0.6);
+}
+
+html.dark .bg-brand-blueTint {
+  background-color: #162c52;
+}
+
+html.dark .bg-brand-magentaTint {
+  background-color: #401432;
+}
+
+html.dark .border-hairline {
+  border-color: #2a426e;
+}
+
+html.dark .border-hairline\/80 {
+  border-color: rgba(42, 66, 110, 0.8);
+}
+
+html.dark .divide-hairline > :not([hidden]) ~ :not([hidden]) {
+  border-color: #2a426e;
+}
+
+html.dark .text-ink,
+html.dark .hover\:text-ink:hover {
+  color: #f1f5f9;
+}
+
+html.dark .text-ink-muted {
+  color: #c2cee2;
+}
+
+html.dark .text-ink-subtle,
+html.dark .placeholder\:text-ink-subtle::placeholder {
+  color: #94a3b8;
+}
+
+/* High-Contrast Brand Utility Adaptation for Dark Mode */
+html.dark .text-brand-navy,
+html.dark .hover\:text-brand-navy:hover,
+html.dark .group:hover .group-hover\:text-brand-navy {
+  color: #f1f5f9;
+}
+
+html.dark .text-brand-royal,
+html.dark .hover\:text-brand-royal:hover,
+html.dark .group:hover .group-hover\:text-brand-royal {
+  color: #93c5fd;
+}
+
+html.dark .text-brand-cobalt,
+html.dark .hover\:text-brand-cobalt:hover,
+html.dark .group:hover .group-hover\:text-brand-cobalt {
+  color: #82aafa;
+}
+
+html.dark .text-brand-magenta,
+html.dark .hover\:text-brand-magenta:hover {
+  color: #f472b6;
+}
+
+html.dark .bg-brand-navy,
+html.dark .hover\:bg-brand-navy:hover {
+  background-color: #1f3a70;
+}
+
+html.dark .logo-frame {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+html.dark .shadow-soft {
+  box-shadow: 0 2px 12px -2px rgba(2, 6, 23, 0.55), 0 1px 4px -1px rgba(2, 6, 23, 0.35);
+}
+
+html.dark .shadow-elevated {
+  box-shadow: 0 16px 36px -8px rgba(2, 6, 23, 0.72), 0 4px 12px -2px rgba(2, 6, 23, 0.45);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F8FB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8C2D6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F59A3;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #08152a;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2C4674;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3F59A3;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
