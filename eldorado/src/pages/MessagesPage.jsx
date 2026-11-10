@@ -13,6 +13,8 @@ export default function MessagesPage() {
           { label: 'About Us', to: '/about-us' },
           { label: 'Our Message' },
         ]}
+        image="/media/slider/WhatsApp_Image_2023-07-23_at_12.39.21.jpeg"
+        badgeLabel="Leadership Address"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">

@@ -35,6 +35,8 @@ export default function BlogPage() {
         title="Journal & Updates"
         subtitle="Signing ceremonies, Milad & Doa Mahfil gatherings, and milestone residential handovers across El Dorado Developments Ltd."
         breadcrumbs={[{ label: 'Blog' }]}
+        image="/media/blog/HO.Arshad_Square_1.jpeg"
+        badgeLabel="Ceremonies & News"
       />
 
       <section className="bg-alabaster py-14 lg:py-20">

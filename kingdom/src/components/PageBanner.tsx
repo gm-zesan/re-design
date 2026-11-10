@@ -12,6 +12,7 @@ interface PageBannerProps {
   subtitle?: string;
   breadcrumbs: BreadcrumbItem[];
   backgroundImage?: string;
+  backgroundPositionClass?: string;
   badge?: string;
 }
 
@@ -20,36 +21,32 @@ export function PageBanner({
   title,
   subtitle,
   breadcrumbs,
-  backgroundImage,
+  backgroundImage = '/images/hero/kingdom-flagship-hero.jpg',
+  backgroundPositionClass = 'object-center',
   badge,
 }: PageBannerProps) {
   return (
-    <section className="relative overflow-hidden border-b border-[#E5DFD0] bg-[#1E1B5E] text-white dark:border-white/10 dark:bg-[#0D1024]">
-      {backgroundImage ? (
-        <>
-          <img
-            src={backgroundImage}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover opacity-25 mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0E1122]/95 via-[#1E1B5E]/90 to-[#1E1B5E]/80" />
-        </>
-      ) : (
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }}
-        />
-      )}
+    <section className="relative flex min-h-[250px] flex-col justify-end overflow-hidden border-b border-[#E4E3DF] bg-[#0C0D0F] text-white dark:border-white/10 dark:bg-[#090A0C] sm:min-h-[290px] lg:min-h-[320px]">
+      <img
+        src={backgroundImage}
+        alt=""
+        aria-hidden="true"
+        className={`absolute inset-0 h-full w-full object-cover ${backgroundPositionClass}`}
+      />
+      {/* Directional & bottom edge gradient scrim: keeps left/bottom typography legible while leaving photography clear */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0C0D0F]/85 via-[#0C0D0F]/50 to-[#0C0D0F]/15 dark:from-[#090A0C]/90 dark:via-[#090A0C]/58 dark:to-[#090A0C]/20"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0C0D0F]/80 via-[#0C0D0F]/25 to-black/20"
+      />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-5 flex flex-wrap items-center gap-1.5 text-xs text-white/75">
-          <Link to="/" className="inline-flex items-center gap-1 transition hover:text-[#E5C17B]">
+          <Link to="/" className="inline-flex items-center gap-1 transition hover:text-[#C9A46B]">
             <Home className="h-3.5 w-3.5" />
             <span>Home</span>
           </Link>
@@ -57,7 +54,7 @@ export function PageBanner({
             <span key={`${crumb.label}-${idx}`} className="inline-flex items-center gap-1.5">
               <ChevronRight className="h-3.5 w-3.5 text-white/40" />
               {crumb.to ? (
-                <Link to={crumb.to} className="transition hover:text-[#E5C17B]">
+                <Link to={crumb.to} className="transition hover:text-[#C9A46B]">
                   {crumb.label}
                 </Link>
               ) : (
@@ -70,11 +67,11 @@ export function PageBanner({
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-3xl">
             <div className="mb-3 flex flex-wrap items-center gap-2.5">
-              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#E5C17B]">
+              <span className="font-mono-tech text-xs uppercase tracking-[0.22em] text-[#C9A46B]">
                 {eyebrow}
               </span>
               {badge && (
-                <span className="rounded-full border border-[#B8862D]/50 bg-[#B8862D]/20 px-2.5 py-0.5 font-mono-tech text-[11px] font-medium text-[#F5DC9C]">
+                <span className="rounded-full border border-[#8C6730]/50 bg-[#C9A46B]/18 px-2.5 py-0.5 font-mono-tech text-[11px] font-medium text-[#DFC69B]">
                   {badge}
                 </span>
               )}
@@ -92,7 +89,7 @@ export function PageBanner({
       </div>
 
       {/* Subtle architectural bottom accent line */}
-      <div className="relative h-1 w-full bg-gradient-to-r from-[#B8862D] via-[#E5C17B] to-[#2E3192]" />
+      <div className="relative h-1 w-full bg-gradient-to-r from-[#8C6730] via-[#C9A46B] to-[#2E3036]" />
     </section>
   );
 }

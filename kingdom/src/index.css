@@ -8,14 +8,14 @@
   --font-bengali: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-canvas: #FAF8F3;
-  --color-sandstone: #F3ECD8;
-  --color-sandstone-deep: #E5DBBD;
-  --color-indigo-brand: #1E1B5E;
-  --color-indigo-bright: #2E3192;
-  --color-ink: #121629;
-  --color-slate-muted: #4A4F63;
-  --color-brass: #B8862D;
+  --color-canvas: #F9F9F8;
+  --color-sandstone: #F2F1EE;
+  --color-sandstone-deep: #E4E3DF;
+  --color-indigo-brand: #18191D;
+  --color-indigo-bright: #2E3036;
+  --color-ink: #141518;
+  --color-slate-muted: #52555E;
+  --color-brass: #8C6730;
   --color-crimson: #B93832;
 }
 
@@ -29,8 +29,8 @@
 
   html.dark {
     color-scheme: dark;
-    background-color: #0B0E1A;
-    color: #F1EFE9;
+    background-color: #0C0D0F;
+    color: #F4F3F0;
   }
 }
 
@@ -69,15 +69,28 @@
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 24px,
-    black calc(100% - 24px),
+    black 12px,
+    black calc(100% - 12px),
     transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 24px,
-    black calc(100% - 24px),
+    black 12px,
+    black calc(100% - 12px),
     transparent 100%
   );
+}
+
+@keyframes hero-ken-burns {
+  0% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-hero-ken-burns {
+  animation: hero-ken-burns 18s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }

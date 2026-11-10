@@ -44,6 +44,7 @@ export function CareerPage() {
         title="Job Circulars & Careers"
         subtitle="Explore current recruitment announcements and submit your CV directly into the KINGDOM GROUP talent database across 56 specialized designations."
         breadcrumbs={[{ label: 'Career' }]}
+        backgroundImage="/images/hero/stone-crusher.jpg"
         badge={`${POSITION_APPLIED_OPTIONS.length} Designations`}
       />
 
@@ -51,27 +52,27 @@ export function CareerPage() {
         <div className="grid gap-8 lg:grid-cols-12">
           {/* Active Job Circular Status (Preserves Empty State Without Fabrication) */}
           <div className="space-y-6 lg:col-span-7">
-            <div className="rounded-2xl border border-[#E5DFD0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#161B36] sm:p-8">
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E5DFD0] pb-4 dark:border-white/10">
+            <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E4E3DF] pb-4 dark:border-white/10">
                 <div className="flex items-center gap-2.5">
-                  <Briefcase className="h-5 w-5 text-[#B8862D] dark:text-[#E5C17B]" />
-                  <h2 className="font-display text-2xl font-semibold text-[#1E1B5E] dark:text-white">
+                  <Briefcase className="h-5 w-5 text-[#8C6730] dark:text-[#C9A46B]" />
+                  <h2 className="font-display text-2xl font-semibold text-[#18191D] dark:text-white">
                     Active Job Circulars
                   </h2>
                 </div>
-                <span className="rounded-full bg-[#F3ECD8] px-3 py-1 font-mono-tech text-xs font-semibold text-[#1E1B5E] dark:bg-[#B8862D]/20 dark:text-[#F5DC9C]">
+                <span className="rounded-full bg-[#F2F1EE] px-3 py-1 font-mono-tech text-xs font-semibold text-[#18191D] dark:bg-[#C9A46B]/18 dark:text-[#DFC69B]">
                   0 Active Circulars
                 </span>
               </div>
 
-              <div className="mt-6 rounded-2xl border border-dashed border-[#B8862D]/50 bg-[#FAF8F3] p-6 text-center dark:border-[#B8862D]/40 dark:bg-[#0F1326] sm:p-8">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#F3ECD8] text-[#1E1B5E] dark:bg-[#191F3D] dark:text-[#E5C17B]">
-                  <Info className="h-6 w-6 text-[#B8862D] dark:text-[#E5C17B]" />
+              <div className="mt-6 rounded-2xl border border-dashed border-[#8C6730]/50 bg-[#F9F9F8] p-6 text-center dark:border-[#8C6730]/40 dark:bg-[#141518] sm:p-8">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#F2F1EE] text-[#18191D] dark:bg-[#1E2026] dark:text-[#C9A46B]">
+                  <Info className="h-6 w-6 text-[#8C6730] dark:text-[#C9A46B]" />
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold text-[#1E1B5E] dark:text-white">
+                <h3 className="mt-4 font-display text-xl font-semibold text-[#18191D] dark:text-white">
                   No Open Job Circulars Currently Posted
                 </h3>
-                <p className="mx-auto mt-2 max-w-lg text-sm leading-relaxed text-[#4A4F63] dark:text-slate-300">
+                <p className="mx-auto mt-2 max-w-lg text-sm leading-relaxed text-[#52555E] dark:text-zinc-300">
                   The original KINGDOM GROUP{' '}
                   <code className="font-mono-tech">/career</code> circular board currently
                   contains zero active vacancy announcements. Prospective candidates across all{' '}
@@ -82,16 +83,16 @@ export function CareerPage() {
                 <div className="mt-6 flex flex-wrap justify-center gap-3">
                   <Link
                     to="/career/apply"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#1E1B5E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#2E3192] dark:bg-[#B8862D] dark:text-[#0E1122] dark:hover:bg-[#E5C17B]"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#18191D] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
                   >
-                    <FilePlus2 className="h-4 w-4 text-[#E5C17B] dark:text-[#0E1122]" />
+                    <FilePlus2 className="h-4 w-4 text-[#C9A46B] dark:text-[#111215]" />
                     <span>Open CV Submission Form</span>
                   </Link>
                   <Link
                     to="/team"
-                    className="inline-flex items-center gap-2 rounded-xl border border-[#E5DFD0] bg-white px-5 py-3 text-sm font-semibold text-[#121629] transition hover:border-[#1E1B5E] dark:border-white/15 dark:bg-[#161B36] dark:text-white dark:hover:border-[#E5C17B]"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[#E4E3DF] bg-white px-5 py-3 text-sm font-semibold text-[#141518] transition hover:border-[#18191D] dark:border-white/15 dark:bg-[#1A1C21] dark:text-white dark:hover:border-[#C9A46B]"
                   >
-                    <Users className="h-4 w-4 text-[#B8862D] dark:text-[#E5C17B]" />
+                    <Users className="h-4 w-4 text-[#8C6730] dark:text-[#C9A46B]" />
                     <span>View Team Members</span>
                   </Link>
                 </div>
@@ -99,18 +100,18 @@ export function CareerPage() {
             </div>
 
             {/* Department Taxonomy */}
-            <div className="rounded-2xl border border-[#E5DFD0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#161B36] sm:p-8">
-              <h3 className="font-display text-xl font-semibold text-[#1E1B5E] dark:text-white">
+            <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
+              <h3 className="font-display text-xl font-semibold text-[#18191D] dark:text-white">
                 Recruiting Disciplines Covered by CV Submission
               </h3>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {ROLE_GROUPS.map((group) => (
                   <div
                     key={group.title}
-                    className="rounded-xl border border-[#E5DFD0] bg-[#FAF8F3] p-4 dark:border-white/10 dark:bg-[#0F1326]"
+                    className="rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] p-4 dark:border-white/10 dark:bg-[#141518]"
                   >
-                    <p className="text-sm font-semibold text-[#1E1B5E] dark:text-[#E5C17B]">{group.title}</p>
-                    <p className="mt-1 text-xs leading-relaxed text-[#4A4F63] dark:text-slate-300">
+                    <p className="text-sm font-semibold text-[#18191D] dark:text-[#C9A46B]">{group.title}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-[#52555E] dark:text-zinc-300">
                       {group.examples}
                     </p>
                   </div>
@@ -121,8 +122,8 @@ export function CareerPage() {
 
           {/* Right Quick Application Sidebar */}
           <aside className="space-y-6 lg:col-span-5">
-            <div className="rounded-2xl border border-[#1E1B5E] bg-[#1E1B5E] p-6 text-white shadow-lg dark:border-white/10 dark:bg-[#10142A] sm:p-8">
-              <span className="font-mono-tech text-[11px] uppercase tracking-[0.2em] text-[#E5C17B]">
+            <div className="rounded-2xl border border-[#18191D] bg-[#18191D] p-6 text-white shadow-lg dark:border-white/10 dark:bg-[#141518] sm:p-8">
+              <span className="font-mono-tech text-[11px] uppercase tracking-[0.2em] text-[#C9A46B]">
                 Direct Talent Intake
               </span>
               <h3 className="mt-2 font-display text-2xl font-semibold">
@@ -136,31 +137,31 @@ export function CareerPage() {
 
               <Link
                 to="/career/apply"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#B8862D] px-5 py-3 text-sm font-semibold text-[#0E1122] transition hover:bg-[#E5C17B]"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#C9A46B] px-5 py-3 text-sm font-semibold text-[#0C0D0F] transition hover:bg-[#DFBE88]"
               >
                 <span>Proceed to CV Submission</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
 
-            <div className="rounded-2xl border border-[#E5DFD0] bg-white p-6 dark:border-white/10 dark:bg-[#161B36]">
-              <h4 className="font-display text-lg font-semibold text-[#1E1B5E] dark:text-white">
+            <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 dark:border-white/10 dark:bg-[#1A1C21]">
+              <h4 className="font-display text-lg font-semibold text-[#18191D] dark:text-white">
                 Related Career Links
               </h4>
               <div className="mt-3 space-y-2">
                 <Link
                   to="/notices"
-                  className="flex items-center justify-between rounded-xl border border-[#E5DFD0] bg-[#FAF8F3] px-4 py-3 text-sm font-medium text-[#121629] transition hover:border-[#1E1B5E] dark:border-white/10 dark:bg-[#0F1326] dark:text-white dark:hover:border-[#E5C17B]"
+                  className="flex items-center justify-between rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-3 text-sm font-medium text-[#141518] transition hover:border-[#18191D] dark:border-white/10 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
                 >
                   <span>General Notice (czm/G/201/103)</span>
-                  <ArrowRight className="h-4 w-4 text-[#B8862D] dark:text-[#E5C17B]" />
+                  <ArrowRight className="h-4 w-4 text-[#8C6730] dark:text-[#C9A46B]" />
                 </Link>
                 <Link
                   to="/team"
-                  className="flex items-center justify-between rounded-xl border border-[#E5DFD0] bg-[#FAF8F3] px-4 py-3 text-sm font-medium text-[#121629] transition hover:border-[#1E1B5E] dark:border-white/10 dark:bg-[#0F1326] dark:text-white dark:hover:border-[#E5C17B]"
+                  className="flex items-center justify-between rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] px-4 py-3 text-sm font-medium text-[#141518] transition hover:border-[#18191D] dark:border-white/10 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
                 >
                   <span>KINGDOM Team Members</span>
-                  <ArrowRight className="h-4 w-4 text-[#B8862D] dark:text-[#E5C17B]" />
+                  <ArrowRight className="h-4 w-4 text-[#8C6730] dark:text-[#C9A46B]" />
                 </Link>
               </div>
             </div>

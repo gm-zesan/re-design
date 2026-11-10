@@ -32,10 +32,11 @@ export default function GalleryPage() {
         eyebrow="Milestones & Celebrations"
         title="Photo Gallery"
         subtitle="Signing ceremonies, ground-breaking events, Doa Mahfils, and project milestones across Bashundhara R/A and Jalshiri Abashon."
+        image="/media/gallery/Daylight_Opening_day.jpg"
         breadcrumbs={[{ label: 'Gallery' }]}
         rightSlot={
-          <div className="border border-white/15 bg-white/5 px-5 py-3 text-sm text-white">
-            <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60">
+          <div className="border border-stone border-t-2 border-t-crimson bg-white/95 px-5 py-3 text-sm text-charcoal backdrop-blur-md dark:border-white/15 dark:border-t-crimson dark:bg-[#161920]/90 dark:text-white">
+            <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-concrete dark:text-white/60">
               Archive Summary
             </span>
             <span className="font-serif text-xl font-semibold">

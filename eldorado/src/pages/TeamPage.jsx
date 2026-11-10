@@ -14,6 +14,8 @@ export default function TeamPage() {
           { label: 'About Us', to: '/about-us' },
           { label: 'Our Team' },
         ]}
+        image="/media/slider/51f1b143659493.57f77d5c9619a.jpg"
+        badgeLabel="Architects & Advisors"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">

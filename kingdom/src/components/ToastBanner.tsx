@@ -26,7 +26,7 @@ export function ToastBanner({
       className={`rounded-xl border p-4 shadow-sm ${
         isSuccess
           ? 'border-emerald-200 bg-emerald-50 text-emerald-950 dark:border-emerald-500/30 dark:bg-emerald-950/60 dark:text-emerald-100'
-          : 'border-[#B8862D]/40 bg-[#F3ECD8] text-[#121629] dark:border-[#B8862D]/40 dark:bg-[#191F3D] dark:text-[#F5EFE0]'
+          : 'border-[#8C6730]/40 bg-[#F2F1EE] text-[#141518] dark:border-[#8C6730]/40 dark:bg-[#1E2026] dark:text-[#F4F3F0]'
       }`}
     >
       <div className="flex items-start justify-between gap-3">
@@ -34,7 +34,7 @@ export function ToastBanner({
           {isSuccess ? (
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" />
           ) : (
-            <Info className="mt-0.5 h-5 w-5 shrink-0 text-[#B8862D]" />
+            <Info className="mt-0.5 h-5 w-5 shrink-0 text-[#8C6730]" />
           )}
           <div>
             <p className="text-sm font-semibold">{title}</p>

@@ -11,7 +11,6 @@ import {
   X,
   FileSpreadsheet,
   ExternalLink,
-  Leaf,
   Building2,
   Sun,
   Moon,
@@ -30,7 +29,6 @@ export function Header() {
   const [showQuickEfs, setShowQuickEfs] = useState(false);
   const [efsUser, setEfsUser] = useState('');
   const [efsPass, setEfsPass] = useState('');
-  const [showBanglaTranslation, setShowBanglaTranslation] = useState(false);
 
   const handleQuickEfsSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -45,10 +43,9 @@ export function Header() {
   };
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${
-      isActive
-        ? 'bg-[#1E1B5E] text-white shadow-sm dark:bg-[#B8862D] dark:text-[#0E1122]'
-        : 'text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#F5DC9C]'
+    `inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${isActive
+      ? 'bg-[#18191D] text-white shadow-sm dark:bg-[#C9A46B]/18 dark:text-[#DFC69B] dark:ring-1 dark:ring-[#C9A46B]/45'
+      : 'text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#DFC69B]'
     }`;
 
   const isConcernsActive =
@@ -78,22 +75,22 @@ export function Header() {
     <>
       <div className="relative z-40">
         {/* 1. Top Corporate Utility Bar */}
-        <div className="bg-[#0E1122] text-xs text-white/85 dark:bg-[#070912]">
+        <div className="bg-[#111215] text-xs text-white/85 dark:bg-[#090A0C]">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-2 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
               <a
                 href={`tel:${SITE_META.primaryPhone.replace(/\s+/g, '')}`}
-                className="inline-flex items-center gap-1.5 font-medium text-white transition hover:text-[#E5C17B]"
+                className="inline-flex items-center gap-1.5 font-medium text-white transition hover:text-[#C9A46B]"
               >
-                <Phone className="h-3.5 w-3.5 text-[#E5C17B]" />
+                <Phone className="h-3.5 w-3.5 text-[#C9A46B]" />
                 <span className="tabular-nums">{SITE_META.primaryPhone}</span>
               </a>
 
               <a
                 href={`mailto:${SITE_META.primaryEmail}`}
-                className="inline-flex items-center gap-1.5 transition hover:text-[#E5C17B]"
+                className="inline-flex items-center gap-1.5 transition hover:text-[#C9A46B]"
               >
-                <Mail className="h-3.5 w-3.5 text-[#E5C17B]" />
+                <Mail className="h-3.5 w-3.5 text-[#C9A46B]" />
                 <span>{SITE_META.primaryEmail}</span>
               </a>
 
@@ -101,9 +98,9 @@ export function Header() {
                 href={SITE_META.mapsPlaceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden items-center gap-1.5 transition hover:text-[#E5C17B] sm:inline-flex"
+                className="hidden items-center gap-1.5 transition hover:text-[#C9A46B] sm:inline-flex"
               >
-                <MapPin className="h-3.5 w-3.5 text-[#E5C17B]" />
+                <MapPin className="h-3.5 w-3.5 text-[#C9A46B]" />
                 <span>Get Direction (Mohakhali DOHS)</span>
               </a>
             </div>
@@ -112,15 +109,15 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setShowQuickEfs((prev) => !prev)}
-                className="inline-flex items-center gap-1.5 rounded border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-white transition hover:border-[#B8862D] hover:bg-white/10"
+                className="inline-flex items-center gap-1.5 rounded border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-white transition hover:border-[#8C6730] hover:bg-white/10"
               >
-                <FileSpreadsheet className="h-3 w-3 text-[#E5C17B]" />
+                <FileSpreadsheet className="h-3 w-3 text-[#C9A46B]" />
                 <span>e-File Quick Login</span>
               </button>
 
               <Link
                 to="/login"
-                className="inline-flex items-center gap-1.5 rounded bg-[#B8862D]/20 px-2.5 py-1 text-[11px] font-semibold text-[#F5DC9C] ring-1 ring-[#B8862D]/40 transition hover:bg-[#B8862D] hover:text-[#0E1122]"
+                className="inline-flex items-center gap-1.5 rounded bg-[#C9A46B]/18 px-2.5 py-1 text-[11px] font-semibold text-[#DFC69B] ring-1 ring-[#8C6730]/40 transition hover:bg-[#C9A46B] hover:text-[#0C0D0F]"
               >
                 <Lock className="h-3 w-3" />
                 <span>Admin</span>
@@ -130,13 +127,13 @@ export function Header() {
 
           {/* Collapsible Header e-File System Quick Login Form (Preserves CompanyID=3, UserName, Password) */}
           {showQuickEfs && (
-            <div className="border-t border-white/10 bg-[#161A36] px-4 py-2.5 sm:px-6 lg:px-8">
+            <div className="border-t border-white/10 bg-[#1A1C21] px-4 py-2.5 sm:px-6 lg:px-8">
               <form
                 onSubmit={handleQuickEfsSubmit}
                 className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3"
               >
                 <div className="flex items-center gap-2 text-xs text-white/80">
-                  <span className="font-mono-tech rounded bg-white/10 px-2 py-0.5 text-[11px] text-[#E5C17B]">
+                  <span className="font-mono-tech rounded bg-white/10 px-2 py-0.5 text-[11px] text-[#C9A46B]">
                     eFS • CompanyID: 3
                   </span>
                   <span className="hidden md:inline">
@@ -153,7 +150,7 @@ export function Header() {
                     onChange={(e) => setEfsUser(e.target.value)}
                     placeholder="UserName"
                     aria-label="e-File System Username"
-                    className="w-36 rounded border border-white/20 bg-white/10 px-2.5 py-1 text-xs text-white placeholder:text-white/50 focus:border-[#E5C17B] focus:outline-none"
+                    className="w-36 rounded border border-white/20 bg-white/10 px-2.5 py-1 text-xs text-white placeholder:text-white/50 focus:border-[#C9A46B] focus:outline-none"
                   />
                   <input
                     type="password"
@@ -162,11 +159,11 @@ export function Header() {
                     onChange={(e) => setEfsPass(e.target.value)}
                     placeholder="Password"
                     aria-label="e-File System Password"
-                    className="w-36 rounded border border-white/20 bg-white/10 px-2.5 py-1 text-xs text-white placeholder:text-white/50 focus:border-[#E5C17B] focus:outline-none"
+                    className="w-36 rounded border border-white/20 bg-white/10 px-2.5 py-1 text-xs text-white placeholder:text-white/50 focus:border-[#C9A46B] focus:outline-none"
                   />
                   <button
                     type="submit"
-                    className="rounded bg-[#B8862D] px-3 py-1 text-xs font-semibold text-[#0E1122] transition hover:bg-[#E5C17B]"
+                    className="rounded bg-[#C9A46B] px-3 py-1 text-xs font-semibold text-[#0C0D0F] transition hover:bg-[#DFBE88]"
                   >
                     Login
                   </button>
@@ -185,45 +182,26 @@ export function Header() {
         </div>
 
         {/* 2. Bangla Eco-Housing Marquee Announcement Strip */}
-        <div className="border-b border-[#E5DBBD] bg-[#F3ECD8] text-[#1E1B5E] dark:border-white/10 dark:bg-[#141831] dark:text-[#F5DC9C]">
+        <div className="border-b border-[#E4E3DF] bg-[#F2F1EE] text-[#18191D] dark:border-white/10 dark:bg-[#141518] dark:text-[#F4F3F0]">
           <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-1.5 sm:px-6 lg:px-8">
-            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-800 px-2.5 py-0.5 text-[11px] font-semibold text-white">
-              <Leaf className="h-3 w-3" />
-              <span className="hidden sm:inline">Eco Pledge</span>
-            </span>
 
             <div className="marquee-fade-mask relative min-w-0 flex-1 overflow-hidden">
-              <div className="animate-marquee-slow items-center gap-12 font-bengali text-xs font-semibold text-[#1E1B5E] dark:text-[#F5DC9C] sm:text-sm">
+              <div className="animate-marquee-slow items-center gap-12 font-bengali text-xs font-semibold text-[#18191D] dark:text-[#F4F3F0] sm:text-sm">
                 <span>{SITE_META.banglaMarquee}</span>
-                <span className="text-[#B8862D]">•</span>
+                <span className="text-[#8C6730] dark:text-[#C9A46B]">•</span>
                 <span>{SITE_META.tagline}</span>
-                <span className="text-[#B8862D]">•</span>
+                <span className="text-[#8C6730] dark:text-[#C9A46B]">•</span>
                 <span>{SITE_META.banglaMarquee}</span>
-                <span className="text-[#B8862D]">•</span>
+                <span className="text-[#8C6730] dark:text-[#C9A46B]">•</span>
                 <span>{SITE_META.tagline}</span>
               </div>
             </div>
-
-            <button
-              type="button"
-              onClick={() => setShowBanglaTranslation((prev) => !prev)}
-              className="shrink-0 rounded border border-[#1E1B5E]/20 bg-white/70 px-2 py-0.5 text-[11px] font-medium text-[#1E1B5E] transition hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
-              title={SITE_META.banglaMarqueeTranslation}
-            >
-              {showBanglaTranslation ? 'Hide EN' : 'EN Meaning'}
-            </button>
           </div>
-
-          {showBanglaTranslation && (
-            <div className="border-t border-[#E5DBBD] bg-[#FAF8F3] px-4 py-1.5 text-center text-xs text-[#4A4F63] dark:border-white/10 dark:bg-[#0F1326] dark:text-slate-300">
-              Translation: &ldquo;{SITE_META.banglaMarqueeTranslation}&rdquo;
-            </div>
-          )}
         </div>
       </div>
 
       {/* 3. Sticky Main Brand & Navigation Bar */}
-      <header className="sticky top-0 z-40 border-b border-[#E5DFD0] bg-[#FAF8F3]/95 shadow-sm backdrop-blur-md transition-colors dark:border-white/10 dark:bg-[#0F1326]/95">
+      <header className="sticky top-0 z-40 border-b border-[#E4E3DF] bg-[#F9F9F8]/95 shadow-sm backdrop-blur-md transition-colors dark:border-white/10 dark:bg-[#141518]/95">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           {/* Brand Identity (Clean transparent logo with no background container or border) */}
           <Link to="/" className="group flex items-center gap-3">
@@ -233,10 +211,10 @@ export function Header() {
               className="h-10 w-auto object-contain transition dark:brightness-110 dark:hue-rotate-180 dark:invert sm:h-11"
             />
             <div className="hidden sm:block">
-              <p className="font-display text-lg font-bold leading-none tracking-tight text-[#1E1B5E] dark:text-white">
+              <p className="font-display text-lg font-bold leading-none tracking-tight text-[#18191D] dark:text-white">
                 KINGDOM GROUP
               </p>
-              <p className="mt-0.5 font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#4A4F63] dark:text-[#E5C17B]">
+              <p className="mt-0.5 font-mono-tech text-[10px] uppercase tracking-[0.18em] text-[#52555E] dark:text-[#C9A46B]">
                 Est. 2006 • Bangladesh
               </p>
             </div>
@@ -257,11 +235,10 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setOpenDropdown(openDropdown === 'about' ? null : 'about')}
-                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${
-                  isAboutActive
-                    ? 'bg-[#1E1B5E] text-white shadow-sm dark:bg-[#B8862D] dark:text-[#0E1122]'
-                    : 'text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#F5DC9C]'
-                }`}
+                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${isAboutActive
+                    ? 'bg-[#18191D] text-white shadow-sm dark:bg-[#C9A46B]/18 dark:text-[#DFC69B] dark:ring-1 dark:ring-[#C9A46B]/45'
+                    : 'text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#DFC69B]'
+                  }`}
                 aria-expanded={openDropdown === 'about'}
               >
                 <span>About Us</span>
@@ -270,24 +247,24 @@ export function Header() {
 
               {openDropdown === 'about' && (
                 <div className="absolute left-0 top-full w-60 pt-2">
-                  <div className="rounded-xl border border-[#E5DFD0] bg-white p-2 shadow-xl dark:border-white/15 dark:bg-[#141831]">
+                  <div className="rounded-xl border border-[#E4E3DF] bg-white p-2 shadow-xl dark:border-white/15 dark:bg-[#141518]">
                     <Link
                       to="/about"
                       onClick={() => setOpenDropdown(null)}
-                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#121629] transition hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#E5C17B]"
+                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#141518] transition hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#C9A46B]"
                     >
                       About KINGDOM GROUP
-                      <span className="mt-0.5 block text-xs font-normal text-[#4A4F63] dark:text-slate-300">
+                      <span className="mt-0.5 block text-xs font-normal text-[#52555E] dark:text-zinc-300">
                         Heritage, Leadership, Vision &amp; Mission
                       </span>
                     </Link>
                     <Link
                       to="/gallery"
                       onClick={() => setOpenDropdown(null)}
-                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#121629] transition hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#E5C17B]"
+                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#141518] transition hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#C9A46B]"
                     >
                       Photo Gallery
-                      <span className="mt-0.5 block text-xs font-normal text-[#4A4F63] dark:text-slate-300">
+                      <span className="mt-0.5 block text-xs font-normal text-[#52555E] dark:text-zinc-300">
                         Community Aid &amp; Group Portfolio
                       </span>
                     </Link>
@@ -305,11 +282,10 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setOpenDropdown(openDropdown === 'concerns' ? null : 'concerns')}
-                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${
-                  isConcernsActive
-                    ? 'bg-[#1E1B5E] text-white shadow-sm dark:bg-[#B8862D] dark:text-[#0E1122]'
-                    : 'text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#F5DC9C]'
-                }`}
+                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${isConcernsActive
+                    ? 'bg-[#18191D] text-white shadow-sm dark:bg-[#C9A46B]/18 dark:text-[#DFC69B] dark:ring-1 dark:ring-[#C9A46B]/45'
+                    : 'text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#DFC69B]'
+                  }`}
                 aria-expanded={openDropdown === 'concerns'}
               >
                 <span>Our Concern</span>
@@ -318,20 +294,20 @@ export function Header() {
 
               {openDropdown === 'concerns' && (
                 <div className="absolute -left-24 top-full w-[680px] pt-2">
-                  <div className="rounded-2xl border border-[#E5DFD0] bg-white p-5 shadow-2xl dark:border-white/15 dark:bg-[#141831]">
-                    <div className="mb-3 flex items-center justify-between border-b border-[#E5DFD0] pb-3 dark:border-white/10">
+                  <div className="rounded-2xl border border-[#E4E3DF] bg-white p-5 shadow-2xl dark:border-white/15 dark:bg-[#141518]">
+                    <div className="mb-3 flex items-center justify-between border-b border-[#E4E3DF] pb-3 dark:border-white/10">
                       <div>
-                        <p className="font-display text-base font-semibold text-[#1E1B5E] dark:text-white">
+                        <p className="font-display text-base font-semibold text-[#18191D] dark:text-white">
                           KINGDOM GROUP Sister Concerns (7 Entities)
                         </p>
-                        <p className="text-xs text-[#4A4F63] dark:text-slate-300">
+                        <p className="text-xs text-[#52555E] dark:text-zinc-300">
                           Explore Housing, Builders, Construction, Trading, Software &amp; Philanthropy
                         </p>
                       </div>
                       <Link
                         to="/concerns"
                         onClick={() => setOpenDropdown(null)}
-                        className="inline-flex items-center gap-1 rounded-lg bg-[#F3ECD8] px-3 py-1.5 text-xs font-semibold text-[#1E1B5E] transition hover:bg-[#1E1B5E] hover:text-white dark:bg-[#B8862D] dark:text-[#0E1122] dark:hover:bg-[#E5C17B]"
+                        className="inline-flex items-center gap-1 rounded-lg bg-[#F2F1EE] px-3 py-1.5 text-xs font-semibold text-[#18191D] transition hover:bg-[#18191D] hover:text-white dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
                       >
                         <span>All Concerns</span>
                         <ChevronRight className="h-3.5 w-3.5" />
@@ -342,7 +318,7 @@ export function Header() {
                       {CONCERN_COMPANIES.map((company) => (
                         <div
                           key={company.slug}
-                          className="rounded-xl border border-[#E5DFD0]/80 bg-[#FAF8F3] p-3 transition hover:border-[#1E1B5E]/40 hover:bg-white dark:border-white/10 dark:bg-[#0F1326] dark:hover:border-[#E5C17B]/50 dark:hover:bg-[#191F3D]"
+                          className="rounded-xl border border-[#E4E3DF]/80 bg-[#F9F9F8] p-3 transition hover:border-[#18191D]/40 hover:bg-white dark:border-white/10 dark:bg-[#141518] dark:hover:border-[#C9A46B]/50 dark:hover:bg-[#1E2026]"
                         >
                           <Link
                             to={company.route}
@@ -355,23 +331,23 @@ export function Header() {
                               className="h-9 w-11 shrink-0 object-contain dark:brightness-125 dark:drop-shadow-[0_0_0.5px_rgba(255,255,255,0.9)]"
                             />
                             <div className="min-w-0">
-                              <p className="text-sm font-semibold text-[#121629] hover:text-[#1E1B5E] dark:text-white dark:hover:text-[#E5C17B]">
+                              <p className="text-sm font-semibold text-[#141518] hover:text-[#18191D] dark:text-white dark:hover:text-[#C9A46B]">
                                 {company.name}
                               </p>
-                              <p className="line-clamp-1 text-[11px] text-[#4A4F63] dark:text-slate-300">
+                              <p className="line-clamp-1 text-[11px] text-[#52555E] dark:text-zinc-300">
                                 {company.sector}
                               </p>
                             </div>
                           </Link>
 
                           {company.subUnits.length > 0 && (
-                            <div className="mt-2 flex flex-wrap gap-1 border-t border-[#E5DFD0]/70 pt-2 dark:border-white/10">
+                            <div className="mt-2 flex flex-wrap gap-1 border-t border-[#E4E3DF]/70 pt-2 dark:border-white/10">
                               {company.subUnits.map((unit) => (
                                 <Link
                                   key={unit.name}
                                   to={company.route}
                                   onClick={() => setOpenDropdown(null)}
-                                  className="rounded bg-white px-2 py-0.5 text-[11px] text-[#1E1B5E] ring-1 ring-[#E5DFD0] transition hover:bg-[#1E1B5E] hover:text-white dark:bg-white/10 dark:text-[#F5DC9C] dark:ring-white/15 dark:hover:bg-[#B8862D] dark:hover:text-[#0E1122]"
+                                  className="rounded bg-white px-2 py-0.5 text-[11px] text-[#18191D] ring-1 ring-[#E4E3DF] transition hover:bg-[#18191D] hover:text-white dark:bg-white/10 dark:text-[#DFC69B] dark:ring-white/15 dark:hover:bg-[#C9A46B] dark:hover:text-[#0C0D0F]"
                                 >
                                   {unit.name}
                                 </Link>
@@ -395,11 +371,10 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setOpenDropdown(openDropdown === 'apps' ? null : 'apps')}
-                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${
-                  isAppsActive
-                    ? 'bg-[#1E1B5E] text-white shadow-sm dark:bg-[#B8862D] dark:text-[#0E1122]'
-                    : 'text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#F5DC9C]'
-                }`}
+                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${isAppsActive
+                    ? 'bg-[#18191D] text-white shadow-sm dark:bg-[#C9A46B]/18 dark:text-[#DFC69B] dark:ring-1 dark:ring-[#C9A46B]/45'
+                    : 'text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#DFC69B]'
+                  }`}
                 aria-expanded={openDropdown === 'apps'}
               >
                 <span>Applications</span>
@@ -408,14 +383,14 @@ export function Header() {
 
               {openDropdown === 'apps' && (
                 <div className="absolute left-0 top-full w-72 pt-2">
-                  <div className="rounded-xl border border-[#E5DFD0] bg-white p-2 shadow-xl dark:border-white/15 dark:bg-[#141831]">
+                  <div className="rounded-xl border border-[#E4E3DF] bg-white p-2 shadow-xl dark:border-white/15 dark:bg-[#141518]">
                     <Link
                       to="/applications"
                       onClick={() => setOpenDropdown(null)}
-                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#121629] transition hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#E5C17B]"
+                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#141518] transition hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#C9A46B]"
                     >
                       e-File System (eFS) &amp; Suite
-                      <span className="mt-0.5 block text-xs font-normal text-[#4A4F63] dark:text-slate-300">
+                      <span className="mt-0.5 block text-xs font-normal text-[#52555E] dark:text-zinc-300">
                         Corporate portal &amp; status overview
                       </span>
                     </Link>
@@ -424,10 +399,10 @@ export function Header() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setOpenDropdown(null)}
-                      className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-[#121629] transition hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#E5C17B]"
+                      className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-[#141518] transition hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white dark:hover:bg-white/10 dark:hover:text-[#C9A46B]"
                     >
                       <span>Supply Chain Management (SCM)</span>
-                      <ExternalLink className="h-3.5 w-3.5 text-[#4A4F63] dark:text-slate-300" />
+                      <ExternalLink className="h-3.5 w-3.5 text-[#52555E] dark:text-zinc-300" />
                     </a>
                   </div>
                 </div>
@@ -443,11 +418,10 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setOpenDropdown(openDropdown === 'career' ? null : 'career')}
-                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${
-                  isCareerActive
-                    ? 'bg-[#1E1B5E] text-white shadow-sm dark:bg-[#B8862D] dark:text-[#0E1122]'
-                    : 'text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#F5DC9C]'
-                }`}
+                className={`inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition ${isCareerActive
+                    ? 'bg-[#18191D] text-white shadow-sm dark:bg-[#C9A46B]/18 dark:text-[#DFC69B] dark:ring-1 dark:ring-[#C9A46B]/45'
+                    : 'text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#DFC69B]'
+                  }`}
                 aria-expanded={openDropdown === 'career'}
               >
                 <span>Career</span>
@@ -456,32 +430,32 @@ export function Header() {
 
               {openDropdown === 'career' && (
                 <div className="absolute left-0 top-full w-64 pt-2">
-                  <div className="rounded-xl border border-[#E5DFD0] bg-white p-2 shadow-xl dark:border-white/15 dark:bg-[#141831]">
+                  <div className="rounded-xl border border-[#E4E3DF] bg-white p-2 shadow-xl dark:border-white/15 dark:bg-[#141518]">
                     <Link
                       to="/team"
                       onClick={() => setOpenDropdown(null)}
-                      className="block rounded-lg px-3 py-2 text-sm font-medium text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white dark:hover:bg-white/10"
+                      className="block rounded-lg px-3 py-2 text-sm font-medium text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white dark:hover:bg-white/10"
                     >
                       KINGDOM Team Members
                     </Link>
                     <Link
                       to="/notices"
                       onClick={() => setOpenDropdown(null)}
-                      className="block rounded-lg px-3 py-2 text-sm font-medium text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white dark:hover:bg-white/10"
+                      className="block rounded-lg px-3 py-2 text-sm font-medium text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white dark:hover:bg-white/10"
                     >
                       General Notice
                     </Link>
                     <Link
                       to="/career"
                       onClick={() => setOpenDropdown(null)}
-                      className="block rounded-lg px-3 py-2 text-sm font-medium text-[#121629] hover:bg-[#F3ECD8] hover:text-[#1E1B5E] dark:text-white dark:hover:bg-white/10"
+                      className="block rounded-lg px-3 py-2 text-sm font-medium text-[#141518] hover:bg-[#F2F1EE] hover:text-[#18191D] dark:text-white dark:hover:bg-white/10"
                     >
                       Job Circular
                     </Link>
                     <Link
                       to="/career/apply"
                       onClick={() => setOpenDropdown(null)}
-                      className="mt-1 block rounded-lg bg-[#1E1B5E] px-3 py-2 text-sm font-semibold text-white hover:bg-[#2E3192] dark:bg-[#B8862D] dark:text-[#0E1122] dark:hover:bg-[#E5C17B]"
+                      className="mt-1 block rounded-lg bg-[#18191D] px-3 py-2 text-sm font-semibold text-white hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
                     >
                       CV Submission
                     </Link>
@@ -502,7 +476,7 @@ export function Header() {
               onClick={toggleTheme}
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E5DFD0] bg-white text-[#1E1B5E] transition hover:border-[#B8862D] hover:bg-[#F3ECD8] dark:border-white/15 dark:bg-white/10 dark:text-[#E5C17B] dark:hover:bg-white/20"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E3DF] bg-white text-[#18191D] transition hover:border-[#8C6730] hover:bg-[#F2F1EE] dark:border-white/15 dark:bg-white/10 dark:text-[#C9A46B] dark:hover:bg-white/20"
             >
               {theme === 'dark' ? (
                 <Sun className="h-4 w-4" aria-hidden="true" />
@@ -513,16 +487,16 @@ export function Header() {
 
             <Link
               to="/concerns/housing"
-              className="hidden items-center gap-1.5 rounded-lg bg-[#1E1B5E] px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#2E3192] dark:bg-[#B8862D] dark:text-[#0E1122] dark:hover:bg-[#E5C17B] sm:inline-flex"
+              className="hidden items-center gap-1.5 rounded-lg bg-[#18191D] px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#2E3036] dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88] sm:inline-flex"
             >
-              <Building2 className="h-3.5 w-3.5 text-[#E5C17B] dark:text-[#0E1122]" />
+              <Building2 className="h-3.5 w-3.5 text-[#C9A46B] dark:text-[#111215]" />
               <span>KINGDOM City</span>
             </Link>
 
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="inline-flex items-center justify-center rounded-lg border border-[#E5DFD0] bg-white p-2 text-[#121629] dark:border-white/15 dark:bg-white/10 dark:text-white lg:hidden"
+              className="inline-flex items-center justify-center rounded-lg border border-[#E4E3DF] bg-white p-2 text-[#141518] dark:border-white/15 dark:bg-white/10 dark:text-white lg:hidden"
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -533,45 +507,44 @@ export function Header() {
 
         {/* Mobile Drawer Navigation */}
         {mobileMenuOpen && (
-          <div className="max-h-[80vh] overflow-y-auto border-t border-[#E5DFD0] bg-white px-4 py-4 dark:border-white/10 dark:bg-[#141831] lg:hidden">
+          <div className="max-h-[80vh] overflow-y-auto border-t border-[#E4E3DF] bg-white px-4 py-4 dark:border-white/10 dark:bg-[#141518] lg:hidden">
             <div className="space-y-1.5">
               <Link
                 to="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#121629] hover:bg-[#F3ECD8] dark:text-white dark:hover:bg-white/10"
+                className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#141518] hover:bg-[#F2F1EE] dark:text-white dark:hover:bg-white/10"
               >
                 Home
               </Link>
 
               {/* Mobile About */}
-              <div className="rounded-lg border border-[#E5DFD0]/70 dark:border-white/10">
+              <div className="rounded-lg border border-[#E4E3DF]/70 dark:border-white/10">
                 <button
                   type="button"
                   onClick={() =>
                     setMobileExpanded(mobileExpanded === 'about' ? null : 'about')
                   }
-                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#121629] dark:text-white"
+                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#141518] dark:text-white"
                 >
                   <span>About Us</span>
                   <ChevronDown
-                    className={`h-4 w-4 transition ${
-                      mobileExpanded === 'about' ? 'rotate-180' : ''
-                    }`}
+                    className={`h-4 w-4 transition ${mobileExpanded === 'about' ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
                 {mobileExpanded === 'about' && (
-                  <div className="space-y-1 border-t border-[#E5DFD0]/70 bg-[#FAF8F3] px-3 py-2 dark:border-white/10 dark:bg-[#0F1326]">
+                  <div className="space-y-1 border-t border-[#E4E3DF]/70 bg-[#F9F9F8] px-3 py-2 dark:border-white/10 dark:bg-[#141518]">
                     <Link
                       to="/about"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                     >
                       About KINGDOM GROUP
                     </Link>
                     <Link
                       to="/gallery"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                     >
                       Photo Gallery
                     </Link>
@@ -580,27 +553,26 @@ export function Header() {
               </div>
 
               {/* Mobile Concerns */}
-              <div className="rounded-lg border border-[#E5DFD0]/70 dark:border-white/10">
+              <div className="rounded-lg border border-[#E4E3DF]/70 dark:border-white/10">
                 <button
                   type="button"
                   onClick={() =>
                     setMobileExpanded(mobileExpanded === 'concerns' ? null : 'concerns')
                   }
-                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#121629] dark:text-white"
+                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#141518] dark:text-white"
                 >
                   <span>Our Concern (7 Companies)</span>
                   <ChevronDown
-                    className={`h-4 w-4 transition ${
-                      mobileExpanded === 'concerns' ? 'rotate-180' : ''
-                    }`}
+                    className={`h-4 w-4 transition ${mobileExpanded === 'concerns' ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
                 {mobileExpanded === 'concerns' && (
-                  <div className="space-y-1 border-t border-[#E5DFD0]/70 bg-[#FAF8F3] px-3 py-2 dark:border-white/10 dark:bg-[#0F1326]">
+                  <div className="space-y-1 border-t border-[#E4E3DF]/70 bg-[#F9F9F8] px-3 py-2 dark:border-white/10 dark:bg-[#141518]">
                     <Link
                       to="/concerns"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm font-semibold text-[#1E1B5E] hover:bg-white dark:text-[#E5C17B] dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm font-semibold text-[#18191D] hover:bg-white dark:text-[#C9A46B] dark:hover:bg-white/10"
                     >
                       All Sister Concerns Overview
                     </Link>
@@ -609,7 +581,7 @@ export function Header() {
                         key={company.slug}
                         to={company.route}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                        className="block rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                       >
                         {company.name}
                       </Link>
@@ -619,27 +591,26 @@ export function Header() {
               </div>
 
               {/* Mobile Applications */}
-              <div className="rounded-lg border border-[#E5DFD0]/70 dark:border-white/10">
+              <div className="rounded-lg border border-[#E4E3DF]/70 dark:border-white/10">
                 <button
                   type="button"
                   onClick={() =>
                     setMobileExpanded(mobileExpanded === 'apps' ? null : 'apps')
                   }
-                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#121629] dark:text-white"
+                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#141518] dark:text-white"
                 >
                   <span>Applications</span>
                   <ChevronDown
-                    className={`h-4 w-4 transition ${
-                      mobileExpanded === 'apps' ? 'rotate-180' : ''
-                    }`}
+                    className={`h-4 w-4 transition ${mobileExpanded === 'apps' ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
                 {mobileExpanded === 'apps' && (
-                  <div className="space-y-1 border-t border-[#E5DFD0]/70 bg-[#FAF8F3] px-3 py-2 dark:border-white/10 dark:bg-[#0F1326]">
+                  <div className="space-y-1 border-t border-[#E4E3DF]/70 bg-[#F9F9F8] px-3 py-2 dark:border-white/10 dark:bg-[#141518]">
                     <Link
                       to="/applications"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                     >
                       e-File System (eFS) &amp; Suite
                     </Link>
@@ -647,7 +618,7 @@ export function Header() {
                       href="http://cyberdynetechnologyltd.com/scm/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                      className="flex items-center justify-between rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                     >
                       <span>Supply Chain Management (SCM)</span>
                       <ExternalLink className="h-3.5 w-3.5" />
@@ -657,48 +628,47 @@ export function Header() {
               </div>
 
               {/* Mobile Career */}
-              <div className="rounded-lg border border-[#E5DFD0]/70 dark:border-white/10">
+              <div className="rounded-lg border border-[#E4E3DF]/70 dark:border-white/10">
                 <button
                   type="button"
                   onClick={() =>
                     setMobileExpanded(mobileExpanded === 'career' ? null : 'career')
                   }
-                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#121629] dark:text-white"
+                  className="flex w-full items-center justify-between px-3 py-2.5 text-sm font-semibold text-[#141518] dark:text-white"
                 >
                   <span>Career &amp; People</span>
                   <ChevronDown
-                    className={`h-4 w-4 transition ${
-                      mobileExpanded === 'career' ? 'rotate-180' : ''
-                    }`}
+                    className={`h-4 w-4 transition ${mobileExpanded === 'career' ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
                 {mobileExpanded === 'career' && (
-                  <div className="space-y-1 border-t border-[#E5DFD0]/70 bg-[#FAF8F3] px-3 py-2 dark:border-white/10 dark:bg-[#0F1326]">
+                  <div className="space-y-1 border-t border-[#E4E3DF]/70 bg-[#F9F9F8] px-3 py-2 dark:border-white/10 dark:bg-[#141518]">
                     <Link
                       to="/team"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                     >
                       KINGDOM Team Members
                     </Link>
                     <Link
                       to="/notices"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                     >
                       General Notice
                     </Link>
                     <Link
                       to="/career"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm text-[#121629] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm text-[#141518] hover:bg-white dark:text-white/90 dark:hover:bg-white/10"
                     >
                       Job Circular
                     </Link>
                     <Link
                       to="/career/apply"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block rounded px-2 py-1.5 text-sm font-semibold text-[#1E1B5E] hover:bg-white dark:text-[#E5C17B] dark:hover:bg-white/10"
+                      className="block rounded px-2 py-1.5 text-sm font-semibold text-[#18191D] hover:bg-white dark:text-[#C9A46B] dark:hover:bg-white/10"
                     >
                       CV Submission
                     </Link>
@@ -709,7 +679,7 @@ export function Header() {
               <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#121629] hover:bg-[#F3ECD8] dark:text-white dark:hover:bg-white/10"
+                className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#141518] hover:bg-[#F2F1EE] dark:text-white dark:hover:bg-white/10"
               >
                 Contact
               </Link>

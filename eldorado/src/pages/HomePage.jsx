@@ -293,33 +293,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Dark Counter & Experience Band (75 / 400 / 20) */}
-      <section className="relative overflow-hidden bg-obsidian text-white">
+      {/* 4. Counter & Experience Band (75 / 400 / 20) */}
+      <section className="relative overflow-hidden border-y border-stone bg-limestone text-charcoal transition-colors duration-200 dark:border-white/10 dark:bg-obsidian dark:text-white">
         <img
           src={HOME_INTRO.counterBg}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-luminosity"
+          className="absolute inset-0 h-full w-full object-cover opacity-[0.06] mix-blend-multiply dark:opacity-20 dark:mix-blend-luminosity"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/92 to-[#1F232A]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-limestone/85 via-limestone/70 to-alabaster/80 dark:from-obsidian dark:via-obsidian/92 dark:to-[#1F232A]/90" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-5">
-              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-bronze-light">
+              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-bronze-ink dark:text-bronze-light">
                 Proven Track Record
               </span>
-              <h2 className="mt-2 font-serif text-3xl font-semibold text-white sm:text-4xl">
+              <h2 className="mt-2 font-serif text-3xl font-semibold text-charcoal dark:text-white sm:text-4xl">
                 {HOME_INTRO.counterHeading}
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-white/75">
+              <p className="mt-3 text-sm leading-relaxed text-concrete dark:text-white/75">
                 Since 2003, El Dorado Developments Ltd. has delivered more than
                 70 projects with engineering integrity, earthquake and fire
                 safety compliance, and timely handover.
               </p>
               <Link
                 to="/about-us"
-                className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-bronze-light transition hover:text-white"
+                className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-crimson-ink transition hover:text-charcoal dark:text-bronze-light dark:hover:text-white"
               >
                 <span>Read More About Us</span>
                 <ArrowUpRight className="h-4 w-4" />
@@ -330,13 +330,13 @@ export default function HomePage() {
               {HOME_INTRO.stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="border border-white/15 bg-white/5 p-6 backdrop-blur-sm"
+                  className="border border-stone bg-surface p-6 shadow-card backdrop-blur-sm dark:border-white/15 dark:bg-white/5"
                 >
-                  <p className="font-serif text-5xl font-semibold text-white">
+                  <p className="font-serif text-5xl font-semibold text-charcoal dark:text-white">
                     {stat.value}
                     <span className="text-crimson-ink">+</span>
                   </p>
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-bronze-light">
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-bronze-ink dark:text-bronze-light">
                     {stat.label}
                   </p>
                 </div>
@@ -503,26 +503,26 @@ export default function HomePage() {
       </section>
 
       {/* 7. Services Section (All 4 Pillars) */}
-      <section className="relative overflow-hidden bg-obsidian py-20 text-white lg:py-24">
+      <section className="relative overflow-hidden border-b border-stone bg-surface py-20 text-charcoal transition-colors duration-200 dark:border-white/10 dark:bg-obsidian dark:text-white lg:py-24">
         <img
           src="/static/img/sections/bg/bg-13.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover opacity-15"
+          className="absolute inset-0 h-full w-full object-cover opacity-[0.04] dark:opacity-15"
         />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-bronze-light">
+              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-crimson-ink dark:text-bronze-light">
                 Core Capabilities
               </span>
-              <h2 className="mt-2 font-serif text-4xl font-semibold sm:text-5xl">
+              <h2 className="mt-2 font-serif text-4xl font-semibold text-charcoal dark:text-white sm:text-5xl">
                 We Provide Amazing Solutions
               </h2>
             </div>
             <Link
               to="/service"
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-bronze-light transition hover:text-white"
+              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-charcoal transition hover:text-crimson-ink dark:text-bronze-light dark:hover:text-white"
             >
               <span>Explore All Services</span>
               <ArrowRight className="h-4 w-4" />
@@ -536,23 +536,23 @@ export default function HomePage() {
                 <Link
                   key={service.number}
                   to="/service"
-                  className="group flex flex-col justify-between border border-white/15 bg-white/5 p-7 backdrop-blur-sm transition duration-300 hover:border-crimson hover:bg-white/10"
+                  className="group flex flex-col justify-between border border-stone bg-alabaster p-7 backdrop-blur-sm transition duration-300 hover:border-crimson hover:bg-limestone dark:border-white/15 dark:bg-white/5 dark:hover:border-crimson dark:hover:bg-white/10"
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs font-semibold tracking-widest text-bronze-light">
+                      <span className="font-mono text-xs font-semibold tracking-widest text-bronze-ink dark:text-bronze-light">
                         {service.number}
                       </span>
                       <Icon className="h-5 w-5 text-crimson-ink" />
                     </div>
-                    <h3 className="mt-5 font-serif text-2xl font-semibold text-white group-hover:text-bronze-light">
+                    <h3 className="mt-5 font-serif text-2xl font-semibold text-charcoal group-hover:text-crimson-ink dark:text-white dark:group-hover:text-bronze-light">
                       {service.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/75">
+                    <p className="mt-3 text-sm leading-relaxed text-concrete dark:text-white/75">
                       {service.excerpt}
                     </p>
                   </div>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80 group-hover:text-white">
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-charcoal group-hover:text-crimson-ink dark:text-white/80 dark:group-hover:text-white">
                     <span>Read Pillar</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
@@ -682,7 +682,7 @@ export default function HomePage() {
       </section>
 
       {/* 10. Members & Certification Strip */}
-      <section className="border-t border-stone bg-surface py-14">
+      <section className="border-t border-stone bg-alabaster py-14 transition-colors duration-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <div className="flex items-center gap-2.5">

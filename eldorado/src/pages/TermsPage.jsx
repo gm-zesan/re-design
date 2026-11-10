@@ -11,6 +11,8 @@ export default function TermsPage() {
         title="Terms & Condition"
         subtitle="Official terms disclosure and direct legal correspondence contacts for El Dorado Developments Ltd."
         breadcrumbs={[{ label: 'Terms & Condition' }]}
+        image="/media/slider/eadded46702631.58605976a27f7.jpg"
+        badgeLabel="Logistic & Legal"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">

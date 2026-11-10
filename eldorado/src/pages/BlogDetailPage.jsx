@@ -43,6 +43,8 @@ export default function BlogDetailPage() {
         eyebrow={post.category}
         title={post.title}
         subtitle={`Published ${post.date}`}
+        image={post.detailImage || post.thumbnail}
+        badgeLabel={`Published ${post.date}`}
         breadcrumbs={[
           { label: 'Blog', to: '/blog' },
           { label: post.title },

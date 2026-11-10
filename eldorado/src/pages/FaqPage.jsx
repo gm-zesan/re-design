@@ -41,6 +41,8 @@ export default function FaqPage() {
         title="FAQS"
         subtitle="Verified company, project, landowner partnership, and homebuyer inquiry facts compiled from El Dorado Developments Ltd."
         breadcrumbs={[{ label: 'FAQ' }]}
+        image="/media/slider/WhatsApp_Image_2023-07-23_at_12.39.20.jpeg"
+        badgeLabel="Verified Information"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">

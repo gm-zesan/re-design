@@ -17,6 +17,8 @@ export default function AboutPage() {
         title={ABOUT_CONTENT.heading}
         subtitle="Pledged to deliver enduring residences with excellent quality, timely project handover, strong business ethics, and absolute transparency."
         breadcrumbs={[{ label: 'About Us' }]}
+        image="/media/slider/eadded46702631.58605976a27f7.jpg"
+        badgeLabel="Heritage • Est. 2003"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">
@@ -121,8 +123,8 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="border border-stone bg-obsidian p-6 text-white dark:border-white/15">
-                <div className="flex items-center gap-2 text-bronze-light">
+              <div className="border border-stone bg-limestone p-6 text-charcoal transition-colors duration-200 dark:border-white/15 dark:bg-obsidian dark:text-white">
+                <div className="flex items-center gap-2 text-bronze-ink dark:text-bronze-light">
                   <Building2 className="h-5 w-5" />
                   <span className="text-xs font-semibold uppercase tracking-[0.2em]">
                     Explore Further
@@ -134,21 +136,21 @@ export default function AboutPage() {
                 <div className="mt-5 flex flex-col gap-2.5">
                   <Link
                     to="/our-message"
-                    className="inline-flex items-center justify-between border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] transition hover:border-crimson hover:bg-crimson"
+                    className="inline-flex items-center justify-between border border-stone bg-surface px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-charcoal transition hover:border-crimson hover:bg-crimson hover:text-white dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:border-crimson dark:hover:bg-crimson"
                   >
                     <span>Chairman &amp; MD Messages</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/our-business"
-                    className="inline-flex items-center justify-between border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] transition hover:border-crimson hover:bg-crimson"
+                    className="inline-flex items-center justify-between border border-stone bg-surface px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-charcoal transition hover:border-crimson hover:bg-crimson hover:text-white dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:border-crimson dark:hover:bg-crimson"
                   >
                     <span>Rajbari Group Concerns</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/projects"
-                    className="inline-flex items-center justify-between border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] transition hover:border-crimson hover:bg-crimson"
+                    className="inline-flex items-center justify-between border border-stone bg-surface px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-charcoal transition hover:border-crimson hover:bg-crimson hover:text-white dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:border-crimson dark:hover:bg-crimson"
                   >
                     <span>View All 23 Portfolio Projects</span>
                     <ArrowRight className="h-4 w-4" />

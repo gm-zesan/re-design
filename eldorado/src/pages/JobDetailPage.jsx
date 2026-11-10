@@ -47,6 +47,7 @@ export default function JobDetailPage() {
         eyebrow={`Job Circular #${job.id} • ${job.businessArea}`}
         title={job.designation}
         subtitle={job.subtitle}
+        image="/media/slider/51f1b143659493.57f77d5c9619a.jpg"
         breadcrumbs={[
           { label: 'Careers', to: '/careers' },
           { label: job.designation },

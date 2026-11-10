@@ -28,7 +28,7 @@ const STATUS_BADGE = {
   upcoming: { label: 'Upcoming Project', className: 'bg-bronze text-white' },
   handover: {
     label: 'Handed Over Project',
-    className: 'bg-obsidian text-white',
+    className: 'bg-obsidian text-[#F8F6F2]',
   },
 };
 
@@ -101,6 +101,7 @@ export default function ProjectDetailPage() {
         eyebrow={categoryMeta.label}
         title={project.title}
         subtitle={specs.address || categoryMeta.subtitle}
+        image={validImages[0] || '/media/slider/project-51-1920x1200.webp'}
         breadcrumbs={[
           { label: 'Projects', to: '/projects' },
           { label: categoryMeta.label, to: categoryMeta.route },

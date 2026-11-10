@@ -71,6 +71,7 @@ export default function ProjectsPage({ category = 'all' }) {
         eyebrow="Development Portfolio"
         title={meta.label}
         subtitle={meta.subtitle}
+        image="/media/slider/Top_Long_View.jpeg"
         breadcrumbs={
           category === 'all'
             ? [{ label: 'Projects' }]
@@ -80,13 +81,13 @@ export default function ProjectsPage({ category = 'all' }) {
               ]
         }
         rightSlot={
-          <div className="inline-flex items-center gap-3 border border-white/15 bg-white/5 px-5 py-3 text-sm">
-            <Building2 className="h-5 w-5 text-bronze-light" />
+          <div className="inline-flex items-center gap-3 border border-stone border-t-2 border-t-crimson bg-white/95 px-5 py-3 text-sm text-charcoal backdrop-blur-md dark:border-white/15 dark:border-t-crimson dark:bg-[#161920]/90 dark:text-white">
+            <Building2 className="h-5 w-5 text-bronze-ink dark:text-bronze-light" />
             <div>
-              <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60">
+              <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-concrete dark:text-white/60">
                 Directory Count
               </span>
-              <span className="font-serif text-xl font-semibold text-white">
+              <span className="font-serif text-xl font-semibold text-charcoal dark:text-white">
                 {categoryProjects.length} Developments
               </span>
             </div>

@@ -37,6 +37,8 @@ export default function WhyWePage() {
           { label: 'About Us', to: '/about-us' },
           { label: 'Why We' },
         ]}
+        image={WHY_CLIENTS_LOVE_US.image}
+        badgeLabel="Fair Business Integrity"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">

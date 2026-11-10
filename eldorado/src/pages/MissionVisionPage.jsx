@@ -14,6 +14,8 @@ export default function MissionVisionPage() {
           { label: 'About Us', to: '/about-us' },
           { label: 'Mission & Vision' },
         ]}
+        image="/media/slider/Roof_garden.jpeg"
+        badgeLabel="Philosophy • Home Forever"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">
@@ -62,21 +64,21 @@ export default function MissionVisionPage() {
             </article>
 
             {/* Mission */}
-            <article className="border border-stone bg-obsidian p-8 text-white shadow-editorial dark:border-white/15 sm:p-10">
+            <article className="border border-stone bg-limestone p-8 text-charcoal shadow-editorial transition-colors duration-200 dark:border-white/15 dark:bg-obsidian dark:text-white sm:p-10">
               <div className="flex h-12 w-12 items-center justify-center bg-crimson text-white">
                 <Compass className="h-5 w-5" />
               </div>
-              <h2 className="mt-6 font-serif text-3xl font-semibold text-white sm:text-4xl">
+              <h2 className="mt-6 font-serif text-3xl font-semibold text-charcoal dark:text-white sm:text-4xl">
                 Our Mission
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/80">
+              <p className="mt-4 text-base leading-relaxed text-concrete dark:text-white/80">
                 To establish El Dorado Developments Ltd. as a premier, trusted
                 real estate developer in Bangladesh by combining modern
                 construction technologies, earthquake &amp; fire safety compliance,
                 and strong business ethics—achieving internal and external customer
                 satisfaction through:
               </p>
-              <ul className="mt-6 space-y-2.5 border-t border-white/15 pt-5 text-sm text-white/90">
+              <ul className="mt-6 space-y-2.5 border-t border-stone pt-5 text-sm text-charcoal dark:border-white/15 dark:text-white/90">
                 {ABOUT_CONTENT.objectives.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-crimson-ink" />

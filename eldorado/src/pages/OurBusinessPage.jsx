@@ -21,6 +21,8 @@ export default function OurBusinessPage() {
           { label: 'About Us', to: '/about-us' },
           { label: 'Our Business' },
         ]}
+        image="/media/slider/eadded46702631.58605976a27f7.jpg"
+        badgeLabel="Sister Concerns"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">
@@ -37,18 +39,16 @@ export default function OurBusinessPage() {
                 >
                   <div>
                     <div className="flex flex-wrap items-start justify-between gap-4">
-                      <div
-                        className={`flex h-20 w-44 items-center justify-center border border-stone px-4 py-2 ${
-                          biz.logoOk ? 'bg-white/95' : 'bg-alabaster'
-                        }`}
-                      >
-                        {biz.logoOk ? (
+                      {biz.logoOk ? (
+                        <div className="flex h-20 items-center">
                           <img
                             src={biz.logo}
                             alt={biz.name}
                             className="max-h-14 w-auto object-contain"
                           />
-                        ) : (
+                        </div>
+                      ) : (
+                        <div className="flex h-20 w-44 items-center justify-center border border-stone bg-alabaster px-4 py-2">
                           <div className="flex items-center gap-2.5 text-charcoal">
                             <Icon className="h-6 w-6 shrink-0 text-crimson-ink" />
                             <span className="font-serif text-base font-semibold leading-tight">
@@ -59,8 +59,8 @@ export default function OurBusinessPage() {
                                 .join(' ')}
                             </span>
                           </div>
-                        )}
-                      </div>
+                        </div>
+                      )}
                       <span className="font-mono text-xs font-semibold tracking-widest text-bronze-ink">
                         CONCERN {meta.code}
                       </span>

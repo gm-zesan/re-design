@@ -21,6 +21,8 @@ export default function ServicesPage() {
         title="We Provide Amazing Solutions"
         subtitle="End-to-end excellence across prime site selection, architectural space planning, disciplined engineering, and attentive client care."
         breadcrumbs={[{ label: 'Services' }]}
+        image="/media/service/WhatsApp_Image_2022-04-24_at_5.46.44_PM.jpeg"
+        badgeLabel="Advisory & Execution"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">
@@ -72,10 +74,10 @@ export default function ServicesPage() {
             })}
           </div>
 
-          <div className="border border-stone bg-obsidian p-8 text-white dark:border-white/15 sm:p-10">
+          <div className="border border-stone bg-limestone p-8 text-charcoal transition-colors duration-200 dark:border-white/15 dark:bg-obsidian dark:text-white sm:p-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-bronze-light">
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-crimson-ink dark:text-bronze-light">
                   Begin Your Journey
                 </span>
                 <h2 className="mt-2 font-serif text-3xl font-semibold">
@@ -92,7 +94,7 @@ export default function ServicesPage() {
                 </Link>
                 <Link
                   to="/landowner-query"
-                  className="inline-flex items-center gap-2 border border-white/25 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white hover:text-obsidian"
+                  className="inline-flex items-center gap-2 border border-obsidian bg-surface px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-obsidian transition hover:bg-obsidian hover:text-white dark:border-white/25 dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-obsidian"
                 >
                   <span>Landowner Query</span>
                 </Link>

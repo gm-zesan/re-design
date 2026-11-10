@@ -21,11 +21,10 @@
               : prefersDark
                 ? 'dark'
                 : 'light';
-          if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
+          var root = document.documentElement;
+          root.classList.toggle('dark', theme === 'dark');
+          root.dataset.theme = theme;
+          root.style.colorScheme = theme;
         } catch (e) {}
       })();
     </script>

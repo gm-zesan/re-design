@@ -5,6 +5,7 @@ import {
   Building2,
   CheckCircle2,
   ChevronDown,
+  ChevronRight,
   Mail,
   MapPin,
   Menu,
@@ -115,25 +116,25 @@ export default function Layout() {
   return (
     <div className="flex min-h-screen flex-col overflow-x-clip bg-alabaster text-charcoal transition-colors duration-200">
       {/* Top Utility Bar */}
-      <div className="bg-obsidian text-white/85 border-b border-white/10 text-xs">
+      <div className="border-b border-stone bg-limestone text-charcoal transition-colors duration-200 dark:border-white/10 dark:bg-[#0D0F12] dark:text-white/85 text-xs">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <a
               href={`tel:${COMPANY.topBar.phone.replace(/\s+/g, '')}`}
-              className="inline-flex items-center gap-1.5 transition hover:text-white"
+              className="inline-flex items-center gap-1.5 transition hover:text-crimson-ink dark:hover:text-white"
             >
-              <Phone className="h-3.5 w-3.5 text-crimson" />
+              <Phone className="h-3.5 w-3.5 text-crimson-ink dark:text-crimson" />
               <span>{COMPANY.topBar.phone}</span>
             </a>
             <a
               href={`mailto:${COMPANY.topBar.email}`}
-              className="inline-flex items-center gap-1.5 transition hover:text-white"
+              className="inline-flex items-center gap-1.5 transition hover:text-crimson-ink dark:hover:text-white"
             >
-              <Mail className="h-3.5 w-3.5 text-crimson" />
+              <Mail className="h-3.5 w-3.5 text-crimson-ink dark:text-crimson" />
               <span>{COMPANY.topBar.email}</span>
             </a>
-            <span className="hidden md:inline-flex items-center gap-1.5 text-white/60">
-              <Building2 className="h-3.5 w-3.5 text-bronze-light" />
+            <span className="hidden md:inline-flex items-center gap-1.5 text-concrete dark:text-white/60">
+              <Building2 className="h-3.5 w-3.5 text-bronze-ink dark:text-bronze-light" />
               <span>{COMPANY.groupLine}</span>
             </span>
           </div>
@@ -142,9 +143,9 @@ export default function Layout() {
             {COMPANY.topBar.badges.map((badge) => (
               <span
                 key={badge}
-                className="inline-flex items-center gap-1 rounded border border-white/15 bg-white/5 px-2.5 py-0.5 text-[10px] font-semibold tracking-[0.14em] uppercase text-white/90"
+                className="inline-flex items-center gap-1 rounded border border-stone bg-surface px-2.5 py-0.5 text-[10px] font-semibold tracking-[0.14em] uppercase text-charcoal dark:border-white/15 dark:bg-white/5 dark:text-white/90"
               >
-                <ShieldCheck className="h-3 w-3 text-bronze-light" />
+                <ShieldCheck className="h-3 w-3 text-bronze-ink dark:text-bronze-light" />
                 {badge}
               </span>
             ))}
@@ -153,11 +154,11 @@ export default function Layout() {
       </div>
 
       {/* Main Sticky Header */}
-      <header className="sticky top-0 z-40 border-b border-stone bg-surface/95 backdrop-blur-md transition-colors duration-200">
+      <header className="sticky top-0 z-40 border-b border-stone bg-white/95 backdrop-blur-md transition-colors duration-200 dark:border-[#323843] dark:bg-[#1F232A]/95">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className="flex shrink-0 items-center gap-3 focus:outline-none dark:rounded-sm dark:bg-white/95 dark:px-2.5 dark:py-1"
+            className="flex shrink-0 items-center gap-3 focus:outline-none"
             aria-label="El Dorado Developments Ltd. Home"
           >
             <img
@@ -175,13 +176,16 @@ export default function Layout() {
             {NAV_ITEMS.map((item) => {
               const hasChildren = Boolean(item.children);
               const isDropdownOpen = openDropdown === item.label;
+              const isChildActive =
+                hasChildren &&
+                item.children.some((sub) => location.pathname === sub.to);
 
               return (
                 <div
                   key={item.label}
                   className="relative"
                   onMouseEnter={() =>
-                    hasChildren ? setOpenDropdown(item.label) : undefined
+                    hasChildren ? setOpenDropdown(item.label) : setOpenDropdown(null)
                   }
                   onMouseLeave={() =>
                     hasChildren ? setOpenDropdown(null) : undefined
@@ -191,11 +195,12 @@ export default function Layout() {
                     <NavLink
                       to={item.to}
                       end={item.to === '/'}
+                      onClick={() => setOpenDropdown(null)}
                       className={({ isActive }) =>
                         `inline-flex items-center gap-1 px-3 py-2 text-xs font-semibold uppercase tracking-[0.13em] transition-colors ${
-                          isActive
-                            ? 'text-crimson-ink'
-                            : 'text-charcoal hover:text-crimson-ink'
+                          isActive || isChildActive
+                            ? 'text-crimson-ink dark:text-[#FF7A80]'
+                            : 'text-charcoal hover:text-crimson-ink dark:text-[#F2EFE9] dark:hover:text-[#FF7A80]'
                         }`
                       }
                     >
@@ -211,23 +216,27 @@ export default function Layout() {
                   </div>
 
                   {hasChildren && isDropdownOpen && (
-                    <div className="absolute left-0 top-full z-50 w-60 pt-1">
-                      <div className="border border-stone bg-surface py-2 shadow-editorial">
-                        {item.children.map((sub) => (
-                          <NavLink
-                            key={sub.to}
-                            to={sub.to}
-                            className={({ isActive }) =>
-                              `block px-4 py-2.5 text-xs font-medium tracking-wide transition-colors ${
-                                isActive
-                                  ? 'bg-crimson-soft text-crimson-ink font-semibold'
-                                  : 'text-charcoal hover:bg-limestone hover:text-crimson-ink'
-                              }`
-                            }
-                          >
-                            {sub.label}
-                          </NavLink>
-                        ))}
+                    <div className="absolute left-0 top-full z-50 w-64 pt-2">
+                      <div className="overflow-hidden border-x border-b border-stone border-t-2 border-t-crimson bg-white py-1.5 shadow-2xl ring-1 ring-obsidian/10 dark:border-[#323843] dark:border-t-crimson dark:bg-[#1A1E24] dark:ring-white/10">
+                        <div className="divide-y divide-stone/40 dark:divide-white/5">
+                          {item.children.map((sub) => (
+                            <NavLink
+                              key={sub.to}
+                              to={sub.to}
+                              onClick={() => setOpenDropdown(null)}
+                              className={({ isActive }) =>
+                                `group/item flex items-center justify-between px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors ${
+                                  isActive
+                                    ? 'border-l-2 border-crimson bg-[#F9EAEB] text-[#B81D24] font-semibold dark:border-[#F25C63] dark:bg-[#3A191D] dark:text-[#FF858B]'
+                                    : 'text-[#23262B] hover:bg-[#F3EFE8] hover:text-[#B81D24] dark:text-[#E8E5DE] dark:hover:bg-[#262B34] dark:hover:text-white'
+                                }`
+                              }
+                            >
+                              <span>{sub.label}</span>
+                              <ChevronRight className="h-3.5 w-3.5 opacity-40 transition-all group-hover/item:translate-x-0.5 group-hover/item:opacity-100" />
+                            </NavLink>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   )}
@@ -382,7 +391,7 @@ export default function Layout() {
       </main>
 
       {/* Pre-Footer Quote / Help Band */}
-      <section className="border-t border-stone bg-limestone bg-arch-grid">
+      <section className="border-t border-stone bg-surface bg-arch-grid transition-colors duration-200">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:px-8">
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-crimson-ink">
@@ -408,7 +417,7 @@ export default function Layout() {
             </Link>
             <Link
               to="/landowner-query"
-              className="inline-flex items-center gap-2 border border-obsidian bg-surface px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-obsidian transition hover:bg-obsidian hover:text-white dark:border-white/35 dark:text-white dark:hover:bg-white dark:hover:text-obsidian"
+              className="inline-flex items-center gap-2 border border-obsidian bg-alabaster px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-obsidian transition hover:bg-obsidian hover:text-white dark:border-white/35 dark:text-white dark:hover:bg-white dark:hover:text-obsidian"
             >
               <span>Landowner Query</span>
             </Link>
@@ -416,15 +425,16 @@ export default function Layout() {
         </div>
       </section>
 
-      {/* Architectural Dark Footer */}
-      <footer className="bg-obsidian text-white/80 border-t border-white/10">
+      {/* Architectural Footer */}
+      <footer className="border-t border-stone bg-limestone text-charcoal transition-colors duration-200 dark:border-white/10 dark:bg-[#0D0F12] dark:text-white/80">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
             {/* Brand Column */}
             <div className="lg:col-span-3 space-y-5">
               <Link
                 to="/"
-                className="inline-block rounded bg-white px-3.5 py-2.5 shadow-sm"
+                className="inline-block focus:outline-none"
+                aria-label="El Dorado Developments Ltd. Home"
               >
                 <img
                   src={COMPANY.logo}
@@ -432,11 +442,13 @@ export default function Layout() {
                   className="h-9 w-auto object-contain"
                 />
               </Link>
-              <p className="text-sm leading-relaxed text-white/70">
+              <p className="text-sm leading-relaxed text-concrete dark:text-white/70">
                 Established in {COMPANY.established} and a sister concern of{' '}
-                <span className="text-white font-medium">Rajbari Group</span>.
-                More than 70 projects handed over under our enduring motto{' '}
-                <span className="italic text-bronze-light">
+                <span className="font-medium text-charcoal dark:text-white">
+                  Rajbari Group
+                </span>
+                . More than 70 projects handed over under our enduring motto{' '}
+                <span className="italic text-bronze-ink dark:text-bronze-light">
                   “{COMPANY.motto}”
                 </span>
                 .
@@ -445,7 +457,7 @@ export default function Layout() {
                 {COMPANY.topBar.badges.map((badge) => (
                   <span
                     key={badge}
-                    className="border border-white/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-white/80"
+                    className="border border-stone bg-surface px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-charcoal dark:border-white/15 dark:bg-transparent dark:text-white/80"
                   >
                     {badge}
                   </span>
@@ -457,27 +469,27 @@ export default function Layout() {
             <div className="lg:col-span-5 grid gap-8 sm:grid-cols-2">
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-serif text-lg font-semibold text-white">
+                  <h3 className="font-serif text-lg font-semibold text-charcoal dark:text-white">
                     {headOffice.title}
                   </h3>
-                  <p className="mt-2.5 flex items-start gap-2 text-xs leading-relaxed text-white/70">
-                    <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-crimson" />
+                  <p className="mt-2.5 flex items-start gap-2 text-xs leading-relaxed text-concrete dark:text-white/70">
+                    <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-crimson-ink dark:text-crimson" />
                     <span>{headOffice.address}</span>
                   </p>
-                  <p className="mt-2 flex items-center gap-2 text-xs text-white/80">
-                    <Phone className="h-3.5 w-3.5 shrink-0 text-bronze-light" />
+                  <p className="mt-2 flex items-center gap-2 text-xs text-charcoal dark:text-white/80">
+                    <Phone className="h-3.5 w-3.5 shrink-0 text-bronze-ink dark:text-bronze-light" />
                     <a
                       href={`tel:${headOffice.phones[0].replace(/\s+/g, '')}`}
-                      className="hover:text-white"
+                      className="transition hover:text-crimson-ink dark:hover:text-white"
                     >
                       {headOffice.phones[0]}
                     </a>
                   </p>
-                  <p className="mt-1.5 flex items-center gap-2 text-xs text-white/80">
-                    <Mail className="h-3.5 w-3.5 shrink-0 text-bronze-light" />
+                  <p className="mt-1.5 flex items-center gap-2 text-xs text-charcoal dark:text-white/80">
+                    <Mail className="h-3.5 w-3.5 shrink-0 text-bronze-ink dark:text-bronze-light" />
                     <a
                       href={`mailto:${headOffice.email}`}
-                      className="hover:text-white"
+                      className="transition hover:text-crimson-ink dark:hover:text-white"
                     >
                       {headOffice.email}
                     </a>
@@ -485,18 +497,21 @@ export default function Layout() {
                 </div>
 
                 <div>
-                  <h3 className="font-serif text-lg font-semibold text-white">
+                  <h3 className="font-serif text-lg font-semibold text-charcoal dark:text-white">
                     {canadaOffice.title}
                   </h3>
-                  <p className="mt-2.5 flex items-start gap-2 text-xs leading-relaxed text-white/70">
-                    <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-crimson" />
+                  <p className="mt-2.5 flex items-start gap-2 text-xs leading-relaxed text-concrete dark:text-white/70">
+                    <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-crimson-ink dark:text-crimson" />
                     <span>{canadaOffice.address}</span>
                   </p>
-                  <div className="mt-2 space-y-1 text-xs text-white/80">
+                  <div className="mt-2 space-y-1 text-xs text-charcoal dark:text-white/80">
                     {canadaOffice.phones.map((phone) => (
                       <p key={phone} className="flex items-center gap-2">
-                        <Phone className="h-3.5 w-3.5 shrink-0 text-bronze-light" />
-                        <a href={`tel:${phone}`} className="hover:text-white">
+                        <Phone className="h-3.5 w-3.5 shrink-0 text-bronze-ink dark:text-bronze-light" />
+                        <a
+                          href={`tel:${phone}`}
+                          className="transition hover:text-crimson-ink dark:hover:text-white"
+                        >
                           {phone}
                         </a>
                       </p>
@@ -506,35 +521,37 @@ export default function Layout() {
               </div>
 
               <div>
-                <h3 className="font-serif text-lg font-semibold text-white">
+                <h3 className="font-serif text-lg font-semibold text-charcoal dark:text-white">
                   {corporateOffice.title}
                 </h3>
-                <p className="mt-2.5 flex items-start gap-2 text-xs leading-relaxed text-white/70">
-                  <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-crimson" />
+                <p className="mt-2.5 flex items-start gap-2 text-xs leading-relaxed text-concrete dark:text-white/70">
+                  <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-crimson-ink dark:text-crimson" />
                   <span>{corporateOffice.address}</span>
                 </p>
-                <div className="mt-2.5 space-y-1 text-xs text-white/80">
+                <div className="mt-2.5 space-y-1 text-xs text-charcoal dark:text-white/80">
                   {corporateOffice.phones.map((phone) => (
                     <p key={phone} className="flex items-center gap-2">
-                      <Phone className="h-3.5 w-3.5 shrink-0 text-bronze-light" />
+                      <Phone className="h-3.5 w-3.5 shrink-0 text-bronze-ink dark:text-bronze-light" />
                       <a
                         href={`tel:${phone.replace(/\s+/g, '')}`}
-                        className="hover:text-white"
+                        className="transition hover:text-crimson-ink dark:hover:text-white"
                       >
                         {phone}
                       </a>
                     </p>
                   ))}
                 </div>
-                <p className="mt-2 text-xs text-white/65">
-                  <span className="font-semibold text-white/85">Fax:</span>{' '}
+                <p className="mt-2 text-xs text-concrete dark:text-white/65">
+                  <span className="font-semibold text-charcoal dark:text-white/85">
+                    Fax:
+                  </span>{' '}
                   {corporateOffice.fax}
                 </p>
-                <p className="mt-2 flex items-center gap-2 text-xs text-white/80">
-                  <Mail className="h-3.5 w-3.5 shrink-0 text-bronze-light" />
+                <p className="mt-2 flex items-center gap-2 text-xs text-charcoal dark:text-white/80">
+                  <Mail className="h-3.5 w-3.5 shrink-0 text-bronze-ink dark:text-bronze-light" />
                   <a
                     href={`mailto:${COMPANY.contactSummary.salesEmail}`}
-                    className="hover:text-white"
+                    className="transition hover:text-crimson-ink dark:hover:text-white"
                   >
                     {COMPANY.contactSummary.salesEmail}
                   </a>
@@ -545,7 +562,7 @@ export default function Layout() {
             {/* Company Navigation & Newsletter */}
             <div className="lg:col-span-4 space-y-8">
               <div>
-                <h3 className="font-serif text-lg font-semibold text-white">
+                <h3 className="font-serif text-lg font-semibold text-charcoal dark:text-white">
                   Company
                 </h3>
                 <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
@@ -553,7 +570,7 @@ export default function Layout() {
                     <Link
                       key={link.to}
                       to={link.to}
-                      className="text-white/70 transition hover:text-white hover:underline underline-offset-4"
+                      className="text-concrete transition hover:text-crimson-ink hover:underline underline-offset-4 dark:text-white/70 dark:hover:text-white"
                     >
                       {link.label}
                     </Link>
@@ -561,11 +578,11 @@ export default function Layout() {
                 </div>
               </div>
 
-              <div className="border-t border-white/10 pt-6">
-                <h3 className="font-serif text-lg font-semibold text-white">
+              <div className="border-t border-stone pt-6 dark:border-white/10">
+                <h3 className="font-serif text-lg font-semibold text-charcoal dark:text-white">
                   Project Updates
                 </h3>
-                <p className="mt-1.5 text-xs text-white/65">
+                <p className="mt-1.5 text-xs text-concrete dark:text-white/65">
                   Receive updates on upcoming developments and handover milestones.
                 </p>
                 <form
@@ -582,7 +599,7 @@ export default function Layout() {
                     value={newsletterEmail}
                     onChange={(e) => setNewsletterEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="w-full border border-white/15 bg-white/5 px-3.5 py-2.5 text-xs text-white placeholder:text-white/45 focus:border-crimson focus:outline-none"
+                    className="w-full border border-stone bg-surface px-3.5 py-2.5 text-xs text-charcoal placeholder:text-concrete/70 focus:border-crimson focus:outline-none dark:border-white/15 dark:bg-white/5 dark:text-white dark:placeholder:text-white/45"
                   />
                   <button
                     type="submit"
@@ -592,10 +609,12 @@ export default function Layout() {
                   </button>
                 </form>
                 {newsletterError && (
-                  <p className="mt-2 text-xs text-red-400">{newsletterError}</p>
+                  <p className="mt-2 text-xs text-red-700 dark:text-red-400">
+                    {newsletterError}
+                  </p>
                 )}
                 {newsletterMsg && (
-                  <p className="mt-2 flex items-center gap-1.5 text-xs text-emerald-300">
+                  <p className="mt-2 flex items-center gap-1.5 text-xs text-emerald-700 dark:text-emerald-300">
                     <CheckCircle2 className="h-3.5 w-3.5 shrink-0" />
                     <span>{newsletterMsg}</span>
                   </p>
@@ -604,18 +623,27 @@ export default function Layout() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/55 sm:flex-row sm:items-center">
+          <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-stone pt-6 text-xs text-concrete dark:border-white/10 dark:text-white/55 sm:flex-row sm:items-center">
             <p>
               © {new Date().getFullYear()} {COMPANY.name} All Rights Reserved.
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Link to="/terms-condition" className="hover:text-white">
+              <Link
+                to="/terms-condition"
+                className="transition hover:text-crimson-ink dark:hover:text-white"
+              >
                 Terms &amp; Condition
               </Link>
-              <Link to="/faq" className="hover:text-white">
+              <Link
+                to="/faq"
+                className="transition hover:text-crimson-ink dark:hover:text-white"
+              >
                 FAQ
               </Link>
-              <Link to="/contact-us" className="hover:text-white">
+              <Link
+                to="/contact-us"
+                className="transition hover:text-crimson-ink dark:hover:text-white"
+              >
                 Contact Us
               </Link>
             </div>

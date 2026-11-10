@@ -60,6 +60,8 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="Visit our Dhaka Head & Corporate offices or our Canada office, or message our support and sales teams directly."
         breadcrumbs={[{ label: 'Contact Us' }]}
+        image="/media/slider/project-51-1920x1200.webp"
+        badgeLabel="Dhaka & Toronto Offices"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">

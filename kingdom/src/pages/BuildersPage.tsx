@@ -35,7 +35,7 @@ export function BuildersPage() {
           { label: 'Our Concern', to: '/concerns' },
           { label: 'KINGDOM Builders Ltd.' },
         ]}
-        backgroundImage="/images/about/about-banner.jpg"
+        backgroundImage="/images/hero/kingdom-flagship-hero.jpg"
         badge="~700 Handovers"
       />
 
@@ -44,9 +44,9 @@ export function BuildersPage() {
           {/* Sidebar */}
           <aside className="lg:col-span-3">
             <div className="sticky top-28 space-y-5">
-              <div className="overflow-hidden rounded-2xl border border-[#E5DFD0] bg-white shadow-xs dark:border-white/10 dark:bg-[#161B36]">
-                <div className="border-b border-[#E5DFD0] bg-[#F3ECD8] px-4 py-3 dark:border-white/10 dark:bg-[#10142A]">
-                  <p className="font-mono-tech text-[11px] font-semibold uppercase tracking-wider text-[#1E1B5E] dark:text-[#E5C17B]">
+              <div className="overflow-hidden rounded-2xl border border-[#E4E3DF] bg-white shadow-xs dark:border-white/10 dark:bg-[#1A1C21]">
+                <div className="border-b border-[#E4E3DF] bg-[#F2F1EE] px-4 py-3 dark:border-white/10 dark:bg-[#141518]">
+                  <p className="font-mono-tech text-[11px] font-semibold uppercase tracking-wider text-[#18191D] dark:text-[#C9A46B]">
                     KINGDOM BUILDERS LTD.
                   </p>
                 </div>
@@ -60,8 +60,8 @@ export function BuildersPage() {
                         onClick={() => setActiveTab(tab.id)}
                         className={`flex w-full items-center justify-between rounded-xl px-3.5 py-2.5 text-left text-sm font-medium transition ${
                           active
-                            ? 'bg-[#1E1B5E] text-white dark:bg-[#B8862D] dark:text-[#0E1122]'
-                            : 'text-[#121629] hover:bg-[#FAF8F3] hover:text-[#1E1B5E] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#F5DC9C]'
+                            ? 'bg-[#18191D] text-white dark:bg-[#8C6730] dark:text-[#111215]'
+                            : 'text-[#141518] hover:bg-[#F9F9F8] hover:text-[#18191D] dark:text-white/85 dark:hover:bg-white/10 dark:hover:text-[#DFC69B]'
                         }`}
                       >
                         <span>{tab.label}</span>
@@ -69,8 +69,8 @@ export function BuildersPage() {
                           <span
                             className={`rounded px-1.5 py-0.5 font-mono-tech text-[10px] ${
                               active
-                                ? 'bg-white/20 text-white dark:bg-black/15 dark:text-[#0E1122]'
-                                : 'bg-[#F3ECD8] text-[#4A4F63] dark:bg-white/10 dark:text-slate-300'
+                                ? 'bg-white/20 text-white dark:bg-black/15 dark:text-[#111215]'
+                                : 'bg-[#F2F1EE] text-[#52555E] dark:bg-white/10 dark:text-zinc-300'
                             }`}
                           >
                             #
@@ -82,7 +82,7 @@ export function BuildersPage() {
                 </nav>
               </div>
 
-              <div className="rounded-2xl border border-[#E5DFD0] bg-white p-5 dark:border-white/10 dark:bg-[#161B36]">
+              <div className="rounded-2xl border border-[#E4E3DF] bg-white p-5 dark:border-white/10 dark:bg-[#1A1C21]">
                 <div className="flex items-center gap-3">
                   <img
                     src="/images/concerns/kingdom-builders.png"
@@ -90,20 +90,20 @@ export function BuildersPage() {
                     className="h-12 w-14 shrink-0 object-contain dark:brightness-125 dark:drop-shadow-[0_0_0.5px_rgba(255,255,255,0.95)]"
                   />
                   <div>
-                    <p className="font-display text-sm font-semibold text-[#1E1B5E] dark:text-white">
+                    <p className="font-display text-sm font-semibold text-[#18191D] dark:text-white">
                       Shariatpur Office
                     </p>
-                    <p className="text-xs text-[#4A4F63] dark:text-slate-300">Zilla Parishad Kingdom Tower</p>
+                    <p className="text-xs text-[#52555E] dark:text-zinc-300">Zilla Parishad Kingdom Tower</p>
                   </div>
                 </div>
-                <p className="mt-3 text-xs leading-relaxed text-[#4A4F63] dark:text-slate-300">
+                <p className="mt-3 text-xs leading-relaxed text-[#52555E] dark:text-zinc-300">
                   Chowrongy, Palong, Shariatpur Sadar, Shariatpur
                 </p>
                 <a
                   href="tel:+8801711925095"
-                  className="mt-2 inline-flex items-center gap-1.5 font-mono-tech text-xs font-semibold text-[#1E1B5E] dark:text-[#E5C17B]"
+                  className="mt-2 inline-flex items-center gap-1.5 font-mono-tech text-xs font-semibold text-[#18191D] dark:text-[#C9A46B]"
                 >
-                  <Phone className="h-3.5 w-3.5 text-[#B8862D] dark:text-[#E5C17B]" />
+                  <Phone className="h-3.5 w-3.5 text-[#8C6730] dark:text-[#C9A46B]" />
                   <span>+88 01711-925095</span>
                 </a>
               </div>
@@ -114,17 +114,17 @@ export function BuildersPage() {
           <div className="space-y-8 lg:col-span-9">
             {activeTab === 'ongoing' ? (
               <>
-                <div className="rounded-2xl border border-[#E5DFD0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#161B36] sm:p-8">
-                  <div className="flex flex-wrap items-end justify-between gap-4 border-b border-[#E5DFD0] pb-4 dark:border-white/10">
+                <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
+                  <div className="flex flex-wrap items-end justify-between gap-4 border-b border-[#E4E3DF] pb-4 dark:border-white/10">
                     <div>
-                      <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#B8862D] dark:text-[#E5C17B]">
+                      <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
                         KINGDOM Private Development Project
                       </span>
-                      <h2 className="mt-1 font-display text-2xl font-semibold text-[#1E1B5E] dark:text-white sm:text-3xl">
+                      <h2 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white sm:text-3xl">
                         Ongoing Projects
                       </h2>
                     </div>
-                    <span className="rounded-full bg-[#F3ECD8] px-3 py-1 font-mono-tech text-xs font-semibold text-[#1E1B5E] dark:bg-[#B8862D]/20 dark:text-[#F5DC9C]">
+                    <span className="rounded-full bg-[#F2F1EE] px-3 py-1 font-mono-tech text-xs font-semibold text-[#18191D] dark:bg-[#C9A46B]/18 dark:text-[#DFC69B]">
                       3 Listed Active Cards
                     </span>
                   </div>
@@ -133,9 +133,9 @@ export function BuildersPage() {
                     {BUILDERS_PROJECTS.map((project) => (
                       <article
                         key={project.id}
-                        className="flex flex-col overflow-hidden rounded-2xl border border-[#E5DFD0] bg-[#FAF8F3] shadow-2xs transition hover:border-[#1E1B5E]/40 dark:border-white/10 dark:bg-[#0F1326] dark:hover:border-[#E5C17B]/40"
+                        className="flex flex-col overflow-hidden rounded-2xl border border-[#E4E3DF] bg-[#F9F9F8] shadow-2xs transition hover:border-[#18191D]/40 dark:border-white/10 dark:bg-[#141518] dark:hover:border-[#C9A46B]/40"
                       >
-                        <div className="group relative bg-white p-3 dark:bg-[#10142A]">
+                        <div className="group relative bg-white p-3 dark:bg-[#141518]">
                           <img
                             src={project.image}
                             alt={project.name}
@@ -151,7 +151,7 @@ export function BuildersPage() {
                                 caption: project.addressLines.join(' — '),
                               })
                             }
-                            className="absolute bottom-5 right-5 rounded-lg bg-[#0E1122]/85 p-2 text-white transition hover:bg-[#1E1B5E]"
+                            className="absolute bottom-5 right-5 rounded-lg bg-[#111215]/85 p-2 text-white transition hover:bg-[#18191D]"
                             aria-label={`Inspect ${project.name}`}
                           >
                             <Maximize2 className="h-3.5 w-3.5" />
@@ -161,29 +161,29 @@ export function BuildersPage() {
                         <div className="flex flex-1 flex-col justify-between p-5">
                           <div>
                             <div className="flex items-center justify-between gap-2">
-                              <span className="font-mono-tech text-[10px] uppercase tracking-wider text-[#B8862D] dark:text-[#E5C17B]">
+                              <span className="font-mono-tech text-[10px] uppercase tracking-wider text-[#8C6730] dark:text-[#C9A46B]">
                                 {project.category}
                               </span>
-                              <span className="rounded bg-white px-2 py-0.5 font-mono-tech text-[10px] font-semibold text-[#1E1B5E] ring-1 ring-[#E5DFD0] dark:bg-white/10 dark:text-[#F5DC9C] dark:ring-white/15">
+                              <span className="rounded bg-white px-2 py-0.5 font-mono-tech text-[10px] font-semibold text-[#18191D] ring-1 ring-[#E4E3DF] dark:bg-white/10 dark:text-[#DFC69B] dark:ring-white/15">
                                 Type: {project.type}
                               </span>
                             </div>
-                            <h3 className="mt-2 font-display text-xl font-semibold text-[#1E1B5E] dark:text-white">
+                            <h3 className="mt-2 font-display text-xl font-semibold text-[#18191D] dark:text-white">
                               {project.name}
                             </h3>
-                            <div className="mt-3 flex items-start gap-2 text-xs leading-relaxed text-[#121629] dark:text-slate-200">
-                              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#B8862D] dark:text-[#E5C17B]" />
+                            <div className="mt-3 flex items-start gap-2 text-xs leading-relaxed text-[#141518] dark:text-zinc-200">
+                              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
                               <div>
                                 {project.addressLines.map((line) => (
                                   <p key={line}>{line}</p>
                                 ))}
-                                <p className="mt-0.5 text-[#4A4F63] dark:text-slate-400">{project.country}</p>
+                                <p className="mt-0.5 text-[#52555E] dark:text-zinc-400">{project.country}</p>
                               </div>
                             </div>
                           </div>
 
-                          <div className="mt-4 border-t border-[#E5DFD0] pt-3 dark:border-white/10">
-                            <p className="font-mono-tech text-[10px] text-[#4A4F63] dark:text-slate-400">
+                          <div className="mt-4 border-t border-[#E4E3DF] pt-3 dark:border-white/10">
+                            <p className="font-mono-tech text-[10px] text-[#52555E] dark:text-zinc-400">
                               CMS Locality: {project.cmsLocality}
                             </p>
                           </div>
@@ -194,13 +194,13 @@ export function BuildersPage() {
                 </div>
 
                 {/* Zilla Parishad Kingdom Tower & Visual Perspectives */}
-                <div className="rounded-2xl border border-[#E5DFD0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#161B36] sm:p-8">
+                <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div>
-                      <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#B8862D] dark:text-[#E5C17B]">
+                      <span className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8C6730] dark:text-[#C9A46B]">
                         District HQ Tower &amp; Architectural Perspectives
                       </span>
-                      <h3 className="mt-1 font-display text-2xl font-semibold text-[#1E1B5E] dark:text-white">
+                      <h3 className="mt-1 font-display text-2xl font-semibold text-[#18191D] dark:text-white">
                         Zilla Parishad Kingdom Tower &amp; Residential Concepts
                       </h3>
                     </div>
@@ -226,7 +226,7 @@ export function BuildersPage() {
                     ].map((render) => (
                       <div
                         key={render.src}
-                        className="group overflow-hidden rounded-xl border border-[#E5DFD0] bg-[#FAF8F3] dark:border-white/10 dark:bg-[#0F1326]"
+                        className="group overflow-hidden rounded-xl border border-[#E4E3DF] bg-[#F9F9F8] dark:border-white/10 dark:bg-[#141518]"
                       >
                         <div className="relative">
                           <img
@@ -244,17 +244,17 @@ export function BuildersPage() {
                                 caption: render.subtitle,
                               })
                             }
-                            className="absolute bottom-2.5 right-2.5 rounded-lg bg-[#0E1122]/85 p-2 text-white transition hover:bg-[#1E1B5E]"
+                            className="absolute bottom-2.5 right-2.5 rounded-lg bg-[#111215]/85 p-2 text-white transition hover:bg-[#18191D]"
                             aria-label={`Expand ${render.title}`}
                           >
                             <Maximize2 className="h-3.5 w-3.5" />
                           </button>
                         </div>
                         <div className="p-4">
-                          <p className="font-display text-base font-semibold text-[#121629] dark:text-white">
+                          <p className="font-display text-base font-semibold text-[#141518] dark:text-white">
                             {render.title}
                           </p>
-                          <p className="mt-1 text-xs text-[#4A4F63] dark:text-slate-300">{render.subtitle}</p>
+                          <p className="mt-1 text-xs text-[#52555E] dark:text-zinc-300">{render.subtitle}</p>
                         </div>
                       </div>
                     ))}
@@ -262,20 +262,20 @@ export function BuildersPage() {
                 </div>
               </>
             ) : (
-              <div className="rounded-2xl border border-[#E5DFD0] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#161B36] sm:p-8">
-                <div className="flex items-start gap-3 rounded-xl border border-[#B8862D]/40 bg-[#F3ECD8]/60 p-5 dark:border-[#B8862D]/30 dark:bg-[#191F3D]">
-                  <Info className="mt-0.5 h-5 w-5 shrink-0 text-[#B8862D] dark:text-[#E5C17B]" />
+              <div className="rounded-2xl border border-[#E4E3DF] bg-white p-6 shadow-xs dark:border-white/10 dark:bg-[#1A1C21] sm:p-8">
+                <div className="flex items-start gap-3 rounded-xl border border-[#8C6730]/40 bg-[#F2F1EE]/60 p-5 dark:border-[#8C6730]/30 dark:bg-[#1E2026]">
+                  <Info className="mt-0.5 h-5 w-5 shrink-0 text-[#8C6730] dark:text-[#C9A46B]" />
                   <div>
-                    <h2 className="font-display text-xl font-semibold text-[#1E1B5E] dark:text-white">
+                    <h2 className="font-display text-xl font-semibold text-[#18191D] dark:text-white">
                       {BUILDERS_SIDEBAR_TABS.find((t) => t.id === activeTab)?.label} — Origin Placeholders Preserved
                     </h2>
-                    <p className="mt-2 text-sm leading-relaxed text-[#4A4F63] dark:text-slate-300">
+                    <p className="mt-2 text-sm leading-relaxed text-[#52555E] dark:text-zinc-300">
                       On the live website (<code className="font-mono-tech">/home/content_builders</code>),
                       the sidebar links for <strong>About</strong>, <strong>Builders Plan</strong>,{' '}
                       <strong>Members</strong>, and <strong>Photo Gallery</strong> point to unlinked{' '}
                       <code className="font-mono-tech">#</code> placeholders without separate subpages.
                     </p>
-                    <p className="mt-2 text-sm leading-relaxed text-[#4A4F63] dark:text-slate-300">
+                    <p className="mt-2 text-sm leading-relaxed text-[#52555E] dark:text-zinc-300">
                       Verified facts for KINGDOM Builders Ltd. documented on About Us confirm its 2006
                       incorporation (&ldquo;Dedicated to Quality and Commitment&rdquo;),{' '}
                       <strong className="dark:text-white">around 700 apartments handed over</strong>, and District Headquarters
@@ -285,14 +285,14 @@ export function BuildersPage() {
                       <button
                         type="button"
                         onClick={() => setActiveTab('ongoing')}
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-[#1E1B5E] px-4 py-2 text-xs font-semibold text-white dark:bg-[#B8862D] dark:text-[#0E1122] dark:hover:bg-[#E5C17B]"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-[#18191D] px-4 py-2 text-xs font-semibold text-white dark:bg-[#C9A46B] dark:text-[#0C0D0F] dark:hover:bg-[#DFBE88]"
                       >
                         <Layers className="h-3.5 w-3.5" />
                         <span>Return to Ongoing Projects</span>
                       </button>
                       <Link
                         to="/about"
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-[#E5DFD0] bg-white px-4 py-2 text-xs font-semibold text-[#121629] dark:border-white/15 dark:bg-[#0F1326] dark:text-white dark:hover:border-[#E5C17B]"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-[#E4E3DF] bg-white px-4 py-2 text-xs font-semibold text-[#141518] dark:border-white/15 dark:bg-[#141518] dark:text-white dark:hover:border-[#C9A46B]"
                       >
                         <Building2 className="h-3.5 w-3.5" />
                         <span>View About Us</span>

@@ -6,6 +6,7 @@ export interface HeroSlide {
   category: string;
   linkTo: string;
   badgeText?: string;
+  fitMode?: 'cover' | 'contain';
 }
 
 export interface OfficeInfo {
@@ -151,6 +152,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     category: 'Heavy Machinery',
     linkTo: '/concerns/construction',
     badgeText: 'Field Operations',
+    fitMode: 'contain',
   },
   {
     id: 9,
@@ -160,6 +162,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     category: 'Structural Engineering',
     linkTo: '/concerns/construction',
     badgeText: 'Public & Private',
+    fitMode: 'contain',
   },
   {
     id: 10,
@@ -169,6 +172,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     category: 'Landmark Tower',
     linkTo: '/concerns/builders',
     badgeText: 'District HQ',
+    fitMode: 'contain',
   },
   {
     id: 11,
@@ -178,6 +182,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     category: 'Real Estate',
     linkTo: '/concerns/builders',
     badgeText: 'Architecture',
+    fitMode: 'contain',
   },
 ];
 

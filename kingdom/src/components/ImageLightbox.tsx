@@ -45,7 +45,7 @@ export function ImageLightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col bg-[#0E1122]/95 text-white backdrop-blur-md"
+      className="fixed inset-0 z-50 flex flex-col bg-[#111215]/95 text-white backdrop-blur-md"
       role="dialog"
       aria-modal="true"
       aria-label={title || alt}

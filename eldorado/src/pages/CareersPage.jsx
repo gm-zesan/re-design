@@ -87,6 +87,8 @@ export default function CareersPage() {
           { label: 'Query', to: '/careers' },
           { label: 'Careers' },
         ]}
+        image="/media/blog/Project_Signing.Jalshiri_Cv78AxA.jpeg"
+        badgeLabel="Dhaka Opportunities"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">

@@ -63,6 +63,8 @@ export default function LandownerQueryPage() {
           { label: 'Query', to: '/landowner-query' },
           { label: 'Landowner Query' },
         ]}
+        image="/media/slider/WhatsApp_Image_2023-07-23_at_12.39.20.jpeg"
+        badgeLabel="Joint Venture Land"
       />
 
       <section className="bg-alabaster py-16 lg:py-24">
@@ -116,15 +118,15 @@ export default function LandownerQueryPage() {
                 </ul>
               </div>
 
-              <div className="border border-stone bg-obsidian p-6 text-white dark:border-white/15">
-                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-bronze-light">
+              <div className="border border-stone bg-limestone p-6 text-charcoal transition-colors duration-200 dark:border-white/15 dark:bg-obsidian dark:text-white">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-bronze-ink dark:text-bronze-light">
                   Direct Land Development Desk
                 </span>
                 <p className="mt-2 flex items-center gap-2 font-serif text-2xl font-semibold">
                   <Phone className="h-5 w-5 text-crimson-ink" />
                   <span>{COMPANY.topBar.phone}</span>
                 </p>
-                <p className="mt-1 text-xs text-white/70">
+                <p className="mt-1 text-xs text-concrete dark:text-white/70">
                   Email: {COMPANY.contactSummary.supportEmail}
                 </p>
               </div>
