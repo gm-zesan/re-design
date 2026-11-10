@@ -197,3 +197,4 @@ The original property detail pages include an inline JavaScript Mortgage Calcula
   - `Total Loan Amount` *(Note: live JS displays total payment `monthly_payment * loan_period * 12` inside `#totalAmount`)*
   - `Payment Breakdown` progress bar comparing `Interest` percentage vs `Principal` percentage
 - **Subtitle on Live Site:** Placeholder `Lorem ipsum dolor sit amet...`
+

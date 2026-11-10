@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Dorado Developments Ltd. | Home Forever</title>
+    <meta
+      name="description"
+      content="El Dorado Developments Ltd. — A Concern of Rajbari Group. REHAB Member & RAJUK Enlisted luxury residential and commercial real estate developer in Bangladesh since 2003."
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('eldorado-theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme =
+            saved === 'dark' || saved === 'light'
+              ? saved
+              : prefersDark
+                ? 'dark'
+                : 'light';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="shortcut icon" href="/static/img/favicon.gif" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-alabaster text-charcoal font-sans antialiased transition-colors duration-200 selection:bg-crimson selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

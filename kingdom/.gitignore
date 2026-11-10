@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Production build & caches
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Logs & OS files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# Local environment secrets
+.env
+.env.local
+.env.*.local
+
+# Editor directories
+.vscode/
+.idea/
+

@@ -147,3 +147,4 @@ All 8 WP categories returned `count: 0` in `/wp-json/wp/v2/categories` and displ
 - **Bottom Legal Bar:**
   - `Copyright © 2023 Shwapnobari`
   - Links: `About Us` (`/about-us/`), `Contact Us` (`/contact-us/`), `Privacy Policy` (`/privacy-policy/`), `Terms & Condition` (`/terms-and-conditions/`)
+

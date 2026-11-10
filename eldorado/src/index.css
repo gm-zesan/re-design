@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-alabaster: 248 246 242;
+    --color-limestone: 239 236 230;
+    --color-surface: 255 255 255;
+    --color-stone: 229 223 213;
+    --color-charcoal: 35 38 43;
+    --color-concrete: 97 103 107;
+    --color-crimson-soft: 249 234 235;
+    --color-crimson-ink: 184 29 36;
+    --color-bronze-soft: 244 237 228;
+    --color-bronze-ink: 166 124 82;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    --color-alabaster: 17 19 23;
+    --color-limestone: 24 27 33;
+    --color-surface: 31 35 42;
+    --color-stone: 50 56 67;
+    --color-charcoal: 242 239 233;
+    --color-concrete: 165 173 184;
+    --color-crimson-soft: 68 24 29;
+    --color-crimson-ink: 242 92 99;
+    --color-bronze-soft: 45 36 26;
+    --color-bronze-ink: 200 168 130;
+  }
+
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Subtle architectural grid backdrop */
+.bg-arch-grid {
+  background-image:
+    linear-gradient(to right, rgba(20, 21, 23, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 21, 23, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+html.dark .bg-arch-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-arch-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}

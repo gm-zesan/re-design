@@ -56,3 +56,4 @@ A full-scope automated and manual audit of `https://shwapnobari.com/` was conduc
 
 7. **[07 — Content Migration Checklist](./07-content-migration-checklist.md)**  
    Actionable verification matrix ensuring 100% preservation of all factual information, properties, assets, and legal/contact data in the React + Tailwind CSS implementation.
+

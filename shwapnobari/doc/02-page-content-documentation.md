@@ -212,3 +212,4 @@ All publicly accessible copy from `https://shwapnobari.com/` is documented below
   9. **9. Changes to These Terms** — May update anytime without notice; continued use implies acceptance.
   10. **10. Governing Law** — Governed by the laws of the People's Republic of Bangladesh.
   11. **11. Contact Us** — Same company address, `+8801711107238`, `https://shwapnobari.com`, Google Maps, Facebook Page, plus `Contact Us` button.
+
